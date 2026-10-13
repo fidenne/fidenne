@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <b>In final review — available to download soon</b>
+  <b>Public beta 1 — <a href="https://github.com/fidenne/fidenne/releases/latest">Download</a> · <a href="https://fidenne.github.io/fidenne/">Install and use guide (Korean)</a></b>
 </p>
 
 <br>
@@ -60,9 +60,9 @@ A Mac with Apple silicon (M1 or later), macOS 26 or later, and a **wired externa
 
 ## Installation
 
-It is in **final review**, so the download is not open yet. When it opens, install like this.
+Public beta 1 is out. Install it like this.
 
-1. Download the `.dmg` file from the releases page of this repository.
+1. Download the `.dmg` file from the [releases page](https://github.com/fidenne/fidenne/releases/latest) of this repository.
 2. Open the `.dmg` and drag Fidenne into the **Applications** folder.
 3. Open Fidenne from Applications and press **Open** if a confirmation window appears.
 4. Follow the first-run setup. Allow the permissions macOS asks for.

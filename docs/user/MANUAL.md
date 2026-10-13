@@ -499,7 +499,7 @@ Fidenne 창 안에서 YouTube Music 에 로그인해 듣는 방식은 지금 없
 
 ## 베타 안내와 제보 경로
 
-Fidenne 은 지금 **공개 베타** 를 앞두고 **최종 검수 중** 이라 아직 내려받을 수 없습니다. 열리면 `https://github.com/fidenne/fidenne/releases` 에서 받습니다. Apple 실리콘 Mac 과 macOS 26 이상이 필요합니다.
+Fidenne 은 지금 **공개 베타** 입니다. `https://github.com/fidenne/fidenne/releases` 에서 받습니다. Apple 실리콘 Mac 과 macOS 26 이상이 필요합니다.
 
 - 문제는 메일 **fidenne.support@gmail.com** 으로 알리는 것이 기본입니다. 저장소의 이슈(**버그 신고** 양식)에는 증상만 적어도 됩니다. 진단 번들과 보안 문제는 이슈 대신 메일로 보냅니다.
 - 함께 적어 주면 좋은 것: DAC 와 출력 방식 · 언제 무엇을 하다가 무엇이 들렸는지. 앱 버전과 macOS 버전은 메일 양식과 번들에 저절로 들어 있습니다.

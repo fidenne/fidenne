@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <b>최종 검수 중 — 곧 내려받을 수 있습니다</b>
+  <b>공개 베타 1 — <a href="https://github.com/fidenne/fidenne/releases/latest">내려받기</a> · <a href="https://fidenne.github.io/fidenne/">설치 · 사용 안내</a></b>
 </p>
 
 <br>
@@ -59,9 +59,9 @@ Apple 실리콘(M1 이후) Mac, macOS 26 이상, 그리고 **USB 로 직접 연�
 
 ## 설치
 
-지금은 **최종 검수 중**이라 내려받는 곳이 아직 열려 있지 않습니다. 열리면 다음 순서로 설치합니다.
+공개 베타 1 이 나왔습니다. 다음 순서로 설치합니다.
 
-1. 이 저장소의 릴리스 페이지에서 `.dmg` 파일을 받습니다.
+1. 이 저장소의 [릴리스 페이지](https://github.com/fidenne/fidenne/releases/latest)에서 `.dmg` 파일을 받습니다.
 2. `.dmg` 를 열고 Fidenne 을 **응용 프로그램** 폴더로 끌어 넣습니다.
 3. 응용 프로그램에서 Fidenne 을 열고, 확인 창이 뜨면 **열기** 를 누릅니다.
 4. 처음 설정 창의 안내를 따릅니다. macOS 가 권한을 물으면 허용합니다.

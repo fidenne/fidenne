@@ -200,7 +200,7 @@ Auto Bypass · Loop comparison is **hidden in this beta** too. To compare on and
 **How to tell it worked**: Searching with Spotify in the Music page's service list returns results, and Settings has **Refresh playback permission (재생 권한 갱신)** · **Disconnect (연결 해제)**. Without a key, sound processing of tracks played in the Spotify app still works. More: Manual [§3](MANUAL.md#3-music-page).
 
 ## 30. Get the beta and report a problem
-1. It is in **final review** now, so it cannot be downloaded yet. When it opens, get the signed and notarized `.dmg` from the releases page (`https://github.com/fidenne/fidenne/releases`) (Apple silicon Mac, macOS 26 or later).
+1. Get the signed and notarized `.dmg` from the releases page (`https://github.com/fidenne/fidenne/releases`) (Apple silicon Mac, macOS 26 or later).
 2. Make a support file as in section 20 and send it to **fidenne.support@gmail.com** (**Send by mail (메일로 보내기)** or **Copy mail form (메일 양식 복사)** fills in the address, subject and form).
 3. Write the DAC and output mode · what you were doing and what you heard or saw. The app version and macOS version are already in the form and the bundle. Send security problems by mail instead of a public issue.
 

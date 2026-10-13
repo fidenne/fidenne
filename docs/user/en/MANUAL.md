@@ -500,7 +500,7 @@ When something goes wrong, make a diagnostics bundle of what happened and send i
 
 ## Beta notice and where to report
 
-Fidenne is in **final review** before its **public beta**, so it cannot be downloaded yet. When it opens, it will be at `https://github.com/fidenne/fidenne/releases`. It needs an Apple silicon Mac and macOS 26 or later.
+Fidenne is in **public beta**. Download it from `https://github.com/fidenne/fidenne/releases`. It needs an Apple silicon Mac and macOS 26 or later.
 
 - Reporting by mail to **fidenne.support@gmail.com** is the default. In the repository's issues (the **Bug report** form) the symptom alone is enough. Send diagnostics bundles and security problems by mail rather than in an issue.
 - Good to include: DAC and output mode · what you were doing when, and what you heard. The app version and macOS version are already in the mail form and the bundle.
