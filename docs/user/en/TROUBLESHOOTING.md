@@ -43,7 +43,7 @@ Fidenne needs a **wired USB DAC** connected directly to the Mac (an external dev
 
 ## 3. DAC · output
 
-On a DAC or output method used for the first time, start the first playback with the amp and DAC volume low. If integer PCM shows `The DAC volume is not at maximum, so …` (`DAC 음량이 최대가 아니어서 …`), raise the macOS volume to the maximum and lower the loudness with the DAC knob.
+On a DAC or output method used for the first time, start the first playback with the amp and DAC volume low. If integer PCM shows `The DAC volume is not at maximum, so …` (`DAC 음량이 최대가 아니어서 …`), do not raise the volume — play with **PCM Direct** instead. The next update lets Fidenne take over the DAC volume.
 
 - **In PCM Direct the DAC rate differs from the track's · it stays the same when the track changes** — this is normal. In PCM Direct the sound does not pass through Fidenne, so the DAC rate is not matched track by track but set once at start; macOS converts other rates (Spotify: 44.1 kHz; if the DAC was left at DSD or 352.8 kHz, the track's rate or 44.1 kHz). To process the original rate, use the engine output (DSD (DoP) · PCM 352.8 kHz).
 - **The DAC is not visible · the connection was lost** — check the cable and power, plug it in again, press **Reconnect (다시 연결)** or **Search again (다시 찾기)** in the window and play. The switch that resumes playback on the same DAC after a reconnect is in I/O › DAC format check. Details: [Manual «7.2 DAC format check (formerly "Engine output format")»](MANUAL.md#72-dac-format-check-formerly-engine-output-format)
