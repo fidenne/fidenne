@@ -33,4 +33,4 @@ When attaching a diagnostic file, please send only what falls within the boundar
 
 - Because this is a small project, **we do not promise a response time**. We will send an acknowledgment and do the fixing work as quickly as we can.
 - Please do not disclose the details before a fixed release comes out. After the fix, we will write what was fixed in the release notes and, if you wish, include the reporter's name.
-- Extensions (plugins) are managed separately by their authors. Please report problems in an extension itself to the person who made it.
+- The browser extension for YouTube Music (Fidenne for YouTube Music) is part of Fidenne. Report problems in it the same way as above.

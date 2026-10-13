@@ -67,7 +67,7 @@ It is in **final review**, so the download is not open yet. When it opens, insta
 3. Open Fidenne from Applications and press **Open** if a confirmation window appears.
 4. Follow the first-run setup. Allow the permissions macOS asks for.
 
-Before the first playback, turn down the volume on your DAC and amplifier. Step-by-step guides will be published with the release.
+Before the first playback, turn down the volume on your DAC and amplifier. Step-by-step instructions are in the [install and use guide](/docs/user/GUIDE.md) (Korean only) and the [User manual](/docs/user/en/MANUAL.md).
 
 <br>
 
@@ -79,7 +79,7 @@ A free app made by an individual, not affiliated with Apple, Spotify or Google.
 - **YouTube Music** — an experimental feature connected through a browser extension. It reads only the track on the page you opened and never touches ads. What it reads goes only to Fidenne on this Mac and nowhere else.
 - **Lyrics · headphone measurements · song search and charts** — public data from LRCLIB, squig.link and Apple, fetched to this Mac. Copyright stays with the rights holders and the measurers.
 - **Sound** — processed only on this Mac. Never recorded or sent anywhere.
-- **Album covers and lyrics** — kept on this Mac temporarily for quick display and removed 30 days after you last saw them.
+- **Album covers and lyrics** — kept on this Mac temporarily for quick display and removed 30 days after last use. Pictures from song search and charts stay in memory only.
 
 The full list is in the [Privacy notice](/PRIVACY.en.md).
 
@@ -87,7 +87,8 @@ The full list is in the [Privacy notice](/PRIVACY.en.md).
 
 ## Help
 
-- The user manual and troubleshooting guide will be published with the release.
+- [Install and use guide](/docs/user/GUIDE.md) (Korean only) — from installing to everyday use, in order.
+- [User manual](/docs/user/en/MANUAL.md) · [Troubleshooting guide](/docs/user/en/TROUBLESHOOTING.md) · [Known limitations](/docs/user/en/KNOWN_LIMITATIONS.md)
 - Contact: fidenne.support@gmail.com
 
 ## Issues
@@ -95,7 +96,8 @@ The full list is in the [Privacy notice](/PRIVACY.en.md).
 Bugs and suggestions are received as issues in this repository. For anything hard to write as an issue, use email: **fidenne.support@gmail.com**.
 Please do not write security problems in a public issue; report them by the method in `SECURITY.en.md`.
 
-When you report, attach the support file made by **Help > Create diagnostics for a problem report...** in the app (it shows its content before anything is sent) and write one line on what happened. The app version and macOS version are already inside the support file. The app sends nothing on its own.
+When you report, attach the support file made by **Help > Create diagnostics for a problem report...** in the app (it shows its content before anything is sent) to a mail and write one line on what happened. Do not post the support file in an issue.
+**Send by mail** opens your mail app; with another mail service, **Copy mail form** gives the address, subject and form to paste. The app version and macOS version are already in the form and the support file. The app sends nothing on its own.
 
 <br>
 
