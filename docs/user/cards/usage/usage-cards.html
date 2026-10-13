@@ -1,0 +1,159 @@
+<!doctype html>
+<!-- SPDX-FileCopyrightText: 2026 The Aural Authors -->
+<!-- SPDX-License-Identifier: LicenseRef-Fidenne-Freeware -->
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fidenne 사용 카드</title>
+<style>
+:root{--bg:#f4f4f1;--ink:#1c1c1e;--sub:#5c5c62;--card:#ffffff;--line:#d8d8d2;--acc:#0a63d6;--accsoft:#e3eefc;--warn:#b25000;--warnsoft:#fdebd6}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#17171a;--ink:#f2f2f4;--sub:#a4a4ac;--card:#232327;--line:#3a3a40;--acc:#5aa2ff;--accsoft:#1d2c44;--warn:#ffb15c;--warnsoft:#3a2a14}}
+:root[data-theme=dark]{--bg:#17171a;--ink:#f2f2f4;--sub:#a4a4ac;--card:#232327;--line:#3a3a40;--acc:#5aa2ff;--accsoft:#1d2c44;--warn:#ffb15c;--warnsoft:#3a2a14}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,"SF Pro Text","Apple SD Gothic Neo",sans-serif;display:flex;flex-direction:column;align-items:center;gap:24px;padding:16px;word-break:keep-all;overflow-wrap:break-word;line-break:strict;letter-spacing:-.012em;text-wrap:pretty}
+.card{width:1200px;height:900px;flex:none;background:var(--bg);position:relative;overflow:hidden;padding:64px 80px 96px;display:flex;flex-direction:column}
+.step{font-size:30px;font-weight:600;color:var(--acc);letter-spacing:0}
+h1{font-size:80px;line-height:1.16;font-weight:800;margin:18px 0 0;letter-spacing:-.035em;text-wrap:balance}
+.lead{font-size:44px;line-height:1.45;color:var(--sub);margin-top:26px}
+.lead b{color:var(--ink)}
+.art{flex:1;display:flex;align-items:center;justify-content:center;gap:28px}
+.foot{position:absolute;left:80px;right:80px;bottom:40px;display:flex;justify-content:space-between;font-size:26px;color:var(--sub)}
+.box{background:var(--card);border:2px solid var(--line);border-radius:28px;padding:26px 34px;font-size:38px;font-weight:600;text-align:center}
+.box small{display:block;font-size:26px;font-weight:400;color:var(--sub);margin-top:6px}
+.arrow{font-size:60px;color:var(--acc)}
+.mark{width:170px;height:170px;display:block}
+.ph{background:var(--warnsoft);color:var(--warn);border:2px dashed var(--warn);border-radius:16px;padding:6px 18px;font-weight:700}
+.list{display:flex;flex-direction:column;gap:18px;margin-top:30px;width:100%}
+.row{background:var(--card);border:2px solid var(--line);border-radius:24px;padding:20px 30px;font-size:38px;display:flex;gap:24px;align-items:center}
+.row .n{width:64px;height:64px;border-radius:50%;background:var(--acc);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none;font-size:36px}
+.row span.s{display:block;font-size:27px;color:var(--sub);margin-top:2px}
+.dmgwin{background:var(--card);border:2px solid var(--line);border-radius:22px;width:300px;height:260px;display:flex;flex-direction:column}
+.dmgwin i{display:block;height:44px;border-bottom:2px solid var(--line);background:var(--accsoft);border-radius:20px 20px 0 0}
+.dmgwin div{flex:1;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:600}
+.dialog{background:var(--card);border:2px solid var(--line);border-radius:26px;padding:30px 36px;width:640px;font-size:32px;line-height:1.4}
+.btns{display:flex;gap:16px;justify-content:flex-end;margin-top:22px;font-size:30px}
+.btns span{border:2px solid var(--line);border-radius:14px;padding:8px 26px}
+.btns span.p{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:700}
+.vol{width:620px;height:26px;border-radius:13px;background:var(--line);position:relative}
+.vol:after{content:"";position:absolute;left:0;top:0;bottom:0;width:60px;border-radius:13px;background:var(--acc)}
+.pill{background:var(--card);border:2px solid var(--line);border-radius:60px;padding:18px 34px;font-size:40px;display:flex;gap:28px;align-items:center;color:var(--ink)}
+.pill .cv{width:84px;height:84px;border-radius:18px;background:var(--accsoft);color:var(--acc);display:flex;align-items:center;justify-content:center;font-size:44px}
+.pill .on{color:var(--acc);font-weight:800}
+.chip{display:inline-block;border:2px solid var(--line);background:var(--card);border-radius:40px;padding:10px 26px;font-size:34px;font-weight:600}
+.chip.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.chips{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+.tabs{display:flex;gap:0;border:2px solid var(--line);border-radius:18px;overflow:hidden;background:var(--card);font-size:34px;font-weight:600}
+.tabs span{padding:14px 34px;border-right:2px solid var(--line)}.tabs span:last-child{border:0}.tabs span.on{background:var(--acc);color:#fff}
+.col{display:flex;flex-direction:column;gap:14px}
+.tile{width:170px;height:170px;border-radius:24px;background:var(--accsoft);border:2px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:600;text-align:center;padding:8px}
+.panel{background:var(--card);border:2px solid var(--line);border-radius:24px;padding:22px 30px;width:440px;font-size:32px}
+.panel b.h{display:block;color:var(--acc);font-size:26px;margin-bottom:8px}
+.panel p{padding:8px 0;border-top:2px solid var(--line)}.panel p:first-of-type{border:0}
+.sw{display:inline-block;width:78px;height:42px;border-radius:21px;background:var(--acc);position:relative;vertical-align:middle}
+.sw:after{content:"";position:absolute;right:5px;top:5px;width:32px;height:32px;border-radius:50%;background:#fff}
+.sw.off{background:var(--line)}.sw.off:after{right:auto;left:5px}
+.curve{width:640px;height:200px;background:var(--card);border:2px solid var(--line);border-radius:22px}
+.warnbox{background:var(--warnsoft);border:2px solid var(--warn);color:var(--warn);border-radius:24px;padding:22px 34px;font-size:36px;font-weight:700;text-align:center}
+.tight .row{padding:14px 26px;font-size:34px}.tight .lead{font-size:32px;margin-top:16px}.tight .tile{width:140px;height:120px}.tight .panel p{padding:5px 0}.tight .panel{padding:16px 26px}
+</style>
+</head>
+<body>
+<section class="card" id="c1">
+ <img src="../../images/fidenne-icon.png" alt="Fidenne" style="position:absolute;right:80px;top:64px;width:150px;height:150px"><div class="step">사용 안내</div>
+ <h1>Fidenne,<br>이렇게 씁니다</h1>
+<p class="lead">설치를 마쳤다면 이 열 장으로 충분합니다. 장치 고르기부터 소리 다듬기, 막혔을 때까지 <b>한 장에 하나씩</b>.</p>
+<div class="art"><div class="box">장치<small>DAC 고르기</small></div><div class="arrow">→</div><div class="box">서비스<small>연결하기</small></div><div class="arrow">→</div><div class="box">재생<small>듣기</small></div></div>
+
+ <div class="foot"><span>Fidenne 사용 카드</span><span>1 / 10</span></div>
+</section>
+
+<section class="card tight" id="c2">
+ <div class="step">1 · 처음 설정</div>
+ <h1>소리가 나갈<br>DAC를 고릅니다</h1>
+<p class="lead">사이드바 <b>입출력 · 진단</b>(⌘5)에서 <b>출력 DAC</b>와 <b>출력 방식</b>을 고릅니다.</p>
+<div class="art" style="flex-direction:column;gap:18px;align-items:stretch"><div class="row"><div><b>PCM Direct</b><span class="s">Fidenne이 손대지 않고 macOS가 DAC로 보냅니다. 소리 다듬기는 꺼집니다.</span></div></div><div class="row"><div><b>DSD (DoP)</b><span class="s">처음 골라져 있습니다. 엔진이 필터와 DSD 변환을 거쳐 보냅니다.</span></div></div><div class="row"><div><b>PCM 352.8 kHz</b><span class="s">엔진이 처리한 소리를 정수 PCM으로 보냅니다.</span></div></div></div>
+<p class="lead" style="font-size:28px;margin:0 0 6px">소리 다듬기는 352.8 kHz 이상 받는 2채널 외장 DAC에서만 돕니다.</p>
+ <div class="foot"><span>Fidenne 사용 카드</span><span>2 / 10</span></div>
+</section>
+
+<section class="card" id="c3">
+ <div class="step">2 · 음량</div>
+ <h1>처음 재생 전에<br>음량부터 낮추기</h1>
+<p class="lead">처음 재생을 누르면 “음량을 낮추고 시작하세요” 안내가 뜹니다. DAC · 앰프 음량을 <b>0이나 아주 낮게</b> 내린 뒤 <b style="white-space:nowrap">낮췄어요, 시작</b>을 누르고, 들으면서 천천히 올립니다.</p>
+<div class="art" style="flex-direction:column;gap:30px"><div class="vol"></div><div class="warnbox">갑자기 큰 소리가 날 수 있습니다 · 귀와 장비를 지키세요</div></div>
+
+ <div class="foot"><span>Fidenne 사용 카드</span><span>3 / 10</span></div>
+</section>
+
+<section class="card tight" id="c4">
+ <div class="step">3 · 서비스 연결</div>
+ <h1>Apple Music · Spotify<br>YouTube Music</h1>
+<p class="lead">Apple Music은 macOS가 물을 때 <b>허용</b>만 하면 됩니다. Spotify는 앱에서 곡을 고르면 소리를 다듬어 줍니다.</p>
+<div class="art" style="flex-direction:column;gap:18px;align-items:stretch"><div class="row"><div class="n">♪</div><div>Apple Music · Spotify<span class="s">음악 페이지의 서비스 단추에서 고릅니다. 자동화를 물으면 허용</span></div></div><div class="row"><div class="n">▶</div><div>YouTube Music — Chrome · Edge 확장<span class="s">설정(⌘,) › 개인정보 › YouTube Music › 확장과 연결 › 설치 안내…</span></div></div><div class="row"><div class="n">✓</div><div>“브라우저 1개 연결됨”이면 끝<span class="s">Chrome과 Edge에서만 됩니다</span></div></div></div>
+
+ <div class="foot"><span>Fidenne 사용 카드</span><span>4 / 10</span></div>
+</section>
+
+<section class="card" id="c5">
+ <div class="step">4 · 하단 재생 캡슐</div>
+ <h1>늘 떠 있는 캡슐,<br>표지를 누르면 앨범 모드</h1>
+
+<div class="art" style="flex-direction:column;gap:30px"><div class="pill"><div class="cv">♫</div><span>♡</span><span>⇄</span><span>⏮</span><span class="on">▶</span><span>⏭</span><span>⟲</span></div><div class="chips"><span class="chip">하트</span><span class="chip">셔플</span><span class="chip">이전</span><span class="chip on">재생/일시정지</span><span class="chip">다음</span><span class="chip">반복</span></div></div>
+<p class="lead" style="font-size:30px;margin:0 0 4px">셔플·반복은 Fidenne에서 재생한 목록에서만 씁니다. 표지를 누르면 큰 재생 화면, Esc로 닫습니다.</p>
+ <div class="foot"><span>Fidenne 사용 카드</span><span>5 / 10</span></div>
+</section>
+
+<section class="card tight" id="c6">
+ <div class="step">5 · 음악 페이지</div>
+ <h1>홈에서 이어 듣고,<br>검색으로 찾기</h1>
+<p class="lead">사이드바 <b>음악</b>(⌘1). 검색 칸 앞의 서비스 단추로 서비스를 고릅니다.</p>
+<div class="art" style="flex-direction:column;gap:22px;align-items:stretch"><div class="row" style="justify-content:space-between"><span>🔍 곡·아티스트·앨범 검색</span><span class="chip">Apple Music ▾</span></div><div class="chips" style="justify-content:flex-start"><span class="chip on">이어 듣기</span><span class="chip">오늘 들은 것</span><span class="chip">내 재생목록</span><span class="chip">오랜만에</span></div><div style="display:flex;gap:20px"><div class="tile">재생목록</div><div class="tile">재생목록</div><div class="tile">재생목록</div><div class="tile">재생목록</div></div></div>
+
+ <div class="foot"><span>Fidenne 사용 카드</span><span>6 / 10</span></div>
+</section>
+
+<section class="card" id="c7">
+ <div class="step">6 · Fidenne 보관함</div>
+ <h1>나만의 재생목록을<br>Fidenne에 모읍니다</h1>
+<p class="lead">곡의 <b>⋯</b>(또는 우클릭) › <b>재생목록에 추가</b>. 하트는 좋아요 목록에 담고, <b>＋ 새 재생목록</b>으로 새 목록을 만듭니다.</p>
+<div class="art"><div class="panel"><b class="h">재생목록에 추가</b><p>♡ 좋아요</p><p>♫ 출근길</p><p>♫ 밤에 듣는 것</p><p style="color:var(--acc);font-weight:700">＋ 새 재생목록</p></div></div>
+<p class="lead" style="font-size:28px;margin:0 0 6px">목록은 앱 안에 저장되고, 곡은 각 서비스에서 재생됩니다.</p>
+ <div class="foot"><span>Fidenne 사용 카드</span><span>7 / 10</span></div>
+</section>
+
+<section class="card tight" id="c8">
+ <div class="step">7 · 오른쪽 패널</div>
+ <h1>다음 재생과 가사</h1>
+<p class="lead">앨범 모드를 열면 가운데 칸에 <b>다음 재생</b>(지금 곡과 이어지는 곡)과 <b>가사</b>가 있습니다.</p>
+<div class="art" style="align-items:flex-start;padding-top:20px"><div class="panel"><b class="h">다음 재생</b><p>▶ 지금 재생 중</p><p>이어지는 곡</p><p>이어지는 곡</p></div><div class="panel"><b class="h">가사</b><p>첫 줄 가사</p><p style="color:var(--acc);font-weight:700">지금 부르는 줄</p><p>다음 줄</p></div></div>
+<p class="lead" style="font-size:26px;margin:0 0 6px">가사를 처음 인터넷에서 찾을 때 동의를 한 번 묻습니다(보내는 것은 제목·아티스트·앨범·길이).</p>
+ <div class="foot"><span>Fidenne 사용 카드</span><span>8 / 10</span></div>
+</section>
+
+<section class="card" id="c9">
+ <div class="step">8 · 소리 다듬기</div>
+ <h1>DSP 페이지에서<br>EQ · Ostrum · Crossfeed</h1>
+<p class="lead">사이드바 <b>DSP</b>(⌘4). 바꾸면 바로 들리고, 다음 실행에도 남기려면 <b>저장(⌘S)</b>.</p>
+<div class="art" style="flex-direction:column;gap:24px"><svg class="curve" viewBox="0 0 640 200"><line x1="0" y1="100" x2="640" y2="100" stroke="currentColor" stroke-opacity=".3" stroke-width="2" style="color:var(--sub)"/><path d="M10 110 C120 60 200 150 300 100 S500 60 630 95" fill="none" stroke="var(--acc)" stroke-width="6"/></svg><div class="tabs"><span class="on">Equalizer</span><span>Ostrum</span><span>Crossfeed <i class="sw" style="margin-left:10px;transform:scale(.7)"></i></span></div></div>
+<p class="lead" style="font-size:28px;margin:0 0 6px">Crossfeed는 헤드폰의 좌우 소리를 조금 섞습니다. 스위치로 켜고 끕니다.</p>
+ <div class="foot"><span>Fidenne 사용 카드</span><span>9 / 10</span></div>
+</section>
+
+<section class="card" id="c10">
+ <div class="step">9 · 막혔을 때</div>
+ <h1>소리가 안 나면<br>진단을 이메일로</h1>
+
+<div class="list"><div class="row"><div>문제 확인 가이드<span class="s">증상으로 찾습니다</span></div></div><div class="row"><div>도움말 › 문제 제보용 진단 만들기…<span class="s">보내기 전에 내용을 확인합니다. 앱은 아무것도 대신 보내지 않습니다</span></div></div><div class="row"><div>문의: fidenne.support@gmail.com<span class="s">GitHub이 있으면 github.com/fidenne/fidenne/issues 에 올려도 됩니다<br>진단 번들은 꼭 이메일로</span></div></div></div>
+
+ <div class="foot"><span>Fidenne 사용 카드</span><span>10 / 10</span></div>
+</section>
+
+<script>
+// ?c=<number> shows only that one (used to render PNGs); ?theme=light|dark forces a theme.
+var q=new URLSearchParams(location.search),c=q.get("c"),t=q.get("theme");
+if(t)document.documentElement.setAttribute("data-theme",t);
+if(c){document.body.style.padding="0";document.body.style.gap="0";document.querySelectorAll(".card").forEach(function(e){if(e.id!=="c"+c)e.style.display="none"})}
+</script>
+</body>
+</html>

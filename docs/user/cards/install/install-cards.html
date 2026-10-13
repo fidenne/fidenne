@@ -1,0 +1,190 @@
+<!doctype html>
+<!-- SPDX-FileCopyrightText: 2026 The Aural Authors -->
+<!-- SPDX-License-Identifier: LicenseRef-Fidenne-Freeware -->
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fidenne 설치 카드</title>
+<style>
+:root{--bg:#f4f4f1;--ink:#1c1c1e;--sub:#5c5c62;--card:#ffffff;--line:#d8d8d2;--acc:#0a63d6;--accsoft:#e3eefc;--warn:#b25000;--warnsoft:#fdebd6}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#17171a;--ink:#f2f2f4;--sub:#a4a4ac;--card:#232327;--line:#3a3a40;--acc:#5aa2ff;--accsoft:#1d2c44;--warn:#ffb15c;--warnsoft:#3a2a14}}
+:root[data-theme=dark]{--bg:#17171a;--ink:#f2f2f4;--sub:#a4a4ac;--card:#232327;--line:#3a3a40;--acc:#5aa2ff;--accsoft:#1d2c44;--warn:#ffb15c;--warnsoft:#3a2a14}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,"SF Pro Text","Apple SD Gothic Neo",sans-serif;display:flex;flex-direction:column;align-items:center;gap:24px;padding:16px;word-break:keep-all;overflow-wrap:break-word;line-break:strict;letter-spacing:-.012em;text-wrap:pretty}
+.card{width:1200px;height:900px;flex:none;background:var(--bg);position:relative;overflow:hidden;padding:64px 80px 96px;display:flex;flex-direction:column}
+.step{font-size:30px;font-weight:600;color:var(--acc);letter-spacing:0}
+h1{font-size:80px;line-height:1.16;font-weight:800;margin:18px 0 0;letter-spacing:-.035em;text-wrap:balance}
+.lead{font-size:44px;line-height:1.45;color:var(--sub);margin-top:26px}
+.lead b{color:var(--ink)}
+.art{flex:1;display:flex;align-items:center;justify-content:center;gap:28px}
+.foot{position:absolute;left:80px;right:80px;bottom:40px;display:flex;justify-content:space-between;font-size:26px;color:var(--sub)}
+.box{background:var(--card);border:2px solid var(--line);border-radius:28px;padding:26px 34px;font-size:38px;font-weight:600;text-align:center}
+.box small{display:block;font-size:26px;font-weight:400;color:var(--sub);margin-top:6px}
+.arrow{font-size:60px;color:var(--acc)}
+.mark{width:170px;height:170px;display:block}
+.ph{background:var(--warnsoft);color:var(--warn);border:2px dashed var(--warn);border-radius:16px;padding:6px 18px;font-weight:700}
+.list{display:flex;flex-direction:column;gap:18px;margin-top:30px;width:100%}
+.row{background:var(--card);border:2px solid var(--line);border-radius:24px;padding:20px 30px;font-size:38px;display:flex;gap:24px;align-items:center}
+.row .n{width:64px;height:64px;border-radius:50%;background:var(--acc);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none;font-size:36px}
+.row span.s{display:block;font-size:27px;color:var(--sub);margin-top:2px}
+.dmgwin{background:var(--card);border:2px solid var(--line);border-radius:22px;width:300px;height:260px;display:flex;flex-direction:column}
+.dmgwin i{display:block;height:44px;border-bottom:2px solid var(--line);background:var(--accsoft);border-radius:20px 20px 0 0}
+.dmgwin div{flex:1;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:600}
+.dialog{background:var(--card);border:2px solid var(--line);border-radius:26px;padding:30px 36px;width:640px;font-size:32px;line-height:1.4}
+.btns{display:flex;gap:16px;justify-content:flex-end;margin-top:22px;font-size:30px}
+.btns span{border:2px solid var(--line);border-radius:14px;padding:8px 26px}
+.btns span.p{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:700}
+.vol{width:620px;height:26px;border-radius:13px;background:var(--line);position:relative}
+.vol:after{content:"";position:absolute;left:0;top:0;bottom:0;width:60px;border-radius:13px;background:var(--acc)}
+.row.sm{padding:12px 24px;font-size:31px;gap:20px}
+.row.sm .n{width:50px;height:50px;font-size:28px}
+.row.sm span.s{font-size:23px}
+.cols{display:flex;gap:28px;align-items:stretch;margin-top:22px;flex:1}
+.cols .list{margin-top:0;gap:10px;flex:1}
+.wide{width:1040px;border-radius:14px;border:2px solid var(--line);display:block;margin-top:18px}
+.shot{width:430px;flex:none;align-self:flex-start;border-radius:18px;border:2px solid var(--line);display:block}
+</style>
+</head>
+<body>
+
+<section class="card" id="c1">
+ <div class="step">설치 안내</div>
+ <h1>Fidenne,<br>Mac 소리를 DAC로</h1>
+ <p class="lead">재생 앱이 내는 소리를 다듬어 <b>내 DAC</b>로 보내는 Mac용 오디오 플레이어. 설치는 여덟 걸음이면 끝납니다.</p>
+ <div class="art"><div class="box">재생 앱</div><div class="arrow">→</div><img class="mark" src="../../images/fidenne-icon.png" alt="Fidenne"><div class="arrow">→</div><div class="box">DAC</div></div>
+ <div class="foot"><span>Fidenne 설치 카드</span><span>1 / 12</span></div>
+</section>
+
+<section class="card" id="c2">
+ <div class="step">1 · 준비물</div>
+ <h1>준비물은 세 가지,<br>외장 DAC가 필수</h1>
+ <div class="list">
+  <div class="row"><div class="n">✓</div><div>Apple 실리콘 Mac<span class="s">M1 이후 칩</span></div></div>
+  <div class="row"><div class="n">✓</div><div>macOS 26 이상<span class="s">이보다 오래된 macOS에서는 앱이 열리지 않습니다</span></div></div>
+  <div class="row"><div class="n">✓</div><div>외장 DAC — 필수<span class="s">베타는 USB로 꽂는 외장 DAC로 듣는 것을 전제로 합니다</span></div></div>
+ </div>
+ <div class="foot"><span>Fidenne 설치 카드</span><span>2 / 12</span></div>
+</section>
+
+<section class="card" id="c3">
+ <div class="step">2 · 내려받기</div>
+ <h1>설치 파일(.dmg)을<br>내려받으세요</h1>
+ <p class="lead">받는 곳은 <b>github.com/fidenne/fidenne/releases</b>,<br>파일 이름은 <b>Fidenne-0.5.0.dmg</b> 입니다.</p>
+ <div class="art"><div class="box">Fidenne-0.5.0.dmg<small>디스크 이미지 파일</small></div></div>
+ <div class="foot"><span>Fidenne 설치 카드</span><span>3 / 12</span></div>
+</section>
+
+<section class="card" id="c4">
+ <div class="step">3 · 옮기기</div>
+ <h1>응용 프로그램<br>폴더로 끌어 넣기</h1>
+ <p class="lead">내려받은 .dmg를 두 번 눌러 열고, <b>Fidenne</b>을 <b>응용 프로그램</b> 폴더로 옮깁니다.</p>
+ <div class="art"><div class="dmgwin"><i></i><div>Fidenne</div></div><div class="arrow">→</div><div class="dmgwin"><i></i><div>응용 프로그램</div></div></div>
+ <div class="foot"><span>Fidenne 설치 카드</span><span>4 / 12</span></div>
+</section>
+
+<section class="card" id="c5">
+ <div class="step">4 · 처음 열기</div>
+ <h1>응용 프로그램에서<br>Fidenne을 엽니다</h1>
+ <p class="lead">인터넷에서 받은 앱이라 확인 창이 뜰 수 있습니다. <b>열기</b>를 누르세요.</p>
+ <div class="art"><div class="dialog">“Fidenne”은 인터넷에서 내려받은 앱입니다. 열까요?<div class="btns"><span>취소</span><span class="p">열기</span></div></div></div>
+ <p class="lead" style="font-size:30px;margin:0">막히면 <b>시스템 설정 › 개인정보 보호 및 보안</b>에서 허용합니다.</p>
+ <div class="foot"><span>Fidenne 설치 카드</span><span>5 / 12</span></div>
+</section>
+
+<section class="card" id="c6">
+ <div class="step">5 · 처음 설정</div>
+ <h1>“처음 설정” 네 단계</h1>
+ <div class="list">
+  <div class="row"><div class="n">1</div><div>소리가 나갈 DAC<span class="s">모르겠으면 “나중에 고르기”</span></div></div>
+  <div class="row"><div class="n">2</div><div>소리를 가져오는 방법<span class="s">처음 골라진 Fidenne Inlet을 그대로 두어도 됩니다</span></div></div>
+  <div class="row"><div class="n">3</div><div>macOS가 물어볼 것들<span class="s">지금은 묻지 않고, 쓸 때 묻습니다</span></div></div>
+  <div class="row"><div class="n">4</div><div>이용 약관(필수) · 인터넷 연결 · 진단 기록(선택)<span class="s">약관에 동의해야 시작합니다 · 선택 칸은 꺼 두고 써도 됩니다</span></div></div>
+ </div>
+ <div class="foot"><span>Fidenne 설치 카드</span><span>6 / 12</span></div>
+</section>
+
+<section class="card" id="c7">
+ <div class="step">6 · 권한</div>
+ <h1>macOS가 물으면<br>“허용”</h1>
+ <div class="list">
+  <div class="row"><div>오디오 녹음 · 시스템 오디오<span class="s">다른 앱의 소리를 받을 때</span></div></div>
+  <div class="row"><div>마이크<span class="s">Fidenne Inlet 등 입력 장치로 받을 때 — 소리를 저장하거나 밖으로 보내지 않습니다</span></div></div>
+  <div class="row"><div>자동화<span class="s">Apple Music · Spotify의 곡 정보를 읽고 재생을 조작할 때</span></div></div>
+ </div>
+ <p class="lead" style="font-size:32px;margin-top:22px">거절했다면 <b>시스템 설정 › 개인정보 보호 및 보안</b>에서 다시 켭니다.</p>
+ <div class="foot"><span>Fidenne 설치 카드</span><span>7 / 12</span></div>
+</section>
+
+<section class="card" id="c8">
+ <div class="step">7 · 첫 재생 전에</div>
+ <h1>음량을 먼저<br>낮추세요</h1>
+ <p class="lead">처음 재생을 누르면 “음량을 낮추고 시작하세요” 안내가 뜹니다. DAC · 앰프 음량을 <b>0이나 아주 낮게</b> 내리고 <b style="white-space:nowrap">낮췄어요, 시작</b>을 누른 뒤, 들으면서 천천히 올립니다.</p>
+ <div class="art"><div class="vol"></div></div>
+ <div class="foot"><span>Fidenne 설치 카드</span><span>8 / 12</span></div>
+</section>
+
+<section class="card" id="c9">
+ <div class="step">8 · 막혔을 때</div>
+ <h1>소리가 안 나면<br>여기부터</h1>
+ <div class="list">
+  <div class="row"><div>문제 확인 가이드<span class="s">증상으로 찾습니다</span></div></div>
+  <div class="row"><div>도움말 › 문제 제보용 진단 만들기…<span class="s">보내기 전에 내용을 확인할 수 있습니다</span></div></div>
+  <div class="row"><div>문의: fidenne.support@gmail.com<span class="s">GitHub이 있으면 github.com/fidenne/fidenne/issues 에 올려도 됩니다<br>진단 번들은 꼭 이메일로</span></div></div>
+ </div>
+ <div class="foot"><span>Fidenne 설치 카드</span><span>9 / 12</span></div>
+</section>
+
+<section class="card" id="c10">
+ <div class="step">선택 · Spotify 연결 ①</div>
+ <h1 style="font-size:60px">Spotify 연결: 내 앱 만들기</h1>
+ <p class="lead" style="font-size:28px;margin-top:12px">키 없이도 소리는 다듬습니다. <b>검색 · 재생목록 · 조종</b>은 내 Spotify 앱의 키로 씁니다.</p>
+ <img class="wide" style="width:860px" src="shot-spotify-create.png" alt="Spotify 개발자 대시보드의 앱 만들기 화면">
+ <div class="list" style="gap:10px;margin-top:18px">
+  <div class="row sm"><div class="n">1</div><div>음악 › Spotify 옆 점(●) › <b>개발자 대시보드 열기</b> → <b>Create app</b><span class="s">로그인 · 앱 이름과 설명은 아무거나 · 사이트의 단추 이름은 바뀔 수 있습니다</span></div></div>
+  <div class="row sm"><div class="n">2</div><div><b>Redirect URIs</b>에 Fidenne의 <b>복사</b> 주소를 붙여 넣고 <b>Add</b></div></div>
+  <div class="row sm"><div class="n">3</div><div><b>Web API</b>와 약관 동의를 체크하고 <b>Save</b></div></div>
+ </div>
+ <div class="foot"><span>Fidenne 설치 카드</span><span>10 / 12</span></div>
+</section>
+
+<section class="card" id="c11">
+ <div class="step">선택 · Spotify 연결 ②</div>
+ <h1 style="font-size:60px">Spotify 연결: 키 넣기</h1>
+ <p class="lead" style="font-size:28px;margin-top:12px">재생 조종(재생 · 곡 넘기기)은 <b>Spotify Premium</b>이 필요합니다.</p>
+ <div class="cols">
+  <div class="list">
+   <img class="wide" style="width:100%" src="shot-spotify-clientid.png" alt="Spotify 앱의 Client ID 칸과 복사 단추">
+   <div class="row sm"><div class="n">4</div><div>만든 앱의 <b>Client ID</b> 복사<span class="s">Client Secret은 넣지 않습니다</span></div></div>
+   <div class="row sm"><div class="n">5</div><div>Fidenne 칸에 붙여 넣고 <b>키 확인</b> → <b>Spotify 연결</b></div></div>
+   <div class="row sm"><div class="n">6</div><div>브라우저에서 <b>동의</b><span class="s">“Spotify 인증 응답을 받았습니다”가 뜨면 Fidenne으로 돌아갑니다</span></div></div>
+  </div>
+  <img class="shot" src="shot-spotify.png" alt="Fidenne의 Spotify 연결 칸">
+ </div>
+ <div class="foot"><span>Fidenne 설치 카드</span><span>11 / 12</span></div>
+</section>
+
+<section class="card" id="c12">
+ <div class="step">선택 · YouTube Music</div>
+ <h1 style="font-size:60px">YouTube Music (실험 기능, 선택)</h1>
+ <p class="lead" style="font-size:28px;margin-top:12px">설정 › 일반 맨 위 스위치로 켭니다. 확장은 <b>Chrome이나 Edge 한 곳에만</b>.</p>
+ <div class="cols">
+  <div class="list">
+   <div class="row sm"><div class="n">1</div><div>설정 › 개인정보 › <b>Chrome · Edge 확장과 연결</b> 켜기</div></div>
+   <div class="row sm"><div class="n">2</div><div><b>설치 안내…</b>의 네 단계로 확장 불러오기<span class="s">개발자 모드 · 압축 푼 확장 · <b>경로 복사</b></span></div></div>
+   <div class="row sm"><div class="n">3</div><div>메모리 절약 예외에 <b>music.youtube.com</b></div></div>
+   <div class="row sm"><div class="n">4</div><div>재생목록은 Google 테이크아웃 파일로<span class="s">음악 › YouTube Music › 내 재생목록 › <b>YouTube Music 재생목록 가져오기…</b></span></div></div>
+  </div>
+  <img class="shot" src="shot-ytm-extension.png" alt="Fidenne의 확장 설치 안내 창">
+ </div>
+ <div class="foot"><span>Fidenne 설치 카드</span><span>12 / 12</span></div>
+</section>
+
+<script>
+// ?c=<number> shows only that one (used to render PNGs); ?theme=light|dark forces a theme.
+var q=new URLSearchParams(location.search),c=q.get("c"),t=q.get("theme");
+if(t)document.documentElement.setAttribute("data-theme",t);
+if(c){document.body.style.padding="0";document.body.style.gap="0";document.querySelectorAll(".card").forEach(function(e){if(e.id!=="c"+c)e.style.display="none"})}
+</script>
+</body>
+</html>

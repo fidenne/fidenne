@@ -1,14 +1,35 @@
-# 보안 문제 제보
+<!-- SPDX-FileCopyrightText: 2026 The Aural Authors -->
+<!-- SPDX-License-Identifier: LicenseRef-Fidenne-Freeware -->
 
-보안 취약점이나 민감한 정보는 공개 이슈에 올리지 마세요.
-GitHub의 [비공개 취약점 제보](https://github.com/fidenne/fidenne/security/advisories/new)를 이용해 주세요.
+# 보안 문제 알리기 — Fidenne
 
-재현 방법, 영향을 받는 버전, 예상되는 영향을 적어 주세요.
-비밀번호·인증 토큰·개인 음악 기록 등 불필요한 개인정보는 첨부하지 마세요.
+## 지원하는 판
 
-현재 이 저장소는 공개 전 안내용이며, 공개 배포본은 아직 없습니다.
+| 판 | 보안 수정 |
+|---|---|
+| 가장 최근에 공개한 릴리스 | 받는다 |
+| 그 밖의 판 | 받지 않는다 — 최신 릴리스로 올려서 다시 확인해 주세요 |
 
-## Reporting a vulnerability
+Fidenne 은 아직 베타(0.x)다. 수정은 새 릴리스로만 나가고, 지난 판에 따로 고친 판을 내지 않는다.
 
-Please use [GitHub private vulnerability reporting](https://github.com/fidenne/fidenne/security/advisories/new),
-not public issues. Include reproduction steps, affected versions, and impact. Do not include credentials or unnecessary personal data.
+## 알리는 법
+
+**공개 이슈에 쓰지 말아 주세요.** 고치기 전에 알려지면 다른 사용자가 위험해진다.
+
+1. 이 저장소의 **Security** 탭에 **Report a vulnerability**(GitHub 비공개 취약점 신고)가 보이면 그것으로 알린다.
+2. 보이지 않으면 메일로: **fidenne.support@gmail.com** — 제목 앞에 `[보안]` 을 붙여 주세요.
+
+적어 주면 좋은 것:
+
+- 앱 판과 빌드(앱 메뉴 › Fidenne 에 관하여), macOS 판, Mac 모델
+- 무엇을 하면 무슨 일이 일어나는지 — 다시 해 볼 수 있는 순서
+- 영향: 무엇을 읽거나 바꿀 수 있게 되는지
+- 알고 있다면, 고치는 방법
+
+진단 파일을 붙일 때는 [개인정보 처리](PRIVACY.md) 에 적힌 경계 안의 것만 보내 주세요.
+
+## 그다음
+
+- 작은 프로젝트라 **답하는 기간을 약속하지 않는다**. 받았다는 답과 고치는 일은 할 수 있는 만큼 빨리 한다.
+- 고친 릴리스가 나오기 전에는 내용을 공개하지 말아 주세요. 고친 뒤 릴리스 노트에 무엇을 고쳤는지 적고, 원하면 알린 사람의 이름을 함께 적는다.
+- 확장(플러그인)은 만든 사람이 따로 관리한다. 확장 자체의 문제는 그 확장을 만든 사람에게 알려 주세요.

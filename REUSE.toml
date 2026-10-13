@@ -1,0 +1,21 @@
+# SPDX-FileCopyrightText: 2026 The Aural Authors
+# SPDX-License-Identifier: LicenseRef-Fidenne-Freeware
+#
+# 공개본의 REUSE.toml — export_public.py 가 공개본 뿌리에 `REUSE.toml` 로 옮긴다(허용 목록의 `=` 줄).
+# 이 이름으로 두는 까닭: 작업 저장소 안의 `REUSE.toml` 이라는 이름은 reuse 가 그 폴더의 선언으로 읽고, `.txt` 는
+# 작업 저장소의 REUSE.toml 이 이미 선언한다.
+#
+# 주석을 달 수 없는 파일(Markdown · JSON · SVG · 사용자 문서 그림 PNG)의 라이선스를 선언한다. 베타 1 공개본 전체의 라이선스는 Fidenne 무료 사용
+# 약관(`LicenseRef-Fidenne-Freeware`, 전문은 공개본의 LICENSE 와 LICENSES/)이다. 머리에 SPDX 줄이
+# 있는 파일은 내보낼 때 허용 목록의 `~` 줄이 같은 식별자로 바꾼다.
+
+version = 1
+SPDX-PackageName = "Fidenne"
+SPDX-PackageSupplier = "Fidenne"
+SPDX-PackageDownloadLocation = "https://github.com/fidenne/fidenne"
+
+[[annotations]]
+path = ["**.md", "**.json", "**.svg", "REUSE.toml", "docs/user/images/**.png", "docs/user/cards/**.png"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Fidenne"
+SPDX-License-Identifier = "LicenseRef-Fidenne-Freeware"
