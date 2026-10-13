@@ -18,7 +18,7 @@
 <br>
 
 <p align="center">
-  <img src="/docs/user/images/fidenne-home.png" width="860" alt="Fidenne 음악 화면 — 지금 듣는 곡, 오늘의 청취, 재생목록, 하단 재생 막대">
+  <img src="/docs/user/images/fidenne-home.png" width="860" alt="Fidenne 음악 화면 — 지금 듣는 곡, 오늘의 청취, 재생목록, 하단 재생 막대 (앨범 표지는 모자이크)">
 </p>
 
 <br>
