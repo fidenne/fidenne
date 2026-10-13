@@ -20,7 +20,7 @@ Hardware, operating system and service limits of this version.
   library playback cannot be used with them. Only listening to Apple Music or Spotify in PCM Direct works.
 - A 4- or 8-channel audio interface does not use the DSP engine even if it accepts 352.8 kHz.
 - On **base M1 and M2 Macs**, the Trellis modulator at DSD256 may not keep up and the sound may break.
-  If it does, use DSD128 or another modulator. This is an estimate measured on a newer Mac, not on a real M1.
+  If it does, use DSD128 or another modulator. This is an estimate from measurements on an M4 MacBook, not on a real M1.
 - DSD in the 48 kHz family is not opened.
 - System audio is received as the **whole system** only. Picking a single app to receive is not in this version.
 - The beta was tested mainly on the maker's one Mac and three external DACs.
