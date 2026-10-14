@@ -151,7 +151,7 @@ Auto Bypass · Loop comparison is **hidden in this beta** too. To compare on and
 ## 23. Check whether a new version is out
 1. Press **Fidenne › Check for updates… (업데이트 확인…)** in the app menu.
 2. "Up to date (최신입니다)" means you are done. If there is a new version: installed with Homebrew, **Copy command (명령 복사)** copies the Terminal command; installed from a .dmg, **Open release page (릴리스 페이지 열기)** is where you get the new .dmg. The app never downloads or installs by itself. If there is no public release yet, it says so.
-3. Optional: if **Check for a new version automatically once a day (새 버전을 하루에 한 번 자동으로 확인)** shows at the bottom of `Settings (설정) › Privacy (개인정보) › Network destinations (네트워크 목적지)`, you can turn it on (off by default).
+3. You do not have to press it: if you left the GitHub connection on at first run, the app checks once a day by itself, and when there is a new version the notice also shows a few lines of what changed. To stop it, turn off **Check for a new version automatically once a day (새 버전을 하루에 한 번 자동으로 확인)** at the bottom of `Settings (설정) › Privacy (개인정보) › Network destinations (네트워크 목적지)`.
 
 **How to tell it worked**: "Current version (지금 판)" in the result window matches the version on the top row of the Settings window. More: Manual [§8](MANUAL.md#8-settings-window).
 

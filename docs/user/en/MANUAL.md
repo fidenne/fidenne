@@ -77,6 +77,7 @@ The full list is in [Privacy](../../../PRIVACY.en.md).
 On first launch the "Fidenne 처음 설정" (Fidenne first-run setup) window appears. Move between steps with **Back (뒤로) / Next (다음)**.
 
 1. **The DAC the sound goes to (소리가 나갈 DAC)** — pick the output device. "Choose later (나중에 고르기)" also works. If the device does not show, plug in the DAC and refresh.
+   Use a USB DAC with its **USB mode on UAC 2.0** and **its own EQ off**. UAC 1.0 stops at 96 kHz, too low to carry DSD; an EQ inside the DAC computes the PCM again, so it cannot pass DSD (DoP) untouched and lowers the rates the DAC takes (the FiiO K15 stops at 192 kHz with its EQ on). Then DSD and PCM 352.8 kHz output do not start. Fidenne's own EQ works together with DSD.
 2. **How to bring in the sound (소리를 가져오는 방법)**
    - **Fidenne Inlet** (recommended, chosen from the start) — receives the playback app's source rate as is. If it is not installed, press **Install… (설치…)**. macOS asks once for the administrator password and restarts the audio service, so all sound stops for a moment. You can also install it later on the I/O page.
    - **System tap (시스템 탭)** — works right away without installing. Receives at 48 kHz.
@@ -109,14 +110,19 @@ When something goes wrong, a red notice band appears at the window's top (for ex
 
 ### 2.2 Bottom playback bar
 
-The bar floats on every page. In order: service badge (press it to bring that app — for YouTube Music, its browser — to the front) · **output mode menu** · playback controls (heart — adds to Fidenne's own **Liked songs** in the library, separate from the service app's likes · shuffle · previous · play/pause · next · repeat, position) · ⋯ · **engine switch**.
+The bar floats on every page. In a wide window it is one row: album cover · track (title / artist) · playback buttons (shuffle · previous · play/pause · next · repeat) · heart | service icon · **output mode** · ⋯ · **Up next (다음 재생)** · **engine switch**. In a narrower window it becomes two rows — the cover spans both rows; the top row has the track · ⋯ · Up next · engine switch, and the bottom row the playback buttons · heart, then the service icon · output mode.
 
-- **Output mode menu** — PCM Direct · sound presets (recommended list) · saved presets · "Sound settings… (사운드 설정…)". Choosing a saved preset switches to its output mode.
+- **Position** — the line along the bottom of the bar, from the cover's lower right corner to just before the service icon. Press or drag it to move. When the pointer rests on it, the row right above it blurs and the elapsed and remaining times appear over its two ends.
+- **Heart** — adds to Fidenne's own **Liked songs** in the library, separate from the service app's likes.
+- **Service icon** — the app making the sound now. Only the icon shows, without a name; resting the pointer on it shows the name. Pressing it opens the current track in that service (for YouTube Music, its browser tab).
+- **Output mode** — the label shows only the current output (for example `DSD256` · `PCM 24-bit`). Pressing it opens the menu: PCM Direct · sound presets (recommended list) · saved presets · "Sound settings… (사운드 설정…)". Details such as the filter and order are shown inside this menu. Choosing a saved preset switches to its output mode.
 - **⋯** — the track menu ([§2.7](#27-track-menu---and-right-click)) and "Output settings… (출력 설정…)" (opens the filter card on the I/O page).
+- **Up next (다음 재생)** — opens and closes the Up next · Lyrics column.
 - **Engine switch** — turns Fidenne's processing (the engine) on and off. Its colour is the state (green running · orange preparing · red error). When the engine is off with an error, a red ! appears beside it; pressing it opens the I/O · Diagnostics page.
   - **The engine switch does not start a track, and the play button does not turn the engine off.** Pause stops only the playback app, and **Play** with the engine off turns it on and plays.
   - What plays when the engine starts is set by **After the engine starts (엔진 시작 후)** on the I/O page ([§7.3](#73-streaming-app-autoplay--input-and-output-devices)).
 - Shuffle · repeat work only on lists played from Fidenne. Another app's queue is handled in that app.
+- Click a song list's **#** · **Title (제목)** · **Album (앨범)** · **Time (시간)** head to sort by that column ascending; click again for descending, and once more for the list's own order (the sorted head shows ↑ ↓). Anywhere in the head's box works. **#** returns to the list's own order. It is the same state as the list's **Sort (정렬)** menu, playback follows the order on screen, and it is forgotten when the app quits.
 - When a browser or another app starts making sound, the bar says **`시스템 소리 — 출처를 모름`** (system sound — unknown source), and meanwhile it does not count history or look up lyrics.
 - When Spotify plays on another device (a phone etc.), the bar shows only **`Spotify — 다른 기기에서 재생 중`** (playing on another device). Control it on that device. If content scrolling behind the bar hides its text, change the material in Settings › General › **Playback capsule (재생 캡슐)**.
 
@@ -157,7 +163,7 @@ When a track plays, the lyrics panel shows its lyrics. Internet lyrics (lrclib.n
 
 - **Menu bar icon** (waveform) — status · start · stop · play/pause · open window · output device · **EQ presets ▸** (the last five; choosing one is heard at once) · quit. Start · stop are the same as the engine switch.
 - **Hiding the icon** — turn Fidenne off in **System Settings › Menu Bar › Allow in the Menu Bar**. The window · Dock · shortcuts stay.
-- **App menu** — "About Fidenne" (with the trademark notice), **Check for updates… (업데이트 확인…)**. It reads the public repository once, only when pressed, and says "최신입니다" (up to date) or names the new version (or says there is no public release yet). For a new version, copy the Homebrew command or open the release page. The app never downloads or installs by itself.
+- **App menu** — "About Fidenne" (with the trademark notice), **Check for updates… (업데이트 확인…)**. It reads the public repository once and says "최신입니다" (up to date) or names the new version (or says there is no public release yet). For a new version it also shows a few lines of what changed. If you left the GitHub connection on at first run, it also checks once a day without being pressed and tells you about a new version (turn it off with the switch at the bottom of Network destinations). The app never downloads or installs by itself.
 - **Help menu** — **Show controls (조작법 보기)** · **Create diagnostics for a problem report… (문제 제보용 진단 만들기…)** ([§10](#10-sending-a-support-file)). **Diagnostics menu** — start/stop diagnostics · **Export support diagnostics… (지원용 진단 내보내기…)** · **Delete saved diagnostics… (저장된 진단 삭제…)**.
 - Deletions that cannot be undone (saved diagnostics · a playlist · shortcuts "all to defaults") ask once. The red button is not pressed by Return.
 - **Shortcuts** — the list is in Settings › **Controls and shortcuts (조작과 단축키)**: change · clear · default per key. It warns about clashes with macOS shortcuts. They work only while the Fidenne window is in front (media keys excepted).
@@ -184,6 +190,7 @@ The first time you open Equalizer and Ostrum, a tip **EQ 다루기** (Handling t
 
 - **Two-finger scrolling** always moves the page. A value changes only when you keep **⌘ held** with the pointer on the control (scroll up = up); add ⌥ · Shift for slower. Choose the behavior in Settings › Controls and shortcuts › **Change values with two-finger scrolling (두 손가락 스크롤로 값 바꾸기)** (with ⌘ held · when started over a control · off).
 - **Trackpad haptics** — **Off · ends only · normal (끔 · 양끝 알림 · 일반)** in Settings › Controls and shortcuts. On a Force Touch trackpad a light tap per notch while dragging.
+- **Music page back · forward** — the ‹ › buttons, ⌘[ ⌘], a sideways trackpad swipe and the **mouse side buttons** (back · forward) all make the same step. The side buttons work only while the Fidenne window is in front.
 - **⌘Z / ⇧⌘Z** — step back and forward through changes made on the DSP page (one whole drag is one step). Undone values are heard at once.
 
 ### 2.7 Track menu — ⋯ and right-click
@@ -216,7 +223,7 @@ Where you search and open Apple Music · Spotify · YouTube Music in one place.
 
 After connecting you see "Refresh playback permission (재생 권한 갱신)" · "Disconnect (연결 해제)". **Follow Spotify queue · for Jam (Spotify 대기열 따르기 · Jam용)** keeps Fidenne from overwriting a Spotify shared queue.
 
-**Did it work** — pressing a track shows its name and service badge in the bottom bar, and the position moves.
+**Did it work** — pressing a track shows its name and service icon in the bottom bar, and the position moves.
 
 ## 4. Library page
 
@@ -232,7 +239,7 @@ Where you listen to music files on this Mac. Formats read: WAV · AIFF · FLAC �
 - **Songs** — the search field (⌘F) filters the current list. A file that cannot play shows the reason (`손상된 파일`, damaged file, etc.) in the format column. **Albums · Artists** are grouped by file tags.
 - **Playlists** — enter a name and create one. Inside: Play all · Shuffle · Delete… (deletes only the playlist; files stay). "파일을 찾을 수 없음" (file not found) means a folder was removed or the file moved.
 - **Selecting several · reordering** (playlists · Up next) — select with ⌘-click · Shift-click, and drag a row onto another to move it. **Return** plays the first selected track.
-- **Up next** — the list button in the bottom bar shows the current and upcoming tracks. Tracks of the same rate play without a gap; where the rate changes there is a short break.
+- **Up next** — the **Up next (다음 재생)** button in the bottom bar shows the current and upcoming tracks. Tracks of the same rate play without a gap; where the rate changes there is a short break.
 - Files always play through Fidenne. Even with PCM Direct as the output mode, files go out through Fidenne's PCM output.
 
 **YouTube Music playlists** collect not on this page but in `Music › YouTube Music › My playlists`. There are two ways in — opening a list screen in the browser ([§8.1](#81-using-youtube-music-chrome-extension)) and a Google Takeout file ([§4.1](#41-importing-youtube-music-playlists)). Fidenne never walks the YouTube Music site by itself. What you can do on an imported track row:
@@ -399,7 +406,7 @@ A table of which formats your DAC takes (DSD128 · DSD256 · PCM 24 · 16-bit). 
 - If the DAC does not take the chosen format, Fidenne does not drop to another rate; it does not start.
 - **It asks once the first time it sends DoP** — `<DAC 이름>로 DSD(DoP)를 처음 보냅니다` (sending DSD (DoP) to <DAC> for the first time). Confirmed in the table does not mean the DAC decodes DoP; a DAC that cannot plays loud noise.
   Lower the volume or take off the headphones; if the DAC's manual lists DoP press **DoP를 받는 DAC · 시작** (DAC takes DoP · start), otherwise **PCM 24-bit로 재생** (play as PCM 24-bit). Check that the DAC's indicator shows DSD; if you chose wrongly, **Ask again (다시 묻기)** on the DoP line under the table.
-- Some DACs need the **macOS volume at maximum** for DSD · integer PCM output. If it is lower you see `DAC 음량이 최대가 아니어서…` (the DAC volume is not at maximum…) — turn the loudness down with the DAC's knob.
+- With a DAC whose volume control is linked to the macOS volume, Fidenne takes that volume over for DSD · integer PCM output: it plays at the same loudness by lowering the sound inside Fidenne, and gives the volume back afterwards. The output device line in Playback Chain shows `DAC 음량 −○ dB 를 Fidenne 이 넘겨받음` (Fidenne took over the DAC volume of −○ dB). If it cannot, you see `이 DAC 의 음량을 Fidenne 이 넘겨받지 못했습니다` (Fidenne could not take over this DAC's volume) — listen to that DAC with PCM Direct ([Troubleshooting](TROUBLESHOOTING.md#dac-volume-and-dsd-dop--integer-pcm)).
 - **If the DAC reconnects within N seconds, resume (DAC가 N초 안에 다시 연결되면 이어서 재생)** — waits for the same DAC only. "Don't wait (기다리지 않기)" turns it off.
 - It starts even if another app is using the DAC. If that app does not let go, `다른 앱(…)이 DAC에서 물러나지 않아…` (another app did not move away from the DAC…) shows once and it does not retry. Meanwhile the other app's sound may move to the Mac speakers.
 - If `DAC 재생 통로가 macOS 안에서 멈췄습니다…` (the DAC playback path stopped inside macOS…) appears, unplug and replug the USB cable or restart Fidenne ([Troubleshooting Guide](TROUBLESHOOTING.md)).

@@ -22,6 +22,7 @@ Hardware, operating system and service limits of this version.
 - On **base M1 and M2 Macs**, the Trellis modulator at DSD256 may not keep up and the sound may break.
   If it does, use DSD128 or another modulator. This is an estimate from measurements on an M4 MacBook, not on a real M1.
 - DSD in the 48 kHz family is not opened.
+- Screens are tuned for the **default 100% interface scale**. At 75, 125 and 150% some screens are less polished. 100% is what development is measured against; please report a screen that breaks at another scale and we will fix it.
 - System audio is received as the **whole system** only. Picking a single app to receive is not in this version.
 - The beta was tested mainly on the maker's one Mac and three external DACs.
   If something is wrong on another DAC, a Bluetooth device or an HDMI output, please tell us.
@@ -49,6 +50,7 @@ Limits that come from how macOS and the music apps work, which Fidenne cannot ch
 - **Stereo (two channels) only.** Multichannel sound such as Dolby Atmos, and 4- or 8-channel audio interfaces, cannot use the engine.
 - **The engine cannot output over Bluetooth, AirPlay or HDMI.** Engine output needs a wired USB DAC that accepts 352.8 kHz.
 - **PCM Direct cannot match the rate track by track,** because the sound does not pass through Fidenne.
+- **A DAC whose volume control is linked to the macOS volume has its DAC-side volume at maximum during DSD · integer PCM playback.** Fidenne keeps the loudness the same inside Fidenne and gives the volume back afterwards, but during playback that volume cannot go higher. Details: [DAC volume and DSD (DoP) · integer PCM](TROUBLESHOOTING.md#dac-volume-and-dsd-dop--integer-pcm)
 - **Apple silicon Macs with macOS 26 or later** only.
 
 ## What is hard for an app made by one person
