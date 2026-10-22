@@ -68,6 +68,22 @@ Built-in speakers, AirPods, most dongles and monitors are such devices, and they
 
 If you have not chosen a DAC yet, or it has not been confirmed, the app starts in PCM Direct. A DAC that accepts DSD can also be sent DSD.
 
+## Why does the DAC rate stay when a track moves on by itself?
+
+Changing a DAC's sample rate means stopping the sound for a moment and opening it again. Doing that while one track runs into the next could cut or pop the sound,
+so Fidenne **does not touch sound you are hearing.** When a track moves on by itself and the rate differs, it keeps the current rate and macOS converts.
+
+Matching the rate to a track happens only when you pick the track yourself, before any sound. The rate learned for each track is remembered by service and by evidence
+(track · album) and used then. An album with a different release is not treated as the same memory.
+
+## Where is lyrics translation done?
+
+With translation on, Fidenne tries these in order and drops to the next when one does not work: (1) the AI provider you chose with your own API key (only if you turned it on) →
+(2) the Apple model on this Mac (Apple Intelligence, no key, the lyrics never leave the Mac) → (3) macOS translation → (4) the original.
+Only (1) sends the lyric lines and the title · artist directly to the chosen provider, and charges go to your account. (2) to (4) send nothing out of the Mac.
+Fidenne never quietly switches to another provider because one failed. What goes out is in the [privacy policy](../../../PRIVACY.en.md).
+Translations are for your own listening on this Mac; if you publish lyrics or translations elsewhere, that is your responsibility. Lyrics remain the property of their rights holders.
+
 ## Why is Fidenne Inlet installed separately?
 
 Fidenne Inlet is a virtual audio device that music apps can send sound to as if it were a speaker. On macOS such a device is loaded
@@ -80,3 +96,19 @@ Inlet is the only thing installed, and Fidenne checks its signature again right 
 
 If you would rather not install anything, choose **System tap (시스템 탭)** in the first-run setup. It needs no installation, but macOS
 hands the sound over converted to 48 kHz. Inlet is recommended because it receives the playing app's original sample rate.
+
+## Where does an update connect to?
+
+An update check reads the new-version notice file on github.com. GitHub sometimes hands this file or the new version over to
+`release-assets.githubusercontent.com`. For the app's other connections, a pointer to another address is followed only when that
+address is allowed. For updates the app checks only the first address, and the update tool (Sparkle) follows what comes after it
+itself, so this one place is the exception where the app cannot check the pointer again. A downloaded new version is installed only
+when its signature checks out, and only when you choose to install it in the update window. What goes out is in the
+[privacy policy](../../../PRIVACY.en.md).
+
+## Why must the Safari extension be opened from the Applications folder?
+
+The Safari extension is inside the Fidenne app, and Safari finds it when the app is in a proper place such as the Applications folder.
+An app opened straight from the downloaded .dmg or from the Downloads folder is run by macOS from a separate temporary copy, and Safari
+cannot show its extension. Fidenne notices this and says `Safari 확장은 Fidenne을 응용 프로그램 폴더로 옮긴 뒤 다시 열어야 Safari에 보입니다.`
+(move Fidenne to the Applications folder and open it again for the extension to appear in Safari).

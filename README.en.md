@@ -9,11 +9,11 @@
 <h1 align="center">Fidenne</h1>
 
 <p align="center">
-  A free app that sends your Mac's music to your external DAC
+  A Mac app that refines the sound of the music app you already use with DSP and sends it to your external DAC
 </p>
 
 <p align="center">
-  <b>Public beta 1 — <a href="https://github.com/fidenne/fidenne/releases/latest">Download</a> · <a href="https://fidenne.github.io/fidenne/">Install and use guide (Korean)</a></b>
+  <b>Public beta 1 · 0.6.0 — <a href="https://github.com/fidenne/fidenne/releases/latest">Download</a> · <a href="https://fidenne.github.io/fidenne/">Install and use guide (Korean)</a></b>
 </p>
 
 <br>
@@ -26,8 +26,9 @@
 
 ## What it is
 
-An app for people who listen to Apple Music, Spotify and YouTube Music on a Mac and send the sound to an external DAC.
-You keep using the player you know; before the sound reaches the DAC, Fidenne shapes it or converts it to a format your DAC handles well.
+Fidenne is a Mac app that refines the sound of the music app you already use with DSP and sends it to your external DAC.
+Keep using Apple Music, Spotify, YouTube Music or the app you know, and choose DSP and an output mode suited to your DAC in Fidenne.
+The music still plays in each service's own app, so play counts and ads stay with the service; Fidenne never blocks or skips ads.
 
 <br>
 
@@ -47,23 +48,40 @@ The Playback Chain in the app shows at a glance which path is in use.
 
 - Choose the output mode that suits your DAC — DSD (DoP) · PCM 352.8 kHz · PCM Direct.
 - Change EQ, Ostrum, Crossfeed and filters and hear the result right away.
-- Search the same way in every service, and keep favourites and playlists in the Fidenne library.
-- Keep a listening history on this Mac only. Sound is never recorded.
+- Check the path your sound takes and the processing in use in Playback Chain.
+- Control the service app you already use from Fidenne and view track information and lyrics alongside it (playback stays in each service’s own app).
+- Sound is never recorded.
+
+<br>
+
+## What's new in 0.6.0
+
+- The home and streaming screens are new, and Apple Music, Spotify and YouTube Music look the same. Continue listening, today's listening, your playlists and saved albums are on one screen.
+- Drag songs to set their order in a playlist or album, and save an album to the service's library from the app.
+- Translate lyrics with your own API key (Anthropic Claude · OpenAI · Google Gemini) or with the Apple model on this Mac. The Lyrics tab gathers the lyrics and translations of the songs you have heard.
+- YouTube Music also works in Safari. The extension is inside the app, so there is no file to install.
+- It opens on macOS 15 (up to 0.5.2 it needed macOS 26).
+- When a song moves on by itself, the DAC rate is not touched. If the app fails to start repeatedly, a recovery screen opens it without erasing your settings.
+- The app checks for a new version every 4 hours, and downloads one only when you choose to install it in the update window; it installs after checking the signature.
+
+The full list of changes is on the [releases page](https://github.com/fidenne/fidenne/releases/latest).
 
 <br>
 
 ## What you need
 
-A Mac with Apple silicon (M1 or later), macOS 26 or later, and a **wired external DAC connected directly by USB**. The app is free.
+- A Mac with Apple silicon (M1 or later) and **macOS 15 or later**. It does not open on an Intel Mac.
+- A **wired external DAC connected directly by USB**. DSP (EQ · Ostrum · Crossfeed) and DSD · PCM 352.8 kHz output run on a **2-channel DAC that accepts 352.8 kHz**. Devices that do not, such as built-in speakers, AirPods, most dongles and monitors, can only be listened to in **PCM Direct** (Fidenne does not process the sound; it goes through macOS).
+- The app is free.
 
 <br>
 
 ## Installation
 
-Public beta 1 is out. Install it like this.
+This is 0.6.0 of public beta 1. Install it like this.
 
 1. Download the `.dmg` file from the [releases page](https://github.com/fidenne/fidenne/releases/latest) of this repository.
-2. Open the `.dmg` and drag Fidenne into the **Applications** folder.
+2. Open the `.dmg` and drag Fidenne into the **Applications** folder. Do not run it straight from the disk image or the Downloads folder (the Safari extension would not show).
 3. Open Fidenne from Applications and press **Open** if a confirmation window appears.
 4. Follow the first-run setup. Allow the permissions macOS asks for.
 
@@ -75,7 +93,7 @@ Before the first playback, turn down the volume on your DAC and amplifier. Step-
 
 A free app made by an individual, not affiliated with Apple, Spotify or Google.
 
-- **Apple Music · Spotify** — Fidenne controls each app for you. Spotify's search and playlist screens work only with a Spotify developer key you create yourself, and that is optional.
+- **Apple Music · Spotify** — Fidenne controls each app for you. Spotify's search and playlist screens work only with a Spotify Premium account and a Spotify developer key you create yourself, and that is optional. Every Spotify item there opens in Spotify through **OPEN SPOTIFY**. Without connecting, Fidenne still processes the sound of the Spotify app.
 - **YouTube Music** — an experimental feature connected through a browser extension. It reads only the track on the page you opened and never touches ads. What it reads goes only to Fidenne on this Mac and nowhere else.
 - **Lyrics · headphone measurements · song search and charts** — public data from LRCLIB, squig.link and Apple, fetched to this Mac. Copyright stays with the rights holders and the measurers.
 - **Sound** — processed only on this Mac. Never recorded or sent anywhere.
@@ -90,6 +108,15 @@ The full list is in the [Privacy notice](/PRIVACY.en.md).
 - [Install and use guide](/docs/user/GUIDE.md) (Korean only) — from installing to everyday use, in order.
 - [User manual](/docs/user/en/MANUAL.md) · [Troubleshooting guide](/docs/user/en/TROUBLESHOOTING.md) · [Known limitations](/docs/user/en/KNOWN_LIMITATIONS.md)
 - Contact: fidenne.support@gmail.com
+- Rights and terms enquiries: fidenne.support+legal@gmail.com
+
+## FAQ
+
+**Is the source code public?**
+No. Fidenne is a personal project, and the app's source code is not published. The app stays free.
+
+**Is there an SDK for building extensions?**
+One is planned, but it is not confirmed and there is no date yet. The licence under consideration is Apache-2.0. Details will follow when it is published.
 
 ## Issues
 

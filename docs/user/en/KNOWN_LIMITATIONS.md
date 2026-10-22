@@ -13,11 +13,11 @@ For how to use the app see the [user manual](MANUAL.md); when something does not
 
 Hardware, operating system and service limits of this version.
 
-- It opens **only on Apple silicon (M1 and later) Macs running macOS 26 or later.** It does not open on an Intel Mac even if macOS 26 is installed.
+- It opens **only on Apple silicon (M1 and later) Macs running macOS 15 or later.** It does not open on an Intel Mac even if macOS 15 or later is installed. macOS 15 was checked in a virtual machine (install, first run, each screen); listening for long on a real Mac with a DAC has not been done yet.
 - **A wired USB external DAC is required.** The beta is built for listening through one.
 - The DSP engine runs **only on a 2-channel external DAC that accepts 352.8 kHz or higher.** Built-in speakers,
   AirPods, most dongles and monitors do not meet this; they are marked at the end of their name, and DSP and
-  library playback cannot be used with them. Only listening to Apple Music or Spotify in PCM Direct works.
+  library playback cannot be used with them. Only listening to Apple Music or Spotify in PCM Direct works. If playback does not start after you first turn on such a device, choose PCM Direct yourself under I/O & Diagnostics › Output mode.
 - A 4- or 8-channel audio interface does not use the DSP engine even if it accepts 352.8 kHz.
 - On **base M1 and M2 Macs**, the Trellis modulator at DSD256 may not keep up and the sound may break.
   If it does, use DSD128 or another modulator. This is an estimate from measurements on an M4 MacBook, not on a real M1.
@@ -34,8 +34,9 @@ Hardware, operating system and service limits of this version.
   If it cannot be read, the app follows only the track information it polls about once a second, and switches may come late.
   On a non-administrator standard account macOS may block it (still being confirmed).
 - **Spotify** depends on the network and your login state. If your login expires or a permission is denied, you may have to handle the macOS authorization window yourself.
-- The **YouTube Music** extension works only in Google Chrome and Microsoft Edge.
-  Install it in **only one** of them; with both, a tab may open in the browser you do not usually use.
+- The **YouTube Music** extension works only in Google Chrome, Microsoft Edge and Safari. Safari needs version 18.4 or later.
+  The Safari extension appears in Safari only for a Fidenne opened from the **Applications folder** (or the Applications folder in your home folder); an app opened from inside the downloaded .dmg or from the Downloads folder does not show it.
+  For Chrome · Edge, install it in **only one** of them; with both, a tab may open in the browser you do not usually use.
   If the site changes its layout, track information may be empty for a while.
 - **Lyrics**: some tracks that do have lyrics show "marked as an instrumental" and no lyrics.
   You can attach them yourself with **Link lyrics file** in the lyrics panel.
@@ -51,7 +52,7 @@ Limits that come from how macOS and the music apps work, which Fidenne cannot ch
 - **The engine cannot output over Bluetooth, AirPlay or HDMI.** Engine output needs a wired USB DAC that accepts 352.8 kHz.
 - **PCM Direct cannot match the rate track by track,** because the sound does not pass through Fidenne.
 - **A DAC whose volume control is linked to the macOS volume has its DAC-side volume at maximum during DSD · integer PCM playback.** Fidenne keeps the loudness the same inside Fidenne and gives the volume back afterwards, but during playback that volume cannot go higher. Details: [DAC volume and DSD (DoP) · integer PCM](TROUBLESHOOTING.md#dac-volume-and-dsd-dop--integer-pcm)
-- **Apple silicon Macs with macOS 26 or later** only.
+- **Apple silicon Macs with macOS 15 or later** only.
 
 ## What is hard for an app made by one person
 
@@ -59,10 +60,11 @@ Limits that come from how macOS and the music apps work, which Fidenne cannot ch
 - **Answers and fixes can take time.** Reports come by mail and GitHub issues; a reply may not be immediate.
 - **The interface is Korean only for now.** An English interface comes later.
 - **No Windows or Intel Mac versions.**
-- **Older macOS versions are planned after testing.** Today it needs macOS 26 or later. Versions that have the features Fidenne relies on — such as taking another app's sound, available since macOS 14.2 — will be tested one by one and added as they pass.
+- **Versions older than macOS 15 are not supported.** The Liquid Glass screen effects and translating lyrics with Apple Intelligence need macOS 26 or later. On macOS 15 Fidenne uses the earlier surface material (the playback capsule is always opaque) and the other translation routes instead.
 - **When a music service changes its pages or rules,** that connection (especially the YouTube Music extension) can stop suddenly, and a fix can take a few days.
 - **Sound measurements are digital only.** There is no equipment to measure a DAC's analogue output.
 - **No paid service keys inside the app,** so Spotify search and playlists need a Spotify developer key you create yourself (optional).
+- **AI lyrics translation has been confirmed working with Claude (Anthropic) only.** OpenAI and Gemini follow each company's public API documentation and current model names but have not yet been tried with a real account. If 「연결 시험…」 (Test connection) shows an error, please report it with the message.
 
 ## Left out of beta 1
 
@@ -78,7 +80,6 @@ Things that exist in the code or are built, but are off or not shipped in beta 1
 - **The "연결 후보" (link candidates) screen for joining similar songs** — hidden. Songs that are certainly the same are still merged into one row in the listening history.
 - **Finding lyrics on Chinese lyrics servers** — not in this version. Lyrics come from LRCLIB only.
 - **Light theme** — not fully supported yet. The app is tuned for the dark theme, so some screens may look off in light.
-- **YouTube Music list screen** — still differs from the Apple Music and Spotify playlist screen (no large cover or sort; just name, song count and ▶ ⤨). The first update gives it the same screen.
 - **English UI** — not yet. Sentences are Korean; only DSP page terms are English.
 - **Developer tools** — not in this version.
 - **Chain presets** — not yet. The crossfeed head model and SOFA HRTF are plans only.
@@ -124,11 +125,15 @@ Deliberately not done.
 
 No dates are promised. The order may change after beta feedback.
 
-- **Planned** — small details fixed right after release (alignment, click-to-sort list headers, filling the empty space on the music home, wider YouTube Music search, YouTube Music lists on the same playlist screen as the other services).
+- **Planned** — small details fixed right after release (alignment, filling the empty space on the music home, wider YouTube Music search).
 - **Planned** — a global "follow the source" switch for filters, dither for every modulator, a 7th-order CLANS modulator option.
 - **Planned** — a Spotify queue playlist; the same home screen for the local library as for services.
 - **Under consideration** — rolling back to the previous version if an update fails; making diagnostic files smaller.
-- **Under consideration** — other UI languages such as English.
+- **Planned** — changing filters and modulators within DSD without a gap.
+- **Planned** — EQ · Ostrum · crossfeed on devices that cannot take 352.8 kHz (built-in speakers · AirPods · most dongles).
+- **Under consideration** — other UI languages such as English and Japanese.
+- **Under consideration** — one-click sound setups per headphone; sharing the current sound path as an image.
+- **After the official release** — an SDK that lets other developers add features to Fidenne, published once the app is judged stable and complete after the official release.
 - **Under consideration** — moving tracks between services (Spotify · YouTube Music tracks into the Apple Music library).
 - **Under consideration** — enriching the library with album notes, credits and artist information (file tags stay untouched; added from a public music database).
 - **Under consideration** — grouping an untidy music folder into albums · artists · covers automatically; syncing untimed lyrics by hand.

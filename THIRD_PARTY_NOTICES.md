@@ -229,3 +229,9 @@ SciPy and are carried as numbers; the tools themselves are not in the app.
   않고, 사용자가 직접 설치했을 때 장치 목록에서 찾아 입력으로 고를 수 있게 할 뿐입니다.
   A virtual audio device the user installs; Fidenne neither ships nor links it, and only lists it as an inpu
   when present. https://github.com/ExistentialAudio/BlackHole
+
+## 5. Spotify 로고 (Spotify logo)
+
+Spotify 로고는 Spotify AB의 상표입니다. Spotify에서 제공한 목록의 출처를 표시하기 위해 공식 로고를 변경 없이 사용합니다.
+The Spotify logos are trademarks of Spotify AB. Official, unmodified logos identify content provided by Spotify.
+[Spotify Design & Branding Guidelines](https://developer.spotify.com/documentation/design).

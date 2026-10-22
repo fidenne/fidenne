@@ -8,7 +8,7 @@ Each task is **steps → how to tell it worked**. If it does not work, see the [
 Screen locations are written as `Page › Section › Control`. Pages are chosen in the sidebar (⌘1 Music (음악) · ⌘2 Library (보관함) · ⌘3 Listening History (청취 기록) · ⌘4 DSP · ⌘5 I/O · Diagnostics (입출력 · 진단)). Open Settings (설정) with ⌘,.
 For what cannot be done, see [Known limitations](KNOWN_LIMITATIONS.md).
 
-**Contents** — Listening: [1](#1-listen-to-apple-music-and-spotify-through-fidenne) · [2](#2-capture-only-a-specific-apps-sound) · [3](#3-listen-to-music-files-on-this-mac) · [26](#26-play-youtube-music-tracks-from-the-music-page) · [27](#27-search-once-add-a-track-that-is-not-in-your-library-to-the-apple-music-library-and-play-it) · [28](#28-continue-a-track-started-in-the-music-app-in-fidennes-queue) · Output: [4](#4-change-the-output-device-dac) · [5](#5-change-the-output-format--dsd--pcm-integer--pcm-direct) · [6](#6-pick-a-filter-and-dsd-conversion-and-save-it-as-a-sound-preset) · Shaping the sound: [7](#7-load-a-headphone-measurement-and-target) · [8](#8-auto-eq-for-your-headphones) · [9](#9-build-an-eq-by-hand-apply-it-and-save-it) · [10](#10-fix-excessive-settings-boost--clipping) · [11](#11-shape-bass--presence--width-with-ostrum) · [12](#12-reduce-the-left-right-separation-in-headphones--crossfeed) · Comparing: [14](#14-compare-at-the-same-volume-with-ab) · [15](#15-test-blind-whether-you-can-really-hear-a-difference--abx) · [16](#16-alternate-on-and-off-automatically--auto-bypass--loop) · Other: [17](#17-view-lyrics) · [18](#18-view-and-export-listening-history) · [19](#19-turn-off-what-goes-out-to-the-internet) · [20](#20-send-a-support-file-when-something-goes-wrong) · [21](#21-adjust-sliders-and-playback-position-with-two-fingers) · [22](#22-read-feature-and-graph-explanations-in-detail) · [23](#23-check-whether-a-new-version-is-out) · [24](#24-volume-notice-before-sound-starts--turning-output-monitoring-on-and-off) · [25](#25-see-and-control-youtube-music-chrome-from-fidenne) · [29](#29-connect-spotify-for-the-first-time-your-own-key) · [30](#30-get-the-beta-and-report-a-problem)
+**Contents** — Listening: [1](#1-listen-to-apple-music-and-spotify-through-fidenne) · [2](#2-capture-only-a-specific-apps-sound) · [3](#3-listen-to-music-files-on-this-mac) · [26](#26-play-youtube-music-tracks-from-the-music-page) · [27](#27-search-once-add-a-track-that-is-not-in-your-library-to-the-apple-music-library-and-play-it) · [28](#28-continue-a-track-started-in-the-music-app-in-fidennes-queue) · Output: [4](#4-change-the-output-device-dac) · [5](#5-change-the-output-format--dsd--pcm-integer--pcm-direct) · [6](#6-pick-a-filter-and-dsd-conversion-and-save-it-as-a-sound-preset) · Shaping the sound: [7](#7-load-a-headphone-measurement-and-target) · [8](#8-auto-eq-for-your-headphones) · [9](#9-build-an-eq-by-hand-apply-it-and-save-it) · [10](#10-fix-excessive-settings-boost--clipping) · [11](#11-shape-bass--presence--width-with-ostrum) · [12](#12-reduce-the-left-right-separation-in-headphones--crossfeed) · Comparing: [14](#14-compare-at-the-same-volume-with-ab) · [15](#15-test-blind-whether-you-can-really-hear-a-difference--abx) · [16](#16-alternate-on-and-off-automatically--auto-bypass--loop) · Other: [17](#17-view-lyrics) · [18](#18-view-and-export-listening-history) · [19](#19-turn-off-what-goes-out-to-the-internet) · [20](#20-send-a-support-file-when-something-goes-wrong) · [21](#21-adjust-sliders-and-playback-position-with-two-fingers) · [22](#22-read-feature-and-graph-explanations-in-detail) · [23](#23-check-whether-a-new-version-is-out) · [24](#24-volume-notice-before-sound-starts--turning-output-monitoring-on-and-off) · [25](#25-see-and-control-youtube-music-chrome-from-fidenne) · [29](#29-connect-spotify-for-the-first-time-your-own-key) · [30](#30-get-the-beta-and-report-a-problem) · 0.6: [31](#31-use-youtube-music-in-safari) · [32](#32-save-an-album-to-your-library) · [33](#33-reorder-songs-your-way) · [34](#34-translate-lyrics-with-ai) · [35](#35-change-the-loudness-with-the-dac-volume-slider) · [36](#36-when-fidenne-stops-while-opening)
 
 ## 1. Listen to Apple Music and Spotify through Fidenne
 1. In `I/O · Diagnostics (입출력 · 진단) › Input and output devices (입력과 출력 장치) › Input (입력)`, choose **Fidenne Inlet** (if missing, **Install… (설치…)** in the same section, one administrator password) or **Process Tap**, which receives system sound without an install. For another loopback app, use **+ Another input device (+ 다른 입력 장치)**.
@@ -111,7 +111,7 @@ Auto Bypass · Loop comparison is **hidden in this beta** too. To compare on and
 ## 17. View lyrics
 1. Play a track and on the bar use ⋯ → **View lyrics (가사 보기)**.
 2. The first time, choose **Agree and search (동의하고 찾기)** (only the title · artist · album · length are sent), or **Do not send (보내지 않음)** and attach an LRC · TXT file.
-3. Adjust timing with the clock button, then + / −, text size in `Settings (설정) › Display (화면) › Lyrics text size (가사 글자 크기)`, find other editions with **Other edition (다른 판)** in the source line, and pick one in **Lyrics edition (가사 판)** when there are two or more.
+3. Adjust timing with the clock button, then + / −, text size in `sidebar › Lyrics (가사) tab › Display (표시)`, find other editions with **Other edition (다른 판)** in the source line, and pick one in **Lyrics edition (가사 판)** when there are two or more.
 
 **How to tell it worked**: The lyrics appear in the lyrics panel. More: Manual [§2.3](MANUAL.md#23-lyrics).
 
@@ -124,16 +124,16 @@ Auto Bypass · Loop comparison is **hidden in this beta** too. To compare on and
 
 ## 19. Turn off what goes out to the internet
 1. In `Settings (설정) › Privacy (개인정보) › Network destinations (네트워크 목적지)`, turn off each destination.
-2. To turn off only lyrics, `Settings (설정) › Privacy (개인정보) › Lyrics internet search (가사 인터넷 검색) › Look for lyrics on lrclib.net (lrclib.net에서 가사 찾기)`.
+2. To turn off only lyrics, the lrclib.net switch in `sidebar › Lyrics (가사) tab › Lyrics source (가사 출처)`.
 
 **How to tell it worked**: Even with everything off, receiving sound · DSP · DSD conversion · DAC output · local playback work. More: Manual [§8](MANUAL.md#8-settings-window).
 
 ## 20. Send a support file when something goes wrong
 1. **Help → Create diagnostics for a problem report… (도움말 → 문제 제보용 진단 만들기…)**. If you agreed to the optional diagnostic record at first launch, it is already recording: make the bundle right after the problem, before quitting the app. If it is off, press **Start diagnostic recording (진단 기록 시작)** and make the bundle the next time the problem happens.
 2. **Create bundle and view contents (번들 만들고 내용 보기)** and check the contents (they include the title · artist · service of songs you listened to).
-3. Press **Send by mail (메일로 보내기)**; when the mail app opens, compress the folder and attach it. If you use another mail service (Gmail and so on), **Copy mail form (메일 양식 복사)** copies the address, subject and form to paste. Send the diagnostic bundle by mail only — do not put it on a GitHub issue.
+3. Press **Send by mail (메일로 보내기)**; when the mail app opens, attach the .zip file from your Downloads folder (do not paste the contents: they get cut off). If you use another mail service (Gmail and so on), **Copy mail form (메일 양식 복사)** copies the address, subject and form to paste. Send the diagnostic bundle by mail only — do not put it on a GitHub issue.
 
-**How to tell it worked**: The folder opened with **Open bundle folder (번들 폴더 열기)** has `support.json` · `manifest.json` · `tracks.json` · `README.txt`. More: Manual [§10](MANUAL.md#10-sending-a-support-file).
+**How to tell it worked**: **Show .zip file (.zip 파일 보기)** shows the .zip file in Downloads; opened, its folder has `support.json` · `manifest.json` · `tracks.json` · `README.txt`. More: Manual [§10](MANUAL.md#10-sending-a-support-file).
 
 ## 21. Adjust sliders and playback position with two fingers
 1. Put the pointer over a control (playback position · EQ gain · Ostrum knob · PCM headroom slider, and so on).
@@ -150,8 +150,8 @@ Auto Bypass · Loop comparison is **hidden in this beta** too. To compare on and
 
 ## 23. Check whether a new version is out
 1. Press **Fidenne › Check for updates… (업데이트 확인…)** in the app menu.
-2. "Up to date (최신입니다)" means you are done. If there is a new version: installed with Homebrew, **Copy command (명령 복사)** copies the Terminal command; installed from a .dmg, **Open release page (릴리스 페이지 열기)** is where you get the new .dmg. The app never downloads or installs by itself. If there is no public release yet, it says so.
-3. You do not have to press it: if you left the GitHub connection on at first run, the app checks once a day by itself, and when there is a new version the notice also shows a few lines of what changed. To stop it, turn off **Check for a new version automatically once a day (새 버전을 하루에 한 번 자동으로 확인)** at the bottom of `Settings (설정) › Privacy (개인정보) › Network destinations (네트워크 목적지)`.
+2. "Up to date (최신입니다)" means you are done. If there is a new version, the update window opens with what changed, and the new version is downloaded only when you choose to install it. The downloaded version is installed, and Fidenne restarted, only after its signature checks out. If there is no public release yet, it says so. When downloading, github.com may point to a different address (`release-assets.githubusercontent.com`); the update tool follows that pointer itself.
+3. You do not have to press it: if you left the GitHub connection on at first run, the app checks every 4 hours by itself (and at launch and on wake), and when there is a new version the notice also shows a few lines of what changed. If the app is in the background, a notification banner appears once per version and clicking it opens the update window (the app asks for notification permission the first time; if you decline, you are told in the app window). To stop it, turn off **Check for a new version automatically, every 4 hours (새 버전을 자동으로 확인(4 시간마다))** at the bottom of `Settings (설정) › Privacy (개인정보) › Network destinations (네트워크 목적지)`.
 
 **How to tell it worked**: "Current version (지금 판)" in the result window matches the version on the top row of the Settings window. More: Manual [§8](MANUAL.md#8-settings-window).
 
@@ -163,7 +163,7 @@ Auto Bypass · Loop comparison is **hidden in this beta** too. To compare on and
 **How to tell it worked**: Playback starts and there is no mute row at the head of the window. More: Manual [§1](MANUAL.md#1-first-launch--the-five-step-first-run-setup) · [§8](MANUAL.md#8-settings-window).
 
 ## 25. See and control YouTube Music (Chrome) from Fidenne
-1. Turn on `Settings (설정) › Privacy (개인정보) › YouTube Music › Connect with Chrome · Edge extension (Chrome · Edge 확장과 연결)`, and in **Setup guide… (설치 안내…)** choose **Chrome** or **Edge**.
+1. Turn on **YouTube Music (experimental)** in `Settings › General` first, then turn on `Settings (설정) › Privacy (개인정보) › YouTube Music › Connect with Chrome · Edge extension (브라우저 확장과 연결 (Safari · Chrome · Edge))`, and in **Setup guide… (설치 안내…)** choose **Chrome** or **Edge**.
 2. Follow the guide window — **Copy address (주소 복사)** → paste it in the address bar and press Return → turn on **Developer mode (개발자 모드)** → **Load unpacked (압축해제된 확장 프로그램을 로드합니다)** → **Copy path (경로 복사)** → in the file window ⌘⇧G · ⌘V · Return · **Open (열기)**.
 3. Reload the YouTube Music tab that was already open with ⌘R and play a track.
 4. A browser that puts unused tabs to sleep leaves YouTube Music unable to answer — add `music.youtube.com` as an exception: Chrome under Settings → Performance → Memory Saver → **Always keep these sites active**, Edge under Settings → System and performance → Resource saving → **Never put these sites to sleep**.
@@ -200,8 +200,57 @@ Auto Bypass · Loop comparison is **hidden in this beta** too. To compare on and
 **How to tell it worked**: Searching with Spotify in the Music page's service list returns results, and Settings has **Refresh playback permission (재생 권한 갱신)** · **Disconnect (연결 해제)**. Without a key, sound processing of tracks played in the Spotify app still works. More: Manual [§3](MANUAL.md#3-music-page).
 
 ## 30. Get the beta and report a problem
-1. Get the signed and notarized `.dmg` from the releases page (`https://github.com/fidenne/fidenne/releases`) (Apple silicon Mac, macOS 26 or later).
+1. Get the signed and notarized `.dmg` from the releases page (`https://github.com/fidenne/fidenne/releases`) (Apple silicon Mac, macOS 15 or later).
 2. Make a support file as in section 20 and send it to **fidenne.support@gmail.com** (**Send by mail (메일로 보내기)** or **Copy mail form (메일 양식 복사)** fills in the address, subject and form).
 3. Write the DAC and output mode · what you were doing and what you heard or saw. The app version and macOS version are already in the form and the bundle. Send security problems by mail instead of a public issue.
 
 **How to tell it worked**: The mail has the above and the support file. The app sends nothing on its own. More: Manual [Beta notice and where to report](MANUAL.md#beta-notice-and-where-to-report).
+
+## 31. Use YouTube Music in Safari
+1. Turn on **YouTube Music (experimental)** in `Settings › General` and `Settings › Privacy › YouTube Music › Connect with browser extensions (Safari · Chrome · Edge)` (Safari uses the same switches).
+2. Quit Fidenne and make sure it is in the **Applications (응용 프로그램)** folder. Opened from the Downloads folder or from inside the .dmg, Safari does not show the extension and Settings shows `Safari 확장은 Fidenne을 응용 프로그램 폴더로 옮긴 뒤 다시 열어야 Safari에 보입니다.` (move Fidenne to the Applications folder and open it again). After moving it, open it from there.
+3. Press **Open Safari Settings (Safari 설정 열기)** in `Settings › Privacy › YouTube Music`. If Safari's extension settings open, turn on Fidenne's YouTube Music extension; if only Safari opens, turn it on in Safari › Settings › **Extensions (확장 프로그램)**.
+4. On the music.youtube.com tab press the Fidenne icon in the row of extension icons next to Safari's address bar, and allow it to read `music.youtube.com` once (**Always Allow**).
+5. Open music.youtube.com and play a track. If the tab was already open, reload it with ⌘R.
+
+**How to tell it worked**: The bottom bar shows that track. Safari 18.4 or later is required. If the bar stops, reload that tab once. If it does not work, see the [Troubleshooting guide](TROUBLESHOOTING.md). More: Manual [Using Safari](MANUAL.md#using-safari).
+
+## 32. Save an album to your library
+1. In the Music page pick a service and open an album.
+2. Press the **라이브러리** (Library) button in the album header (it may read **YouTube Music에 저장**, save to YouTube Music).
+3. Spotify saves at once and the button becomes **저장됨** (Saved). If a notice about the save permission appears, connect **Spotify 연결** again in Settings.
+4. For Apple Music you see `보관함에 넣었습니다. Music 앱에 보이기까지 조금 걸릴 수 있습니다.` (added; it can take a while to show in Music), and a moment later the button becomes **저장됨**. If it is slow, refresh the Music app.
+5. For YouTube Music, that album's page must be open in the browser. Pressing the button makes the extension press the page's save control once and report the result.
+
+**How to tell it worked**: The button becomes **저장됨**, or you see `이미 저장되어 있어요.` (already saved) · `YouTube Music 페이지에서 저장을 확인했어요.` (confirmed on the YouTube Music page). It also shows in the service's own library (Apple Music may be slow). More: Manual [§3](MANUAL.md#3-music-page).
+
+## 33. Reorder songs your way
+1. Open a playlist or album.
+2. Press **순서 조정** (Reorder) in the play row (it is available for two or more songs once the list has been read in full).
+3. Drag song rows to move them. With the keyboard select a row and use ⌥↑ · ⌥↓; if dragging is hard, use the row's **위로 옮기기** (move up) · **아래로 옮기기** (move down). ⌘Z undoes a wrong move.
+4. Press **완료** (Done).
+
+**How to tell it worked**: The **#** column shows your own order and playback follows it. The playlist's order at the service is unchanged. Home sections and playlist tiles can be dragged too. More: Manual [§3](MANUAL.md#3-music-page).
+
+## 34. Translate lyrics with AI
+1. Get your own API key on the site of a provider (Anthropic Claude · OpenAI · Google Gemini). Charges go to your account.
+2. In the collapsed **AI provider settings** under `sidebar › Lyrics tab › Translation steps (번역 단계)` pick the **Provider (제공자)** and **Model (모델)**, paste the key into the **API key (API 키)** field and press **키 저장** (save key).
+3. Press **AI 가사 번역 켜기** (turn on). A window says what goes where; read it and press **켜기**.
+4. In the lyrics column turn on **Korean translation (한국어 번역)**. If you want, limit the count with **하루 요청 상한 사용** (daily limit).
+5. To do it with no key, use **Translate on this Mac (Apple Intelligence) (Mac 안에서 번역 (Apple Intelligence))** in the provider list. It needs macOS 26 or later, an Apple silicon Mac and Apple Intelligence turned on, and the lyrics never leave the Mac.
+
+**How to tell it worked**: A translated line appears under each original line. To delete, use **이 번역 지우기** (delete this translation) under the lyrics, or **AI 번역 전부 지우기…** (delete all) for everything. If it does not work, see the AI lyrics translation line in the [Troubleshooting guide](TROUBLESHOOTING.md). More: Manual [§8](MANUAL.md#8-settings-window).
+
+## 35. Change the loudness with the DAC volume slider
+1. Drag the **DAC volume (DAC 음량)** slider under the ⋯ and Up next buttons in the bottom bar (keep it low before playback starts).
+2. If the slider is dimmed, hover to read why. During DSD · integer output, or with a DAC that has no volume control, use the DAC's own knob.
+
+**How to tell it worked**: The slider follows the value read from the device and the loudness changes. More: [Troubleshooting guide](TROUBLESHOOTING.md#dac-volume-and-dsd-dop--integer-pcm).
+
+## 36. When Fidenne stops while opening
+1. If two starts in a row do not finish, a **시작 복구** (Startup recovery) window appears on the third start. No setting is erased.
+2. **안전하게 시작** (start safely) enters for this one run with the engine · capture · browser extension · auto-play connections off.
+3. To report the problem, build the material with **진단 만들기…** (make diagnostics) and send it (section 20).
+4. Quit and open the app again to return to normal. If nothing looks wrong you can also press **그대로 시작** (start as usual).
+
+**How to tell it worked**: The window shows `안전 시작 중` (safe start) and you can open Settings. More: Manual [When startup fails twice in a row](MANUAL.md#1-first-launch--the-five-step-first-run-setup).
