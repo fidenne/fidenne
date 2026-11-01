@@ -14,7 +14,7 @@ For what cannot be done, see [Known limitations](KNOWN_LIMITATIONS.md).
 1. In `I/O · Diagnostics (입출력 · 진단) › Advanced (고급) › Input (소리 받기)`, choose **Fidenne Inlet** (if missing, **Install… (설치…)** in the same section, one administrator password) or **Process Tap**, which receives system sound without an install. For another loopback app, use **+ Another input device (+ 다른 입력 장치)**.
 2. In the output DAC picker of the same section, choose the DAC (refresh ↻ if it is not shown).
 3. In `I/O · Diagnostics (입출력 · 진단) › Advanced (고급) › Streaming app autoplay (스트리밍 앱 자동 재생) › After the engine starts (엔진 시작 후)`, choose **Auto-detect (자동 감지)** · **Apple Music** · **Spotify** · **YouTube Music (browser) (YouTube Music(브라우저))**. Optional: with Fidenne Inlet as input, turn on **Auto-apply Apple Music source rate (Apple Music 원본 레이트 자동 적용)** to follow the source rate.
-4. Turn on the **engine switch (엔진 스위치)** on the bottom playback bar (allow the audio recording · automation macOS asks about the first time) and start a track in the playback app.
+4. Press the **Playback Chain** pill at the right end of the page header and turn on the **engine switch (엔진 스위치)** at the top of the window that opens (allow the audio recording · automation macOS asks about the first time) and start a track in the playback app.
 
 **How to tell it worked**: The status text on the bar says "Running (실행 중)" and the source · input · device rows of the **Playback Chain** match what you chose. More: Manual [§7.3](MANUAL.md#73-streaming-app-autoplay--input-and-output-devices) · [§3](MANUAL.md#3-streaming-page).
 
@@ -186,7 +186,7 @@ Auto Bypass · Loop comparison is **hidden in this beta** too. To compare on and
 **How to tell it worked**: The line under the guide window says `1 browser connected (브라우저 1개 연결됨)` and the bar shows that track and "YouTube Music (browser) (YouTube Music (브라우저))". After updating the app, press ↻ once on the **Fidenne for YouTube Music** card in `chrome://extensions` (Edge `edge://extensions`) and reload the tab with ⌘R. More: Manual [§8.1](MANUAL.md#81-using-youtube-music-chrome-extension).
 
 ## 26. Play YouTube Music tracks from the Streaming page
-1. Press the service button before the Streaming page's search field and choose **YouTube Music**. If it says "Not connected (연결 안 됨)", do section 25.
+1. Click **YouTube Music** under **Streaming** in the sidebar. If it says "Not connected (연결 안 됨)", do section 25.
 2. In **My playlists (내 재생목록)**, open a list and press **Play all (전체 재생)** (or one track). If there is no list, open that screen once in YouTube Music — within a few seconds it appears as `From browser (브라우저에서)`.
 3. To search, type in **Search in YouTube Music (YouTube Music 에서 검색)** and press Return.
 

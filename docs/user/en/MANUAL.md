@@ -114,17 +114,17 @@ When something goes wrong, a red notice band appears at the window's top (for ex
 
 ### 2.2 Bottom playback bar
 
-The bar floats on every page. In a wide window it is one row: album cover · track (title / artist) · playback buttons (shuffle · previous · play/pause · next · repeat) · heart | service icon · **output mode** · ⋯ · **Up next (다음 재생)** · **engine switch**. In a narrower window it becomes two rows — the cover spans both rows; the top row has the track · ⋯ · Up next · engine switch, and the bottom row the playback buttons · heart, then the service icon · output mode.
+The bar floats on every page. It is one row at any window width and its height never changes: service icon · album cover · track (title · heart / artist · album) · playback buttons (shuffle · previous · play/pause · next · repeat) | ⋯ · volume (speaker) · **Up next (다음 재생)**. In a narrower window the cover becomes square, and in a still narrower one shuffle and repeat leave the bar and move into the ⋯ menu. The engine switch and the output mode are not in the bar: they are in the **Playback Chain** pill at the right end of the page header (below).
 
-- **Position** — the line along the bottom of the bar, from the cover's lower right corner to just before the service icon. Press or drag it to move. When the pointer rests on it, the row right above it blurs and the elapsed and remaining times appear over its two ends.
+- **Position** — the line under the track and the playback buttons. Press or drag it to move. When the pointer rests on it, the line thickens, the row right above it blurs and the elapsed and remaining times appear over its two ends.
 - **Heart** — adds to Fidenne's own **Liked songs** in the library, separate from the service app's likes.
 - **Service icon** — the app making the sound now. Only the icon shows, without a name; resting the pointer on it shows the name. Pressing it opens the current track in that service (for YouTube Music, its browser tab). When the Spotify app is not installed on this Mac, Spotify's official icon shows instead (black on light screens, white on dark ones).
-- **Output mode** — the label shows only the current output (for example `DSD256` · `PCM 24-bit`). Pressing it opens the menu: PCM Direct · sound presets (recommended list) · saved presets · "Sound settings… (사운드 설정…)". Details such as the filter and order are shown inside this menu. Choosing a saved preset switches to its output mode.
-- **⋯** — the track menu ([§2.7](#27-track-menu---and-right-click)) and "Output settings… (출력 설정…)" (opens the filter card on the I/O page).
+- **Playback Chain pill** (right end of the page header) — its text is `app → output mode → DAC` (a narrow header drops the DAC, then the app, first), and its dot is the engine state (green on · grey off · red error). Pressing it opens a window: the **Engine** switch at the top · **Output settings** (recommended sound presets · saved presets · custom) · the stages the sound passes through · **Open I/O · Diagnostics**. Choosing a saved preset switches to its output mode. Pressing it with **Option** held turns the engine on or off without opening the window.
+- **⋯** — the track menu ([§2.7](#27-track-menu---and-right-click)) with a **Sleep timer (취침 타이머)** and "Output settings… (출력 설정…)" (the output settings on the I/O page) added. In a narrow window shuffle and repeat are also at its top.
 - **Up next (다음 재생)** — opens and closes the Up next · Lyrics column.
 - **Previous** — when you listen to a Fidenne list with Apple Music or Spotify, pressing it after 3 seconds or more of the song goes back to the start of this song; within the first 3 seconds it goes to the song before (on the first song of a list it returns to the start).
-- **DAC volume (DAC 음량)** — the small slider under the ⋯ and Up next buttons reads and changes the DAC's own volume (it is not a separate Fidenne volume). Only values read from the device are shown, and if it cannot change the volume you see `DAC 음량을 바꾸지 못했습니다. 장치에서 읽은 값을 표시합니다` (could not change the DAC volume; showing the value read from the device). When the slider is dimmed, hover for the reason: `DSD · 정수 출력 중에는 DAC 본체 노브로 조절합니다` (during DSD · integer output use the DAC's own knob; Fidenne then takes over the DAC volume and holds it at maximum) · `이 DAC 는 본체 노브로 조절합니다` · `이 DAC의 음량 속성은 읽기 전용입니다` · `출력 상태를 확인하는 동안 음량을 조절할 수 없습니다`. Details: [Troubleshooting guide](TROUBLESHOOTING.md#dac-volume-and-dsd-dop--integer-pcm)
-- **Engine switch** — turns Fidenne's processing (the engine) on and off. Its colour is the state (green running · orange preparing · red error). When the engine is off with an error, a red ! appears beside it; pressing it opens the I/O · Diagnostics page.
+- **DAC volume (DAC 음량)** — the speaker button in the bar mutes and unmutes when pressed, and a slider appears above it when the pointer rests on it. The button and the slider read and change the DAC's own volume (it is not a separate Fidenne volume). Only values read from the device are shown, and if it cannot change the volume you see `DAC 음량을 바꾸지 못했습니다. 장치에서 읽은 값을 표시합니다` (could not change the DAC volume; showing the value read from the device). When the speaker is dimmed, hover for the reason: `DSD · 정수 출력 중에는 DAC 본체 노브로 조절합니다` (during DSD · integer output use the DAC's own knob; Fidenne then takes over the DAC volume and holds it at maximum) · `이 DAC 는 본체 노브로 조절합니다` · `이 DAC의 음량 속성은 읽기 전용입니다` · `출력 상태를 확인하는 동안 음량을 조절할 수 없습니다`. Details: [Troubleshooting guide](TROUBLESHOOTING.md#dac-volume-and-dsd-dop--integer-pcm)
+- **Engine switch** — the **Engine** row at the top of the Playback Chain window. It turns Fidenne's processing (the engine) on and off. The pill's dot is the state (green running · grey off · red error). When the engine is off with an error, a red ! appears at the right end of the bar; pressing it opens the I/O · Diagnostics page.
   - **The engine switch does not start a track, and the play button does not turn the engine off.** Pause stops only the playback app, and **Play** with the engine off turns it on and plays.
   - What plays when the engine starts is set by **After the engine starts (엔진 시작 후)** on the I/O page ([§7.3](#73-streaming-app-autoplay--input-and-output-devices)).
 - Shuffle · repeat work only on lists played from Fidenne. Another app's queue is handled in that app.
@@ -148,7 +148,6 @@ The bar floats on every page. In a wide window it is one row: album cover · tra
 - **Song transitions (AutoMix · Crossfade)** — Music › Settings › Playback. Overlapping tracks blur when a track changes, so track changes and rate matching can go wrong.
 - Things that change the sound first (**Sound Check** · **Equalizer** · **Sound Enhancer**) are best turned off too; they change the sound before Fidenne shapes it.
 
-**When Fidenne plays a YouTube Music list** — turning off YouTube Music's **Autoplay** switch at the top of the Up next panel is recommended. With it on, Fidenne still stops a song Autoplay opens and plays the list's next song, but the song change is cleanest with it off.
 ### 2.3 Lyrics
 
 When a track plays, the lyrics panel shows its lyrics. Internet lyrics (lrclib.net) need your consent once — "동의하고 찾기" (Agree and search) / "보내지 않음" (Do not send). Only the title · artist · album · length are sent.
@@ -226,7 +225,7 @@ Spotify tracks have **Open in Spotify (Spotify에서 열기)** · **Copy link**.
 Where you search and open Apple Music · Spotify · YouTube Music in one place.
 
 - **Automation prompt** — if you see `시스템 설정의 개인정보 보호 및 보안 > 자동화에서 Fidenne의 Apple Music 접근을 허용해 주세요.` (for Spotify, `Fidenne의 Spotify 접근을…`; allow Fidenne's access to Music in System Settings › Privacy & Security › Automation), turn on Fidenne's Music or Spotify there. After you return to Fidenne it reads the lists again and the notice goes away. If you did not allow it in the first prompt, you can still turn it on in the same place later.
-- **Choosing a service** — pick **Apple Music** · **Spotify** · **YouTube Music** from the service button before the search field. YouTube Music needs the extension in [§8.1](#81-using-youtube-music-chrome-extension).
+- **Choosing a service** — click **Apple Music** · **Spotify** · **YouTube Music** under **Streaming** in the sidebar (YouTube Music shows only when it is turned on). The dot next to the service name in the page header shows the connection and opens the connection window. YouTube Music needs the extension in [§8.1](#81-using-youtube-music-chrome-extension).
 - **Search** — results come on one screen in order: my Apple Music (library · playlists) → the Apple Music catalogue (tracks not in the library) → files on this Mac. The last line **Find ‘query’ in YouTube Music ↗** opens the same search in a YouTube Music tab.
   - **Spotify results are separate** — press the **Spotify** tab at the top of the results, and the **Apple Music · Local** tab to come back. Spotify asks that its content not be placed next to other services' results.
   - **Add to library (보관함에 추가)** — puts a catalogue track · album into the Apple Music library. A confirmation appears the first time (the library changes; with iCloud library it shows on other devices). It takes a while to appear, so "보관함에 나타나는 중" (appearing in the library) shows until the button becomes **Play**.
@@ -253,7 +252,7 @@ The connection screen shows `연결하면 이용약관 9조(Spotify)에 동의�
 
 1. Press **Open developer dashboard (개발자 대시보드 열기)** in the connection window (press the dot beside Spotify on the Streaming page, or **Connect (연결하기)** on the Spotify screen) and create an app.
 2. Put the address shown in the box into that app's Redirect URI (the **Copy (복사)** button beside it).
-3. Paste the dashboard's **Client ID** into the box. Do not enter the Client Secret.
+3. Paste the dashboard's **Client ID** into the box. Fidenne does not use the Client Secret, so do not enter it, and do not share it with anyone.
 4. Press **Check key (키 확인)**, and if it is right, **Connect Spotify (Spotify 연결)**. The Spotify login window opens in the browser.
 
 After connecting you see "Refresh playback permission (재생 권한 갱신)" · "Disconnect (연결 해제)". **Follow Spotify queue · for Jam (Spotify 대기 목록 따르기 · Jam용)** keeps Fidenne from overwriting a Spotify shared queue.
@@ -566,7 +565,7 @@ Listen to YouTube Music in Safari, Chrome or Edge. The sound is received by Fide
 5. Turn on **② Developer mode**.
 6. **③** Press the new **Load unpacked** button. Press **Copy path (경로 복사)** in the guide window → in the folder picker **⌘⇧G** → **⌘V** → Return → **Open**.
 7. **④** Reload the YouTube Music tab that was already open (⌘R).
-8. **Tab-sleep exception** — if the browser puts unused tabs to sleep, YouTube Music cannot answer. In Chrome add `music.youtube.com` to Settings › Performance › Memory Saver › **Always keep these sites active**; in Edge to Settings › System and performance › Resource saving › **Never put these sites to sleep**.
+8. **Tab-sleep exception** — if the browser puts unused tabs to sleep, YouTube Music cannot answer. In Chrome add `music.youtube.com` to Settings › Performance › Memory Saver › **Always keep these sites active**; in Edge to Settings › System and performance › Resource saving › **Never put these sites to sleep**. Safari has no per-site sleep exception; if the bar stops, reload that tab once.
 
 **Did it work** — the guide window's last line reads **브라우저 1개 연결됨** (1 browser connected), and a track you play on music.youtube.com shows in the bottom bar.
 
