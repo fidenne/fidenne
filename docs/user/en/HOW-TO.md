@@ -207,12 +207,12 @@ Auto Bypass · Loop comparison is **hidden in this beta** too. To compare on and
 **How to tell it worked**: When a track ends, the next one in Up next follows. More: Manual [§2.2](MANUAL.md#22-bottom-playback-bar).
 
 ## 29. Connect Spotify for the first time (your own key)
-1. In the Spotify section of Settings, press **Open developer dashboard (개발자 대시보드 열기)** and create an app in the Spotify developer dashboard.
+1. In the connection window (press the dot beside Spotify on the Streaming page, or **Connect (연결하기)** on the Spotify screen), press **Open developer dashboard (개발자 대시보드 열기)** and create an app in the Spotify developer dashboard.
 2. Put the address shown in the field into that app's Redirect URI (the **Copy (복사)** button beside it copies it).
 3. Paste the dashboard's **Client ID** into Fidenne's field (do not enter the Client Secret).
 4. Press **Check key (키 확인)**, then **Connect Spotify (Spotify 연결)** and allow it in the login window.
 
-**How to tell it worked**: Searching with Spotify in the Streaming page's service list returns results, and Settings has **Refresh playback permission (재생 권한 갱신)** · **Disconnect (연결 해제)**. Without a key, sound processing of tracks played in the Spotify app still works. More: Manual [§3](MANUAL.md#3-streaming-page).
+**How to tell it worked**: Searching with Spotify in the Streaming page's service list returns results, and the connection window has **Refresh playback permission (재생 권한 갱신)** · **Disconnect (연결 해제)**. Without a key, sound processing of tracks played in the Spotify app still works. More: Manual [§3](MANUAL.md#3-streaming-page).
 
 ## 30. Get the beta and report a problem
 1. Get the signed and notarized `.dmg` from the releases page (`https://github.com/fidenne/fidenne/releases`) (Apple silicon Mac, macOS 15 or later).
@@ -233,7 +233,7 @@ Auto Bypass · Loop comparison is **hidden in this beta** too. To compare on and
 ## 32. Save an album to your library
 1. In the Streaming page pick a service and open an album.
 2. Press the **라이브러리** (Library) button in the album header (it may read **YouTube Music에 저장**, save to YouTube Music).
-3. Spotify saves at once and the button becomes **저장됨** (Saved). If a notice about the save permission appears, connect **Spotify 연결** again in Settings.
+3. Spotify saves at once and the button becomes **저장됨** (Saved). If a notice about the save permission appears, connect **Spotify 연결** again in the Spotify connection window (the dot beside Spotify on the Streaming page).
 4. For Apple Music you see `보관함에 넣었습니다. Music 앱에 보이기까지 조금 걸릴 수 있습니다.` (added; it can take a while to show in Music), and a moment later the button becomes **저장됨**. If it is slow, refresh the Music app.
 5. For YouTube Music, that album's page must be open in the browser. Pressing the button makes the extension press the page's save control once and report the result.
 
@@ -295,9 +295,9 @@ Auto Bypass · Loop comparison is **hidden in this beta** too. To compare on and
 2. Choose **PCM** as the output method and start playback. The first time, `Turn the Mac volume down to 0 or very low before starting, then raise it slowly while you listen.` appears; lower the Mac volume and press the start button.
 3. Turn on EQ · Ostrum · Crossfeed, choose a filter and listen.
 
-**How to tell it worked**: Fidenne processes the sound and sends it; macOS mixes the result through its system mixer before sending it to the device, so the data is not bit-identical. The output line shows `via system mixer · not bit-perfect`, and the bit depth and dither rows are greyed. More: Manual [§7.1](MANUAL.md#71-independent-output-control--output-mode).
+**How to tell it worked**: Fidenne processes the sound and sends it; macOS mixes the result through its system mixer before sending it to the device, so it is not bit-perfect. The output line shows `via system mixer · not bit-perfect`, and the bit depth and dither rows are greyed. More: Manual [§7.1](MANUAL.md#71-independent-output-control--output-mode).
 
-**If it does not work**: if an app using the AirPods microphone is open, the sound drops to call quality and Fidenne pauses its processing; close that app and it restarts by itself. If playback stops because another app changed the device rate, click Play again. For a bit-exact output use an external DAC.
+**If it does not work**: if an app using the AirPods microphone is open, the sound drops to call quality and Fidenne pauses its processing; close that app and it restarts by itself. If playback stops because another app changed the device rate, click Play again. For a bit-perfect output use an external DAC.
 
 ## 40. Put an Audio Unit plug-in in the path
 1. On the sidebar **DSP › Plug-in (플러그인)** page press **Add Plug-in (플러그인 추가)** and choose an effect plug-in from the list. A plug-in seen for the first time is checked before it can be used.

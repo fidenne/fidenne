@@ -67,8 +67,8 @@ The engine's PCM output is chosen from supported rates in the 44.1 and 48 kHz fa
 if it is a 2-channel device that takes at least one of them (DSD only if that DAC can unpack DoP). A DAC that does not take 352.8 kHz can still be used by lowering the rate to one it takes.
 A device that takes none of the supported rates from 44.1 to 768 kHz, or is not 2-channel (some dongles, 4- and 8-channel interfaces), is marked at the end of its name in the output device list and plays only in PCM Direct.
 
-Fidenne processes the sound with EQ, Ostrum, crossfeed and filters and sends it to built-in speakers, the 3.5 mm jack, AirPods (Bluetooth) and HDMI too. macOS mixes the result through its system mixer before sending it to the device, so the data is not bit-identical (**not bit-perfect**).
-The engine processes at the highest supported rate from 44.1 to 768 kHz at or below the device's current rate, and macOS converts to the device rate if needed. macOS decides the device's rate and volume; the volume is the Mac's. For a bit-exact output use an external DAC's integer PCM or DSD.
+Fidenne processes the sound with EQ, Ostrum, crossfeed and filters and sends it to built-in speakers, the 3.5 mm jack, AirPods (Bluetooth) and HDMI too. macOS mixes the result through its system mixer before sending it to the device, so it is **not bit-perfect**.
+The engine processes at the highest supported rate from 44.1 to 768 kHz at or below the device's current rate, and macOS converts to the device rate if needed. macOS decides the device's rate and volume; the volume is the Mac's. For a bit-perfect output use an external DAC's integer PCM or DSD.
 
 If you have not chosen a DAC yet, or it has not been confirmed, the app starts in PCM Direct. A DAC that accepts DSD can also be sent DSD.
 
