@@ -1,6 +1,6 @@
 <!-- SPDX-FileCopyrightText: 2026 The Aural Authors -->
 <!-- SPDX-License-Identifier: LicenseRef-Fidenne-Freeware -->
-<!-- Translated from docs/user/EXPLANATIONS.md at commit 60083913fecff876c8e1725df00d19fcb559a621 -->
+<!-- Translated from docs/user/EXPLANATIONS.md (0.7.0 edition) -->
 
 # When you are curious
 
@@ -58,15 +58,39 @@ the first two have not already lowered, so the same amount is never lowered twic
 With **PCM Direct**, Fidenne does not process the sound. The playback app's sound goes through macOS to the DAC, and the DAC's sample rate is not matched track by track
 but set once at start (44.1 kHz for Spotify). If it differs from the track's, macOS converts it. EQ, Ostrum and crossfeed are not applied.
 
-With **engine output** (DSD or PCM 352.8 kHz), the Fidenne engine processes the sound and sends it to the DAC. Even with EQ and the rest all off, the conversions that format needs
+With **engine output** (DSD or PCM oversampling), the Fidenne engine processes the sound and sends it to the DAC. Even with EQ and the rest all off, the conversions that format needs
 (upsampling, modulation, dither, headroom) still apply, so the character of the sound can vary with the filter and modulator you choose.
 
-## Why must the DAC accept 352.8 kHz?
+## Which devices can use engine output?
 
-The engine's PCM output is fixed at 352.8 kHz (8 times 44.1 kHz). Engine output cannot be sent to a device that does not accept this format.
-Built-in speakers, AirPods, most dongles and monitors are such devices, and they are marked at the end of their names in the output device list.
+The engine's PCM output is chosen from supported rates in the 44.1 and 48 kHz families (44.1 to 768 kHz), and a new configuration keeps the source rate by default. A DAC connected directly by USB can be used
+if it is a 2-channel device that takes at least one of them (DSD only if that DAC can unpack DoP). A DAC that does not take 352.8 kHz can still be used by lowering the rate to one it takes.
+A device that takes none of the supported rates from 44.1 to 768 kHz, or is not 2-channel (some dongles, 4- and 8-channel interfaces), is marked at the end of its name in the output device list and plays only in PCM Direct.
+
+Fidenne processes the sound with EQ, Ostrum, crossfeed and filters and sends it to built-in speakers, the 3.5 mm jack, AirPods (Bluetooth) and HDMI too. macOS mixes the result through its system mixer before sending it to the device, so the data is not bit-identical (**not bit-perfect**).
+The engine processes at the highest supported rate from 44.1 to 768 kHz at or below the device's current rate, and macOS converts to the device rate if needed. macOS decides the device's rate and volume; the volume is the Mac's. For a bit-exact output use an external DAC's integer PCM or DSD.
 
 If you have not chosen a DAC yet, or it has not been confirmed, the app starts in PCM Direct. A DAC that accepts DSD can also be sent DSD.
+
+## How is the output rate decided?
+
+The **output rate** is the rate the engine sends to the DAC, and the filters and EQ also run at that rate. If you pick one, every song goes out at that rate.
+With **Follow the source's rate family** on, the song's family is followed — a 44.1 kHz-family song (44.1 · 88.2 · 176.4 …) goes out in the 44.1 family and a 48 kHz-family song (48 · 96 · 192 …) in the 48 family,
+avoiding a conversion that is not a whole multiple (such as 44.1 → 48). What you choose then is a multiple, and **Auto (highest the device takes)** is the highest multiple the DAC takes.
+If a song's rate is not known yet or is only a guess, the family is not changed, and between songs that change family the DAC goes briefly quiet while it locks to the new rate.
+Whether a higher rate sounds better has not been checked. At low rates the 24-bit noise margin may fall short of the reference, and the screen says so when it does.
+
+## Why is there silence between songs?
+
+Between songs where the rate changes, the DAC needs time to settle on the new rate, so digital silence is put in front so that the first sound of the new song is not cut.
+**Unchanged** leaves the end of the song as it is and puts a short silence in front only when the rate changes. **Smooth** fades the last 0.02 s of a song.
+If the first sound is still cut off, make the per-DAC wait (**Wait when the rate changes**) longer. This applies to PCM output of local files.
+
+## Why can an EQ with filters in the treble sound different?
+
+A digital EQ filter is an analog filter carried into the digital domain, and depending on how it is carried the curve bends near half the output rate (Nyquist) and differs from what you set.
+The current version computes the coefficients to match their analog prototypes, so at high frequencies (especially above 16 kHz) the curve you set is closer to the real curve. An EQ with filters in the treble
+can sound slightly different with the same settings. At 352.8 kHz and in DSD the difference is tiny; it is clearer at low rates such as 44.1 · 48 kHz.
 
 ## Why does the DAC rate stay when a track moves on by itself?
 
@@ -75,6 +99,19 @@ so Fidenne **does not touch sound you are hearing.** When a track moves on by it
 
 Matching the rate to a track happens only when you pick the track yourself, before any sound. The rate learned for each track is remembered by service and by evidence
 (track · album) and used then. An album with a different release is not treated as the same memory.
+
+## Why does Trellis sometimes stop playback?
+
+Trellis chooses each bit while looking at the sound still to come, so the calculation is heavy. Sound has to reach the DAC at fixed moments;
+if this Mac cannot finish the calculation by then, Fidenne stops playback and tells you why instead of sending broken sound. Switching to ‘Precise’,
+‘Safe’ or CLANS makes the calculation lighter. Fidenne never changes the method for you; the choice is yours.
+
+## How are Cardinal Sinc 128K and 64K different from other filters?
+
+They are fixed-length sinc filters in the long-tap extension: 128K has about 131,000 taps (delay about 116 ms) and 64K about 65,500 (delay about 70 ms).
+Both have a fixed cutoff of 22.05 or 24 kHz, and the twin with **Follow (따라감)** in its name lets the cutoff follow the song's rate.
+On 44.1 and 48 kHz songs the twin has the same coefficients and sounds the same; it differs only on songs at other rates.
+The longer the filter, the longer the sound takes to come out, so video may drift.
 
 ## Where is lyrics translation done?
 

@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <b>Public beta 1 · 0.6.0 — <a href="https://github.com/fidenne/fidenne/releases/latest">Download</a> · <a href="https://fidenne.github.io/fidenne/">Install and use guide (Korean)</a></b>
+  <b>Public beta 1 · 0.7.0 — <a href="https://github.com/fidenne/fidenne/releases/latest">Download</a> · <a href="https://fidenne.github.io/fidenne/">Install and use guide (Korean)</a></b>
 </p>
 
 <br>
@@ -46,7 +46,7 @@ The Playback Chain in the app shows at a glance which path is in use.
 
 ## What you can do
 
-- Choose the output mode that suits your DAC — DSD (DoP) · PCM 352.8 kHz · PCM Direct.
+- Choose the output mode that suits your DAC — DSD (DoP) · PCM oversampling (44.1 to 768 kHz) · PCM Direct.
 - Change EQ, Ostrum, Crossfeed and filters and hear the result right away.
 - Check the path your sound takes and the processing in use in Playback Chain.
 - Control the service app you already use from Fidenne and view track information and lyrics alongside it (playback stays in each service’s own app).
@@ -54,15 +54,28 @@ The Playback Chain in the app shows at a glance which path is in use.
 
 <br>
 
-## What's new in 0.6.0
+## What's new in 0.7.0
 
-- The home and streaming screens are new, and Apple Music, Spotify and YouTube Music look the same. Continue listening, today's listening, your playlists and saved albums are on one screen.
-- Drag songs to set their order in a playlist or album, and save an album to the service's library from the app.
-- Translate lyrics with your own API key (Anthropic Claude · OpenAI · Google Gemini) or with the Apple model on this Mac. The Lyrics tab gathers the lyrics and translations of the songs you have heard.
-- YouTube Music also works in Safari. The extension is inside the app, so there is no file to install.
-- It opens on macOS 15 (up to 0.5.2 it needed macOS 26).
-- When a song moves on by itself, the DAC rate is not touched. If the app fails to start repeatedly, a recovery screen opens it without erasing your settings.
-- The app checks for a new version every 4 hours, and downloads one only when you choose to install it in the update window; it installs after checking the signature.
+**Sound**
+- Choose the PCM output rate from supported rates in the 44.1 and 48 kHz families (44.1 to 768 kHz). With **Follow the source's rate family** on, a 44.1 kHz-family song goes out in the 44.1 family and a 48 kHz-family song in the 48 family; **Auto (highest the device takes)** picks the highest multiple your DAC accepts.
+- Choose whether songs join **Unchanged** or **Smooth**, and set per DAC how long to wait when the rate changes.
+- Fidenne processes the sound with EQ, Ostrum, crossfeed and filters and sends it to built-in speakers, the 3.5 mm jack, AirPods (Bluetooth) and HDMI too. macOS mixes the result through its system mixer before sending it to the device, so the data is not bit-identical; the screen shows **not bit-perfect**.
+- **The sound changes** — the EQ filter coefficients are now computed to match their analog prototypes. At high frequencies (especially above 16 kHz) the curve you set follows the real curve more closely, so an EQ with filters in the treble can sound slightly different with the same settings. The difference is larger at low output rates.
+- **CLANS** is a new experimental conversion method in 0.7.0, available at DSD128 and DSD256.
+- If this Mac cannot finish the Trellis conversion in time, playback stops and Fidenne recommends **Precise · Safe · CLANS** with a **Choose conversion method** button. An AU plug-in that runs late or stalls is switched off by Fidenne and the sound carries on.
+- The long-tap filters gain **Cardinal Sinc 128K and 64K**, each with a **Follow** twin that follows the song's rate.
+- On the **Plug-in** page, put up to 4 Audio Unit effect plug-ins in the path the sound takes.
+- The Convolution (IR) page is available starting with this release.
+
+**Screens and tools**
+- On the home page, drag songs into a playlist, group songs of the same day, and **Remove from History** the entries you do not want to see.
+- Import an EQ from Room EQ Wizard (REW), Equalizer APO or AutoEq text files.
+- Call play, next, previous, the current song, bypass of sound processing and an EQ preset from the Shortcuts app.
+- Lyrics get a **pronunciation** line, and you can reorder the original, pronunciation and translation lines.
+- The screens can be used in English and Japanese (they follow the language order set in macOS). The translations are AI drafts that no native speaker has reviewed yet.
+- When something sounds odd, press **⌥⌃⌘K** (Help › Mark That Something Was Off) to mark that moment in the diagnostic record, so it is easy to find in a problem report. The record stays on this Mac.
+- If a YouTube Music tab starts by itself while you listen to another service, your song is left as it is. In Apple Music and Spotify, Previous goes back to the start of the song when you have heard more than 3 seconds.
+- Song lists behave the Mac way (one click selects, double-click or Return plays). The Playback menu gains volume and mute and a **Sleep Timer**, and lyrics gain restoring a **Previous Translation**.
 
 The full list of changes is on the [releases page](https://github.com/fidenne/fidenne/releases/latest).
 
@@ -71,14 +84,15 @@ The full list of changes is on the [releases page](https://github.com/fidenne/fi
 ## What you need
 
 - A Mac with Apple silicon (M1 or later) and **macOS 15 or later**. It does not open on an Intel Mac.
-- A **wired external DAC connected directly by USB**. DSP (EQ · Ostrum · Crossfeed) and DSD · PCM 352.8 kHz output run on a **2-channel DAC that accepts 352.8 kHz**. Devices that do not, such as built-in speakers, AirPods, most dongles and monitors, can only be listened to in **PCM Direct** (Fidenne does not process the sound; it goes through macOS).
+- An **external DAC is recommended.** With a wired DAC connected directly by USB, Fidenne takes hold of the device itself and sends it the processed sound. DSP (EQ · Ostrum · Crossfeed) and DSD · PCM output run on a **2-channel DAC that accepts at least one of the PCM rates the engine uses (44.1 to 768 kHz)**. DSD needs a DAC that can unpack DoP.
+- Fidenne sends processed sound to built-in speakers, the 3.5 mm jack, AirPods and HDMI too. macOS mixes the sound once more before sending it to these devices, so the screen shows **not bit-perfect**. Devices that are not 2-channel, such as 4- and 8-channel audio interfaces, or accept none of the supported rates from 44.1 to 768 kHz use **PCM Direct**, without Fidenne processing.
 - The app is free.
 
 <br>
 
 ## Installation
 
-This is 0.6.0 of public beta 1. Install it like this.
+This is 0.7.0 of public beta 1. Install it like this.
 
 1. Download the `.dmg` file from the [releases page](https://github.com/fidenne/fidenne/releases/latest) of this repository.
 2. Open the `.dmg` and drag Fidenne into the **Applications** folder. Do not run it straight from the disk image or the Downloads folder (the Safari extension would not show).
@@ -97,9 +111,11 @@ A free app made by an individual, not affiliated with Apple, Spotify or Google.
 - **YouTube Music** — an experimental feature connected through a browser extension. It reads only the track on the page you opened and never touches ads. What it reads goes only to Fidenne on this Mac and nowhere else.
 - **Lyrics · headphone measurements · song search and charts** — public data from LRCLIB, squig.link and Apple, fetched to this Mac. Copyright stays with the rights holders and the measurers.
 - **Sound** — processed only on this Mac. Never recorded or sent anywhere.
-- **Album covers and lyrics** — kept on this Mac temporarily for quick display and removed 30 days after last use. Pictures from song search and charts stay in memory only.
+- **Album covers and lyrics** — ordinary artwork and the lyrics lookup cache expire thirty days after last use. Spotify artwork expires thirty days after receipt. Lyrics and translations saved in the Lyrics tab stay until you delete them. Search and chart pictures stay in memory only.
 
 The full list is in the [Privacy notice](/PRIVACY.en.md).
+
+**How the browser extension uses information (Limited Use)** — Information received by the Fidenne extensions for Safari, Chrome and Edge is used only to tell Fidenne on this Mac what is playing now and pass the commands you press to the YouTube Music page. It is not sold, used for advertising, or passed to anyone else. The Safari extension is included in the Fidenne app. The Chrome extension’s use of information follows the Chrome Web Store User Data Policy, including the Limited Use requirements.
 
 <br>
 
