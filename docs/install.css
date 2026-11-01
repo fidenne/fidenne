@@ -1,0 +1,38 @@
+/* SPDX-FileCopyrightText: 2026 The Aural Authors
+ * SPDX-License-Identifier: Apache-2.0 */
+/* 설치 · 사용 가이드 전용 보충 스타일 — style.css 위에 얹는다. */
+.guide-hero { padding-block: 64px 40px; }
+.guide-hero .status { display: block; color: var(--secondary); font-size: 0.9rem; margin-top: 16px; }
+.guide-hero .hero-shot { margin: 40px auto 0; max-width: 960px; }
+.part { padding-block: 64px 8px; scroll-margin-top: 24px; border-top: 1px solid var(--line); }
+.part h2 { margin-bottom: 12px; }
+.part > p { color: var(--secondary); max-width: 76ch; margin-bottom: 0; }
+main > .part:first-child { border-top: 0; }
+.step { padding-block: 48px; }
+.step h3 { font-size: 1.4rem; margin-bottom: 16px; }
+.step h4 { font-size: 1.05rem; font-weight: 650; margin: 32px 0 12px; }
+.step > .lead { font-size: 1.1rem; max-width: 76ch; }
+.step ol.steps, .step > ul, .step dl { max-width: 76ch; }
+.steps { padding-inline-start: 24px; }
+.steps > li::marker { color: var(--accent); font-weight: 650; }
+.steps > li { padding-inline-start: 8px; }
+.steps > li > .shot { margin-block: 16px 8px; }
+.step .note { max-width: 76ch; }
+.shot { margin: 16px 0 24px; max-width: 100%; }
+.shot img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.shot.hero-shot img { border-radius: var(--radius); }
+.shot.wide-small { max-width: 640px; }
+.shot.medium { max-width: 440px; }
+.shot.narrow { max-width: 300px; }
+.shot.compact { max-width: 412px; }
+.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.terms { margin: 16px 0 24px; }
+.terms dt { font-weight: 650; margin-top: 12px; }
+.terms dd { margin: 4px 0 0; color: var(--secondary); }
+.plain { list-style: disc; }
+code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.92em; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; }
+@media (max-width: 700px) {
+  .guide-hero { padding-block: 40px 24px; }
+  .step { padding-block: 40px; }
+  .pair { grid-template-columns: 1fr; }
+}
