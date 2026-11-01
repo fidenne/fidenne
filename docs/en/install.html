@@ -1,0 +1,273 @@
+<!doctype html>
+<!-- SPDX-FileCopyrightText: 2026 The Aural Authors -->
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Install and use Fidenne 0.7. From download to first-time setup, permissions, connecting Spotify and YouTube Music, and shaping your sound, one step at a time with pictures.">
+<title>Fidenne 0.7 · Install and use guide</title>
+<link rel="icon" href="../img/icon.png">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../install.css">
+<link rel="alternate" hreflang="ko" href="../install.html">
+<link rel="alternate" hreflang="en" href="install.html">
+<link rel="alternate" hreflang="ja" href="../ja/install.html">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+<a class="brand" href="index.html"><img src="../img/icon.png" alt="" width="28" height="28">Fidenne</a>
+<nav aria-label="On this page"><a href="index.html">Introduction</a><a href="#install">Install</a><a href="#usage">Use</a></nav>
+<nav class="languages" aria-label="Language"><a href="../install.html" lang="ko" hreflang="ko">한국어</a><a href="install.html" lang="en" hreflang="en" aria-current="page">English</a><a href="../ja/install.html" lang="ja" hreflang="ja">日本語</a></nav>
+</header>
+<main id="main">
+<div class="hero guide-hero" aria-labelledby="hero-title">
+<p class="eyebrow">Fidenne · Public Beta 1 · 0.7.0</p><h1 id="hero-title">Install and use guide</h1>
+<p class="lead">Follow along step by step, with pictures, from the download to your first sound and then to everyday use.</p>
+<a class="button" href="https://github.com/fidenne/fidenne/releases/latest">Download — installer (.dmg)<span aria-hidden="true"> ↗</span></a>
+<p class="requirements">Apple silicon Mac · macOS 15 or later · wired USB external DAC recommended</p>
+<p class="small">This is still a public beta — some things will change or be fixed.</p>
+<figure class="shot hero-shot"><picture><source media="(prefers-color-scheme: dark)" srcset="../img/0.7/streaming-dark-en.png"><img src="../img/0.7/streaming-light-en.png" width="3024" height="1898" alt="Fidenne Streaming page — Apple Music and Spotify under Streaming in the sidebar, and My playlists (covers are hidden)" loading="lazy" decoding="async"></picture></figure>
+</div>
+
+<div class="part" id="install"><p class="eyebrow">Part 1</p><h2>Install</h2><p>Follow these steps from the download to your first sound.</p></div>
+
+<section class="step" id="i1" aria-labelledby="i1-title">
+<p class="eyebrow">Install 1</p>
+<h3 id="i1-title">How sound travels</h3>
+<p class="lead">In Fidenne you choose the output method, shape the sound with EQ, Ostrum, Crossfeed and filters, and check the route the sound takes in the Playback Chain. Sound travels in this order: <b>playback app → Fidenne → DAC</b>.</p>
+<ol class="steps"><li>Choose and play music as usual in the Apple Music, Spotify or YouTube Music app (or in a browser). Fidenne sits in between, takes the sound, processes it and passes it to your DAC.</li><li>The Playback Chain shows the route the sound takes and the processing in use. Fidenne does not save the sound or turn it into files.</li><li>You can control the service app you are listening to from Fidenne and see track information and lyrics alongside (playback itself is done by each service app). Play counts and ads stay as they are in each service. Fidenne does not block or skip ads.</li></ol>
+</section>
+
+<section class="step" id="i2" aria-labelledby="i2-title">
+<p class="eyebrow">Install 2</p>
+<h3 id="i2-title">What you need</h3>
+<p class="lead">We recommend an <b>Apple silicon Mac</b> (M1 or later), <b>macOS 15 or later</b>, and a <b>wired USB external DAC</b>.</p>
+<ol class="steps"><li>Open the Apple logo in the menu bar › <b>About This Mac</b>. The chip name should start with “Apple M”.</li><li>If macOS is older than 15, the app will not open. Update first in System Settings › Software Update.</li><li>Plug in your external DAC by USB. Sound shaping (EQ and so on) works on a 2-channel DAC that accepts at least one of the PCM rates the engine uses (44.1 to 768 kHz).</li></ol>
+<p class="note">With the built-in speakers, the 3.5 mm jack, AirPods or HDMI, Fidenne also sends sound that has had EQ, Ostrum, Crossfeed and filters applied, as PCM. At the very end macOS mixes it through the system mixer, so it is not bit-perfect, and DSD is not available. A device that accepts none of the supported rates (most dongles, for example) plays only in PCM Direct, where you hear the sound untouched.</p>
+</section>
+
+<section class="step" id="i3" aria-labelledby="i3-title">
+<p class="eyebrow">Install 3</p>
+<h3 id="i3-title">Download</h3>
+<p class="lead">Get the installer (<code>.dmg</code>) from the Releases section of the public Fidenne page.</p>
+<ol class="steps"><li>On the <a href="https://github.com/fidenne/fidenne/releases/latest">Releases page</a> (<code>github.com/fidenne/fidenne/releases</code>), open the newest entry at the top.</li><li>Click the file that ends in <code>.dmg</code>. A <code>.dmg</code> is a disk image, the usual way Mac apps are distributed. The downloaded file normally goes into your Downloads folder.</li><li>If the download takes a while, wait until it finishes. If the file will not open or has a different name, check again that you picked the newest entry.</li></ol>
+<p class="note">The app is distributed signed and notarized. Do not use files downloaded from anywhere else.</p>
+</section>
+
+<section class="step" id="i4" aria-labelledby="i4-title">
+<p class="eyebrow">Install 4</p>
+<h3 id="i4-title">Move it to the Applications folder</h3>
+<p class="lead">Open the downloaded disk image and put the app in your Applications folder.</p>
+<figure class="shot wide-small"><img src="../img/install-dmg.png" width="1000" height="254" alt="Disk image window — the Applications folder on the left, the Fidenne app on the right" loading="lazy" decoding="async"></figure>
+<ol class="steps"><li>Double-click the downloaded <code>.dmg</code>. A small window opens.</li><li>Drag the <b>Fidenne</b> icon in that window onto the <b>Applications</b> folder.</li><li>When copying is done, close the window and eject the disk image with the eject (⏏) button in the Finder sidebar.</li></ol>
+<p class="note">Keep the app in the Applications folder so that updating is easier later. The extension that lets Safari work with YouTube Music also shows up in Safari only for an app opened from that folder. Do not open the app directly from inside the disk image or from the Downloads folder. If a window says an app with the same name already exists, choose to replace it with the new one.</p>
+</section>
+
+<section class="step" id="i5" aria-labelledby="i5-title">
+<p class="eyebrow">Install 5</p>
+<h3 id="i5-title">Open it for the first time</h3>
+<p class="lead">Open Fidenne from the Applications folder.</p>
+<ol class="steps"><li>Because the app came from the internet, macOS asks once whether you want to open it. Click <b>Open</b>.</li><li>If it still does not open, allow Fidenne in System Settings › Privacy &amp; Security.</li><li>If your Mac runs a macOS older than 15, the app will not open at all. Go back to Install 2 and update macOS.</li></ol>
+<p class="note">The exact wording of this window differs a little between macOS versions.</p>
+</section>
+
+<section class="step" id="i6" aria-labelledby="i6-title">
+<p class="eyebrow">Install 6</p>
+<h3 id="i6-title">First-time setup</h3>
+<p class="lead">The first time you open it, the “Fidenne First-Time Setup” window appears and takes you through five steps (shown at the top of the window as <code>1 / 5</code> and so on). Use <b>Back</b> and <b>Next</b> to move between steps.</p>
+<figure class="shot medium"><img src="../img/0.7/onboarding-step1-light-en.png" width="3024" height="760" alt="First-time setup 1/5 — choosing the DAC your sound goes to" loading="lazy" decoding="async"></figure><figure class="shot medium"><img src="../img/0.7/onboarding-step2-light-en.png" width="3024" height="760" alt="First-time setup 2/5 — how sound is captured, Fidenne Inlet and the system tap" loading="lazy" decoding="async"></figure><figure class="shot medium"><img src="../img/0.7/onboarding-step3-light-en.png" width="3024" height="760" alt="First-time setup 3/5 — what macOS will ask" loading="lazy" decoding="async"></figure><figure class="shot medium"><img src="../img/0.7/onboarding-step4-light-en.png" width="3024" height="1300" alt="First-time setup 4/5 — what Fidenne does and doesn’t do" loading="lazy" decoding="async"></figure><figure class="shot medium"><img src="../img/0.7/onboarding-step5-light-en.png" width="3024" height="1898" alt="First-time setup 5/5 — licence and internet access" loading="lazy" decoding="async"></figure>
+<ol class="steps"><li><b>The DAC your sound goes to</b> — choose your DAC. If you are not sure, leave it on <b>Choose later</b>. If your DAC does not show up, plug it in and refresh.</li><li><b>How sound is captured</b> — <b>Fidenne Inlet</b> is already selected from the start. It is a virtual device that receives the sound your music app makes exactly as it is, so leave it as it is. If it is not installed, click <b>Install…</b> and enter your administrator password once (all sound is briefly cut at that moment). A virtual audio device such as Inlet is installed separately because macOS only loads it from a system folder. If you would rather not install it, choose <b>System tap</b> (it works without installing, but captures at 48 kHz).</li><li><b>What macOS will ask</b> — it does not ask now. It asks the first time you use each feature.</li><li><b>What Fidenne Does and Doesn’t Do</b> — read it and click <b>Next</b>.</li><li><b>Licence and internet access</b> — below the terms there are four check boxes (<b>Agree to All</b> · <b>[Required] Terms of Use</b> · <b>[Optional] Use features that connect to the internet</b> · <b>[Optional] Diagnostic records for problem reports</b>). You must tick the required box before you can click <b>Start</b>. Playback works even if you leave the optional boxes off. If you do not agree and click Quit, the app closes.</li></ol>
+<p class="note">When you finish, the sidebar (the list of pages) and a page appear in the same window. This window does not appear again from the next launch, and you can change your choices later in Settings. If you do not agree to internet access, online features stay off.</p>
+</section>
+
+<section class="step" id="i7" aria-labelledby="i7-title">
+<p class="eyebrow">Install 7</p>
+<h3 id="i7-title">Permissions</h3>
+<p class="lead">macOS asks for a permission the first time you use the feature that needs it. When the window appears, click <b>Allow</b>.</p>
+<figure class="shot narrow"><img src="../img/permission-automation.png" width="545" height="645" alt="macOS Automation permission window — Fidenne wants to control a music app, Don’t Allow · Allow" loading="lazy" decoding="async"></figure>
+<ol class="steps"><li><b>Audio recording · system audio</b> — when capturing sound made by other apps. The word “recording” is part of the name, but Fidenne does not save the sound.</li><li><b>Microphone</b> — when capturing through an input device such as Fidenne Inlet. Nothing is saved or sent out.</li><li><b>Automation</b> — to read what is playing now in Apple Music and Spotify and to send play and pause.</li><li><b>Apple Music library</b> — to read your library.</li></ol>
+<p class="note">If you declined by mistake, turn Fidenne back on for that item in System Settings › Privacy &amp; Security. If you use the app without allowing it, sound may not come in or track information may not show.</p>
+</section>
+
+<section class="step" id="i8" aria-labelledby="i8-title">
+<p class="eyebrow">Install 8</p>
+<h3 id="i8-title">Turn the volume down before the first play</h3>
+<p class="lead">When you press play for the first time, this window appears before any sound.</p>
+<figure class="shot compact"><img src="../img/volume-first.png" width="820" height="356" alt="“Turn the volume down before starting” window — Cancel · I turned it down, start" loading="lazy" decoding="async"></figure>
+<ol class="steps"><li>Turn the volume on your DAC or amp down to <b>0 or very low</b>.</li><li>Click <b>I turned it down, start</b>. If you click <b>Cancel</b>, nothing starts.</li><li>Raise the volume slowly while you listen.</li></ol>
+<p class="note">It appears once at the first play each time you launch the app, and once more with a DAC you are using with this app for the first time. The first sound can be suddenly loud, so this protects your ears and your equipment. If you press play and nothing happens, check whether this window is behind another window.</p>
+</section>
+
+<section class="step" id="i9" aria-labelledby="i9-title">
+<p class="eyebrow">Install 9</p>
+<h3 id="i9-title">When you get stuck</h3>
+<p class="lead">If there is no sound or it sounds wrong, look up your symptom in the <a href="https://github.com/fidenne/fidenne/blob/main/docs/user/en/TROUBLESHOOTING.md">Troubleshooting guide</a>. The most common one, “no sound”, is the first entry.</p>
+<ol class="steps"><li>If that does not solve it, make a support file from the app’s Diagnostics menu › <b>Export Diagnostics for Support…</b>. Before sending, it shows you on screen what the file contains.</li><li>Send an email to <b>fidenne.support@gmail.com</b>. The app never sends anything for you, so whether to send it is up to you.</li></ol>
+<p class="note">If you have a GitHub account you may also write an issue, but send the diagnostics file by email only. Do not post it in an issue.</p>
+</section>
+
+<section class="step" id="i10" aria-labelledby="i10-title">
+<p class="eyebrow">Install 10 · Optional</p>
+<h3 id="i10-title">Connect Spotify ① Create your own app</h3>
+<p class="lead">You do not have to do this. If you pick a track in the Spotify app, Fidenne shapes the sound and shows what is playing, with no key. Do it only if you want to use Spotify search, playlists and playback control inside Fidenne. Fidenne does not ship with a Spotify key, so you create the key of your own Spotify developer app. Log in with the Spotify account you normally use.</p>
+<ol class="steps">
+<li>In your browser, open <code>developer.spotify.com</code> and click <b>Log in</b>. You can also open it from the dot next to Spotify on Fidenne’s Streaming page › <b>Open Developer Dashboard</b>.<figure class="shot wide-small"><img src="../img/spotify-1-login.jpg" width="1600" height="113" alt="Spotify for Developers start page — address developer.spotify.com, Log in at the end of the menu bar" loading="lazy" decoding="async"></figure></li>
+<li>After logging in, click your account name button and choose <b>Dashboard</b> from the menu.<figure class="shot wide-small"><img src="../img/spotify-2-dashboard-menu.jpg" width="1260" height="373" alt="Menu that opens from the account name button — Dashboard, Log out (account name is hidden)" loading="lazy" decoding="async"></figure></li>
+<li>On the <b>Dashboard</b> page, click <b>Create app</b>.<figure class="shot wide-small"><img src="../img/spotify-3-create.jpg" width="1600" height="341" alt="Dashboard page and the Create app button" loading="lazy" decoding="async"></figure></li>
+<li>Enter anything for <b>App name</b> and <b>App description</b>. In the <b>Redirect URIs</b> field, paste the address shown in Fidenne, <code>http://127.0.0.1:53682/callback</code> (use the <b>Copy</b> button in Fidenne), and click <b>Add</b>. Under <b>Which API/SDKs are you planning to use?</b>, tick <b>Web API</b>. Leave the Website field empty.<figure class="shot wide-small"><img src="../img/spotify-4-form.jpg" width="1600" height="864" alt="Create app form — App name, App description, Website (empty), http://127.0.0.1:53682/callback in Redirect URIs with the Add button, Web API ticked" loading="lazy" decoding="async"></figure></li>
+<li>Tick the terms box (<b>I understand and agree with Spotify's Developer Terms of Service and Design Guidelines</b>) and click <b>Save</b>.<figure class="shot wide-small"><img src="../img/spotify-5-save.jpg" width="1600" height="417" alt="Web API ticked, terms box ticked, Save button" loading="lazy" decoding="async"></figure></li>
+</ol>
+<p class="note">What you agree to here are the Spotify developer terms. You agree to them yourself, and Spotify sets those terms. Button names and layout on the site may change.</p>
+</section>
+
+<section class="step" id="i11" aria-labelledby="i11-title">
+<p class="eyebrow">Install 11 · Optional</p>
+<h3 id="i11-title">Connect Spotify ② Enter the key</h3>
+<p class="lead">Paste the <b>Client ID</b> of the app you created into Fidenne’s field. The <b>Client ID</b> is all you need. The dashboard also shows a <b>Client Secret</b>, but Fidenne does not use it, so there is no field for it. It is like a password, so do not tell anyone. If you paste the whole dashboard address, Fidenne reads the ID from it.</p>
+<ol class="steps" start="6">
+<li>After you Save, the <b>Basic Information</b> page of your app opens. Click the copy button at the end of the <b>Client ID</b> field.<figure class="shot wide-small"><img src="../img/spotify-6-clientid.jpg" width="1600" height="500" alt="Basic Information page of the new app — Client ID field and copy button (the ID value is hidden)" loading="lazy" decoding="async"></figure></li>
+<li>Paste it into the Spotify connection field on Fidenne’s Streaming page and click <b>Check Key</b> to see whether the format is right. If it points out the length or a character that is not allowed, check whether a space at the start or end came along when you copied. If it is right, click <b>Connect Spotify</b>.<figure class="shot medium"><picture><source media="(prefers-color-scheme: dark)" srcset="../img/0.7/spotify-popover-dark-en.png"><img src="../img/0.7/spotify-popover-light-en.png" width="3024" height="1300" alt="Spotify connection window — copy Redirect URI, Client ID field, Check Key, Connect Spotify (the field is empty)" loading="lazy" decoding="async"></picture></figure></li>
+<li>The Spotify consent page appears in your browser. Check the name of the app you created and click the agree button.<figure class="shot medium"><img src="../img/spotify-7-consent.jpg" width="1058" height="1523" alt="Spotify consent page — allow the app you created to connect, list of permissions, cancel and agree buttons (account name is hidden)" loading="lazy" decoding="async"></figure></li>
+<li>When you see a message that Spotify’s sign-in response was received and asks you to go back to Fidenne to check the result, the connection is done. Close this tab and return to Fidenne.<figure class="shot wide-small"><img src="../img/spotify-8-done.jpg" width="1512" height="81" alt="Connection complete page — the Spotify sign-in response was received; return to Fidenne to check the result" loading="lazy" decoding="async"></figure></li>
+</ol>
+<p class="note">Controlling Spotify playback (play, pause, skip) requires Spotify Premium. If you make too many requests, Spotify asks you to wait for a while. The connection stays, and you can try again after the time shown. After connecting, Renew Playback Permission and Disconnect appear in the settings.</p>
+</section>
+
+<section class="step" id="i12" aria-labelledby="i12-title">
+<p class="eyebrow">Install 12 · Optional</p>
+<h3 id="i12-title">YouTube Music</h3>
+<p class="lead">This is an experimental feature, so it is off at first. YouTube Music has no Mac app, so you listen in Safari, Chrome or Edge, and Fidenne gets track information and controls playback through a browser extension (a small program you add to the browser). The sound is captured by Fidenne Inlet as usual. If you connect several browsers, Fidenne follows the browser where you started playback yourself. The Safari extension is built into the app, so there is no file to install.</p>
+<figure class="shot"><img src="../img/settings-ytm.png" width="1264" height="230" alt="The YouTube Music (experimental) switch at the top of Settings › General" loading="lazy" decoding="async"></figure>
+<ol class="steps"><li>Turn on YouTube Music with the switch at the top of <b>Settings › General</b>.</li><li>To use Chrome or Edge, turn on <b>Settings › Privacy › Connect to browser extension (Safari · Chrome · Edge)</b>. If you only use Safari, you do not need this switch; go to <b>Turn it on in Safari</b> below.</li><li>For Chrome and Edge, click <b>Installation Guide…</b> in the same place to open the extension install window. Keep this window open while you follow the next steps.</li></ol>
+<figure class="shot narrow"><img src="../img/privacy-ytm.png" width="620" height="240" alt="YouTube Music section of Settings › Privacy — the Chrome · Edge extension connection switch, the installation guide and open extension folder buttons" loading="lazy" decoding="async"></figure>
+<figure class="shot medium"><img src="../img/ytm-extension.png" width="460" height="425" alt="Extension install window — choose Chrome or Edge, copy address, developer mode, copy path, reload the YouTube Music tab" loading="lazy" decoding="async"></figure>
+<h4>Install the extension in Chrome</h4>
+<ol class="steps">
+<li>Type <code>chrome://extensions</code> in the Chrome address bar and press Return (<b>Copy Address</b> in the install window). Turn on the <b>Developer mode</b> switch and three buttons appear.<figure class="shot wide-small"><img src="../img/ytm-chrome-1-devmode.jpg" width="1600" height="220" alt="Chrome Extensions page — address chrome://extensions, Developer mode on, Load unpacked · Pack extension · Update buttons" loading="lazy" decoding="async"></figure></li>
+<li>Click <b>Load unpacked</b>. A window opens for choosing a folder.<figure class="shot wide-small"><img src="../img/ytm-chrome-2-load.jpg" width="1600" height="774" alt="Extension directory selection window that opens after clicking Load unpacked" loading="lazy" decoding="async"></figure></li>
+<li>In that window press ⌘⇧G, paste the path you copied with <b>Copy Path</b> in the install window, and press Return.<figure class="shot wide-small"><img src="../img/ytm-chrome-3-path.jpg" width="1600" height="820" alt="The Go to the folder field opened with ⌘⇧G — the …Application Support/Fidenne/BrowserExtension/Chrome path pasted in (the user folder name is hidden)" loading="lazy" decoding="async"></figure></li>
+<li>When the folder name changes to <b>Chrome</b>, click <b>Select</b>.<figure class="shot wide-small"><img src="../img/ytm-chrome-4-select.jpg" width="1600" height="818" alt="Selection window with the Chrome folder open — files such as background.js and manifest.json, and the Select button" loading="lazy" decoding="async"></figure></li>
+<li>When <b>Fidenne for YouTube Music</b> appears in the extension list, the installation is done. The version number may differ.<figure class="shot medium"><img src="../img/ytm-chrome-5-done.jpg" width="810" height="427" alt="The installed Fidenne for YouTube Music extension card — Details, Remove, reload, on switch" loading="lazy" decoding="async"></figure></li>
+<li>Reload any open YouTube Music tab (⌘R).</li>
+</ol>
+<h4>Install the extension in Edge</h4>
+<p class="note">The steps are the same as in Chrome; only the names differ.</p>
+<ol class="steps">
+<li>Type <code>edge://extensions</code> in the Edge address bar and press Return.<figure class="shot wide-small"><img src="../img/ytm-edge-1-buttons.jpg" width="1600" height="280" alt="Edge Extensions page — address edge://extensions, Load unpacked · Pack extension · Update buttons under developer options" loading="lazy" decoding="async"></figure></li>
+<li>Turn on the <b>Developer mode</b> switch at the bottom of the sidebar.<figure class="shot narrow"><img src="../img/ytm-edge-2-devmode.jpg" width="610" height="106" alt="The Edge Developer mode switch turned on" loading="lazy" decoding="async"></figure></li>
+<li>Click <b>Load unpacked</b>, press ⌘⇧G in the window that opens, paste the path you copied with <b>Copy Path</b>, press Return, and then click <b>Select</b>.<figure class="shot wide-small"><img src="../img/ytm-edge-3-path.jpg" width="1600" height="814" alt="The path pasted with ⌘⇧G in Edge’s extension directory selection window (the user folder name is hidden)" loading="lazy" decoding="async"></figure></li>
+<li>When <b>Fidenne for YouTube Music</b> appears under Other sources, you are done. Reload any open YouTube Music tab (⌘R).<figure class="shot wide-small"><img src="../img/ytm-edge-4-done.jpg" width="1600" height="342" alt="The Fidenne for YouTube Music extension installed in Edge — Details, Remove, Reload, on switch" loading="lazy" decoding="async"></figure></li>
+</ol>
+<h4>Turn it on in Safari</h4>
+<p>Do this after turning on YouTube Music in step 1 above. Safari 18.4 or later is required.</p>
+<ol class="steps">
+<li>Check that Fidenne is open from the <b>Applications</b> folder. If you opened the app from the Downloads folder or from inside the disk image, Settings › Privacy › YouTube Music shows “The Safari extension appears in Safari only after you move Fidenne to the Applications folder and open it again.” Quit Fidenne, move it to the Applications folder, and open it again from there.</li>
+<li>Click <b>Open Safari Settings</b> in the same place. When Safari’s extension settings open, turn on Fidenne’s YouTube Music extension. If only Safari opens, turn it on in Safari › Settings › <b>Extensions</b>.</li>
+<li>Open music.youtube.com, click the Fidenne icon in the row of extension icons next to the address bar, and allow it on this website (<b>Always Allow</b>). Reload that tab (⌘R).</li>
+</ol>
+<p class="note">When you play a track on music.youtube.com and it shows in the bar at the bottom, the connection works. If it does not show, check in Safari › Settings › <b>Extensions</b> that the Fidenne extension is on, and in Safari › Settings › <b>Websites</b> that music.youtube.com is set to allow. If the bar stops after you update the app, reload that tab once.</p>
+<h4>Keep the tab from falling asleep</h4>
+<p>If the browser puts an unused tab to sleep, YouTube Music cannot respond. Add <code>music.youtube.com</code> to the exceptions. In Chrome it is Settings › Performance › Memory Saver › <b>Always keep these sites active</b>. In Edge it is Settings › System and performance › Optimize Performance › <b>Never put these sites to sleep</b>. Safari has no per-site sleep exception. A tab that is playing sound is not put to sleep, but if a tab left paused for a long time or the extension falls asleep and the bar stops, reload that tab once (⌘R).</p>
+<h4>Import playlists</h4>
+<p>With the extension connected, opening a playlist page in YouTube Music adds it automatically. Or you can import a Google Takeout (download your data) file. The collected lists gather under <b>Streaming › YouTube Music › My playlists</b>.</p>
+<p class="note">In Chrome and Edge, the connection is made when the bottom line of the install window changes to “1 browser connected”. The extension is not in the web store yet, so you install it only in developer mode, and you install it in one browser only. In Safari, the connection is made when a track you play on music.youtube.com shows in the bar at the bottom. After you update the app, press reload (↻, or <b>Reload</b> in Edge) for the Fidenne extension once on the extensions page. If the YouTube Music page changes, it may stop working. That is what “experimental feature” means.</p>
+</section>
+
+<div class="part" id="usage"><p class="eyebrow">Part 2</p><h2>Use</h2><p>This part goes in the order choose a device → connect a service → play. The screens are shown in English. ⌘ in ⌘1, ⌘4 and ⌘5 is the Command key on your keyboard; these keys open a sidebar page directly.</p></div>
+
+<section class="step" id="u1" aria-labelledby="u1-title">
+<p class="eyebrow">Use 1</p>
+<h3 id="u1-title">Choose the DAC your sound goes to</h3>
+<p class="lead">In the sidebar’s <b>Input/Output · Diagnostics</b> (⌘5), choose the output DAC and the output method.</p>
+<figure class="shot"><picture><source media="(prefers-color-scheme: dark)" srcset="../img/0.7/io-dark-en.png"><img src="../img/0.7/io-light-en.png" width="3024" height="1898" alt="Input/Output · Diagnostics page — engine status, output device, output method cards" loading="lazy" decoding="async"></picture></figure>
+<ol class="steps"><li>Under <b>Output DAC</b>, choose your DAC. If it does not show, plug it in and click refresh (↻).</li><li>Under <b>Output method</b>, choose one of the three.</li></ol>
+<dl class="terms"><dt>PCM Direct</dt><dd>Fidenne does not touch the sound, and macOS sends it to the DAC. Sound shaping is off. It is the simplest and works with any device.</dd><dt>DSD (DoP)</dt><dd>This is the starting value (until DSD is confirmed on that DAC, it starts in PCM Direct). The engine sends sound through the filter and the DSD conversion. The DAC must accept DSD.</dd><dt>PCM oversampling</dt><dd>The engine sends the processed sound as integer PCM. It suits DACs that do not know DSD. Choose the output rate under PCM in Advanced from the supported rates of 44.1 to 768 kHz; the default for new settings is to keep the source rate.</dd></dl>
+<p class="note">Sound shaping works on a 2-channel DAC that accepts at least one supported rate between 44.1 and 768 kHz. Other devices get “· PCM Direct only” after their name in the list. The built-in speakers, the 3.5 mm jack, AirPods and HDMI do not show this label; Fidenne processes the sound and sends it, and at the very end macOS mixes it through the system mixer (DSD is locked). If you start in DSD and hear loud hissing or crackling, it stops at once and switches to PCM oversampling. That DAC cannot decode DSD (DoP). The first time you send DSD to a DAC you are using with this app for the first time, a confirmation window appears once.</p>
+</section>
+
+<section class="step" id="u2" aria-labelledby="u2-title">
+<p class="eyebrow">Use 2</p>
+<h3 id="u2-title">Turn the volume down first</h3>
+<p class="lead">The first time you play after launching the app, the volume notice window appears. Turn the volume down, click <b>I turned it down, start</b>, and then raise it slowly.</p>
+<figure class="shot medium"><img src="../img/settings-sound-safety.png" width="1268" height="390" alt="Settings › Sound safety — Volume reminder each time it’s turned on, Mute if a signal that isn’t music comes out" loading="lazy" decoding="async"></figure>
+<ol class="steps"><li>To turn the notice window off, turn off “Volume reminder each time it’s turned on” in Settings › <b>Sound safety</b>.</li><li>Even with it off, you are asked once with a DAC you are using with this app for the first time.</li></ol>
+<p class="note">When you switch to PCM Direct, the engine’s safe headroom is not applied, so check the DAC volume before you switch.</p>
+</section>
+
+<section class="step" id="u3" aria-labelledby="u3-title">
+<p class="eyebrow">Use 3</p>
+<h3 id="u3-title">Connect a service</h3>
+<p class="lead">Choose a service under <b>Streaming</b> in the sidebar. They are Apple Music, Spotify, and YouTube Music if you have turned it on (YouTube Music shows only when you turned it on in Settings › General). When you click a service, the page header shows the service name and its connection state (● Connected · Not connected · Needs attention).</p>
+<figure class="shot medium"><picture><source media="(prefers-color-scheme: dark)" srcset="../img/0.7/streaming-dark-en.png"><img src="../img/0.7/streaming-light-en.png" width="3024" height="1898" alt="Streaming page — Apple Music and Spotify under Streaming in the sidebar, the service name and Connected mark in the header, the Engine off pill at the end of the header (covers are hidden)" loading="lazy" decoding="async"></picture></figure>
+<ol class="steps"><li><b>Apple Music</b> — the first time you use it, macOS asks two things: whether Fidenne may control the Music app, and whether it may read your Apple Music library. Click <b>Allow</b> for both. Even if you do not allow reading the library, Fidenne reads it through the Music app. The ● Connected in the header is only an indicator, not a button. If you missed the prompt, turn on Music for Fidenne in System Settings › Privacy &amp; Security › <b>Automation</b>.</li><li><b>Spotify</b> — you do not have to. If you pick a track in the Spotify app, Fidenne shapes the sound and shows the current track with no key. To use search, playlists and playback control inside Fidenne, click the Spotify status pill in the header, enter your Client ID in the window that opens, and click <b>Connect Spotify</b> (Install 10 and 11). After connecting, the same window gets Renew Playback Permission, Follow Spotify queue and Disconnect.</li><li><b>YouTube Music</b> — turn it on in Settings › General and follow Install 12. It works in Safari, Chrome and Edge. Clicking the status pill in the header opens a window to choose the browser to connect with.</li><li><b>Turn on the engine</b> — to make the sound pass through Fidenne, click the <b>Playback Chain</b> pill at the end of the header (for example ● Engine off ⌄) and turn on the <b>Engine</b> switch at the top of the window that opens. The engine switch does not play a track. Play tracks from the service app or with the play button in the bottom bar. What plays when you turn the engine on is chosen under <b>After the engine starts</b> on the Input/Output · Diagnostics page.</li></ol>
+<h4>If you control Apple Music playback from Fidenne — turn these off in the Music app</h4>
+<ul class="plain"><li><b>Autoplay (∞)</b> — the ∞ button above Up Next in Music. It picks tracks only after the Fidenne list ends.</li><li><b>Shuffle · repeat</b> — turn them off in Music and, if you need them, use shuffle and repeat in the Fidenne bar.</li><li><b>Track transitions (AutoMix · Crossfade)</b> — Music › Settings › Playback. When tracks overlap, the moment a track changes becomes blurred, and skipping tracks and matching rates can go wrong.</li><li>We also recommend turning off <b>Sound Check · Equalizer · Sound Enhancer</b>, which change the sound first. They change the sound before Fidenne shapes it.</li></ul>
+<p class="note">Fidenne has no feature that replaces a service subscription. Tracks always play in each service’s app with your own account. If the sound passes through Fidenne but you cannot hear it, check that the input and output on the Input/Output page are the ones you chose.</p>
+</section>
+
+<section class="step" id="u4" aria-labelledby="u4-title">
+<p class="eyebrow">Use 4</p>
+<h3 id="u4-title">The playback capsule at the bottom</h3>
+<p class="lead">This is the bar that always floats at the bottom of the window. It is one line and the same height whether the window is wide or narrow. From the front, in order:</p>
+<figure class="shot"><picture><source media="(prefers-color-scheme: dark)" srcset="../img/0.7/capsule-dark-en.png"><img src="../img/0.7/capsule-light-en.png" width="2480" height="172" alt="Playback capsule at the bottom — service icon, album cover, track, shuffle · previous · pause · next · repeat, more, volume, Play Next, and the playback position line at the very bottom (playing, cover is hidden)" loading="lazy" decoding="async"></picture></figure>
+<ol class="steps"><li><b>Service icon</b> — the app that is making the sound now. Only the icon shows, without a name; the name appears when you hover the pointer over it. Click it to open the current track in that service (in a browser tab for YouTube Music).</li><li><b>Album cover</b> — click it to open the large playback screen (Album mode). Press <b>Esc</b>, click close (×), or click the cover again to close it.</li><li><b>Track</b> — the title, with the artist · album under it. The <b>heart</b> right after the title adds it to <b>Liked Songs</b> (library), which is managed by Fidenne and exclusive to Fidenne. It is separate from the likes in a service app.</li><li><b>Shuffle · previous · play/pause · next · repeat</b> — shuffle and repeat work only on a list you played from Fidenne.</li><li><b>Playback position</b> — the thin line laid under the track and the play buttons. Click or drag it to move. When you hover the pointer, the line gets thicker, the text right above it fades, and the current time and the time left appear above both ends of the line.</li><li><b>⋯</b> — the menu for the current track. Depending on the track you see <b>Play Next</b> · <b>Add to End of Queue</b> (while playing a Fidenne list) · <b>Add to Playlist</b> · <b>Show Lyrics</b> · <b>Track Info</b> · <b>Open in Another App</b>, and at the very end <b>Sleep Timer</b> and <b>Output Settings…</b> (the output settings on the Input/Output page).</li><li><b>Volume (speaker)</b> — click to mute and click again to restore. When you hover the pointer, a volume bar appears above it, and you can also swipe up and down to change it. This button reads and changes the volume of the DAC itself. On a DAC that is adjusted only with its own knob, it looks dimmed, and hovering shows the reason.</li><li><b>Play Next</b> (list-shaped) — opens and closes the Play Next and lyrics panel.</li></ol>
+<p class="note">If you narrow the window a lot, the cover becomes a square, and if you narrow it more, shuffle and repeat leave the bar and move into the <b>⋯</b> menu.</p>
+<h4>The engine switch and the output method are in the header, not in the bar</h4>
+<ol class="steps"><li>The <b>Playback Chain</b> pill at the end of the page header shows “app → output method → DAC” (for example PCM 24-bit), and its dot is the engine state (green on, gray off, red error). When the engine is off it reads “Engine off”.</li><li>Click it and a window opens. It has the <b>Engine</b> switch at the top, under it <b>Output settings</b> (choose a recommended preset or a saved preset), the stages the sound passes through, and at the bottom the <b>Open Input/Output · Diagnostics</b> button.</li><li>Hold the <b>Option</b> key and click the pill to turn the engine on or off at once without opening the window.</li><li>If the engine is off and there is an error, a red ! appears at the end of the bar; click it to open the Input/Output · Diagnostics page.</li></ol>
+<p class="note">When you play Spotify on another device, the bar shows only “playing on another device”, and you control it on that device.</p>
+</section>
+
+<section class="step" id="u5" aria-labelledby="u5-title">
+<p class="eyebrow">Use 5</p>
+<h3 id="u5-title">The Streaming page</h3>
+<p class="lead">Open <b>Streaming</b> (⌘1) in the sidebar. Home shows <b>Continue listening</b> · <b>Played today</b> · <b>My playlists</b> · <b>Often played before</b>.</p>
+<figure class="shot medium"><picture><source media="(prefers-color-scheme: dark)" srcset="../img/0.7/cap-dark-en.png"><img src="../img/0.7/cap-light-en.png" width="3024" height="1898" alt="Streaming page — service buttons and the search field, the track list of an opened playlist, the playback capsule at the bottom (covers are hidden)" loading="lazy" decoding="async"></picture></figure>
+<ol class="steps"><li>Click one of Apple Music, Spotify or YouTube Music under <b>Streaming</b> in the sidebar (YouTube Music shows only when turned on).</li><li>Search for tracks, artists and albums.</li><li>Click a track and choose Play Now or Play Next.</li><li>When you open a playlist or an album, <b>Adjust order</b> lets you drag track rows to change the order, and the <b>Library</b> button in the album header saves it to that service’s library. The order changes only inside Fidenne, and the service’s own playlist stays as it is.</li></ol>
+<p class="note">Spotify search results are not mixed with other services; you see them separately by clicking the <b>Spotify</b> tab at the top of the results. If Spotify search does not work, check that you entered the key (Install 10 and 11). If YouTube Music shows “Not connected”, follow Install 12.</p>
+</section>
+
+<section class="step" id="u6" aria-labelledby="u6-title">
+<p class="eyebrow">Use 6</p>
+<h3 id="u6-title">Your Fidenne library and Local</h3>
+<p class="lead">Playlists are saved inside Fidenne, and tracks play from each service. The music files on this Mac gather on the <b>Local</b> page in the sidebar.</p>
+<figure class="shot"><picture><source media="(prefers-color-scheme: dark)" srcset="../img/0.7/library-dark-en.png"><img src="../img/0.7/library-light-en.png" width="3024" height="1898" alt="Local page — the list of music files on this Mac, with Songs · Albums · Artists · Playlists tabs" loading="lazy" decoding="async"></picture></figure>
+<ol class="steps"><li>Choose <b>⋯</b> (or right-click) at the end of a track row › <b>Add to Playlist</b>. The heart adds to the likes list.</li><li>Use <b>+ New Playlist</b> to name and create a new list.</li><li>On the Local page, add a folder. Fidenne reads WAV · AIFF · FLAC · ALAC · AAC · MP3 · Opus, and never moves or changes the files themselves.</li></ol>
+<p class="note">Even if you delete a list, the track files stay as they are. If a track disappears from a service, that row in the list may not play.</p>
+</section>
+
+<section class="step" id="u7" aria-labelledby="u7-title">
+<p class="eyebrow">Use 7</p>
+<h3 id="u7-title">Play Next and lyrics</h3>
+<p class="lead">When you open Album mode, the center column holds <b>Play Next</b> (the tracks that follow the current one) and <b>Lyrics</b>.</p>
+<figure class="shot"><picture><source media="(prefers-color-scheme: dark)" srcset="../img/0.7/album-dark-en.png"><img src="../img/0.7/album-light-en.png" width="3024" height="1898" alt="Album mode — cover and playback controls, the Play Next column in the middle, the Playback Chain on the right (cover is hidden)" loading="lazy" decoding="async"></picture></figure>
+<figure class="shot narrow"><img src="../img/album-mode-narrow.jpg" width="600" height="1064" alt="Album mode in a narrow window — cover, playback controls, and the next track list below" loading="lazy" decoding="async"></figure>
+<ol class="steps"><li>Use the buttons below to switch between Play Next and lyrics. In the lyrics, the line being sung now is clear and lines fade as they get further away.</li><li>You can link a lyrics file (LRC or TXT) to a track yourself, or adjust the timing a little at a time if the lyrics are early or late.</li><li>If no lyrics show, click refresh (↻). A track that could not be found is not asked about again for 30 minutes.</li></ol>
+<p class="note">The first time lyrics are looked up on the internet, you are asked for consent once. Only the track title, artist, album and length are sent; sound and account information are not. If you do not agree, nothing is sent.</p>
+</section>
+
+<section class="step" id="u8" aria-labelledby="u8-title">
+<p class="eyebrow">Use 8</p>
+<h3 id="u8-title">Shape your sound</h3>
+<p class="lead">Open <b>DSP</b> (⌘4) in the sidebar. In the DSP group, <b>EQ</b>, <b>Ostrum</b> and <b>Crossfeed</b> are each a page of their own.</p>
+<figure class="shot"><picture><source media="(prefers-color-scheme: dark)" srcset="../img/0.7/eq-dark-en.png"><img src="../img/0.7/eq-light-en.png" width="3024" height="1898" alt="EQ page — graph and bands, with the EQ switch and the saved EQ chooser below" loading="lazy" decoding="async"></picture></figure>
+<ol class="steps"><li><b>Equalizer</b> — adjusts the loudness of high and low sounds band by band. In <b>Auto EQ</b>, choose your headphones and a target and it sets things up for you.</li><li><b>Ostrum</b> — Fidenne’s own feature for shaping bass, presence and the width of the sound. You start from one of four starting points.</li><li><b>Crossfeed</b> — mixes a little of the left and right sound of headphones. Turn it on and off with the switch.</li><li>When you change a value, it applies as it is, without saving. You hear it after a delay equal to the time the sound takes to pass through the filter and the output buffer, which can take up to a few seconds with a long filter or the “Stable” buffer. To keep it for the next launch, click <b>Save</b> (⌘S). If you do not save, it goes back when you quit and reopen the app.</li></ol>
+<div class="pair"><figure class="shot"><picture><source media="(prefers-color-scheme: dark)" srcset="../img/0.7/ostrum-dark-en.png"><img src="../img/0.7/ostrum-light-en.png" width="3024" height="1898" alt="Ostrum page — four starting points and the switch" loading="lazy" decoding="async"></picture></figure><figure class="shot"><picture><source media="(prefers-color-scheme: dark)" srcset="../img/0.7/crossfeed-dark-en.png"><img src="../img/0.7/crossfeed-light-en.png" width="3024" height="1898" alt="Crossfeed page — three levels and a knob" loading="lazy" decoding="async"></picture></figure></div>
+<p class="note">DSP works only when the sound passes through the engine. If you set PCM Direct, or use a device that accepts none of the supported rates between 44.1 and 768 kHz, the sound does not change, so see Use 1. If the sound gets too loud, a big EQ boost may be the reason, so lower it first.</p>
+</section>
+
+<section class="step" id="u9" aria-labelledby="u9-title">
+<p class="eyebrow">Use 9</p>
+<h3 id="u9-title">When you get stuck</h3>
+<p class="lead">If there is no sound, look up your symptom in the <a href="https://github.com/fidenne/fidenne/blob/main/docs/user/en/TROUBLESHOOTING.md">Troubleshooting guide</a>. There are three things to check first.</p>
+<ol class="steps"><li>In the Playback Chain pill at the end of the header, check that the engine is on (green dot).</li><li>Check that the volume on your DAC and amp is up.</li><li>Check that the volume notice window is not sitting open.</li><li>If it still does not work, open the menu <b>Help › Create Diagnostics for a Problem Report…</b>. If you agreed to “Diagnostic records for problem reports” at first-time setup, recording is already on, so create the bundle right after the problem happens and before you quit the app. If it was off, click <b>Start Diagnostic Recording</b> and leave it, and create the bundle the next time a problem happens. The bundle shows you its contents before sending.</li><li><b>Send by Email</b> opens your mail app with the address, subject and form filled in. If you use another mail service (such as Gmail), use <b>Copy Email Form</b> to copy the same content and paste it. Attach the bundle yourself. The app never sends anything for you.</li></ol>
+<p class="note">For questions, write to <b>fidenne.support@gmail.com</b>. In the email, include your DAC and output method, and when you did what and what you heard. The app version and macOS version are already in the form and the bundle. The bundle contains times, services, rates and random track covers; track titles, artists and albums are masked. Send the diagnostics bundle by email only, and do not post it in a GitHub issue.</p>
+<p class="note">When you delete the app, first click <b>Remove…</b> for Fidenne Inlet under <b>Input/Output · Diagnostics › Input and output devices</b>, and then move the app to the Trash. If you only throw the app away, the Inlet device stays behind.</p>
+<div class="resource-links"><a href="https://github.com/fidenne/fidenne/blob/main/docs/user/en/MANUAL.md">Manual</a><a href="https://github.com/fidenne/fidenne/blob/main/docs/user/en/HOW-TO.md">Find by what you want to do</a><a href="https://github.com/fidenne/fidenne/blob/main/docs/user/en/TROUBLESHOOTING.md">Troubleshooting guide</a><a href="mailto:fidenne.support@gmail.com">Support email</a></div>
+</section>
+</main>
+<footer><p>Fidenne shapes the sound made by the Apple Music, Spotify and YouTube Music apps and sends it to your DAC.</p><p>Some pictures were taken on an earlier version, and some were drawn with made-up track and device names. They may differ a little from the 0.7 screens. Album covers are blurred.</p><p>This translation was made with AI and has not yet been reviewed by a native speaker. Some wording may read awkwardly.</p></footer>
+</body>
+</html>

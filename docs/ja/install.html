@@ -1,0 +1,274 @@
+<!doctype html>
+<!-- SPDX-FileCopyrightText: 2026 The Aural Authors -->
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Fidenne 0.7のインストールと使い方ガイド。ダウンロードから初期設定、権限、SpotifyとYouTube Musicの接続、音の調整まで、画像つきで一歩ずつ説明します。">
+<title>Fidenne 0.7 · インストールと使い方ガイド</title>
+<link rel="icon" href="../img/icon.png">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../install.css">
+<link rel="alternate" hreflang="ko" href="../install.html">
+<link rel="alternate" hreflang="en" href="../en/install.html">
+<link rel="alternate" hreflang="ja" href="install.html">
+</head>
+<body>
+<a class="skip-link" href="#main">本文へ</a>
+<header class="site-header" id="top">
+<a class="brand" href="index.html"><img src="../img/icon.png" alt="" width="28" height="28">Fidenne</a>
+<nav aria-label="このページ"><a href="index.html">紹介</a><a href="#install">インストール</a><a href="#usage">使い方</a></nav>
+<nav class="languages" aria-label="言語"><a href="../install.html" lang="ko" hreflang="ko">한국어</a><a href="../en/install.html" lang="en" hreflang="en">English</a><a href="install.html" lang="ja" hreflang="ja" aria-current="page">日本語</a></nav>
+</header>
+<main id="main">
+<div class="hero guide-hero" aria-labelledby="hero-title">
+<p class="eyebrow">Fidenne · 公開ベータ1 · 0.7.0</p><h1 id="hero-title">インストールと使い方ガイド</h1>
+<p class="lead">ダウンロードして最初の音が出るまで、そして使い方まで、画像を見ながら一歩ずつ進めます。</p>
+<a class="button" href="https://github.com/fidenne/fidenne/releases/latest">ダウンロード — インストールファイル（.dmg）<span aria-hidden="true"> ↗</span></a>
+<p class="requirements">AppleシリコンMac · macOS 15以降 · 有線USB外付けDAC推奨</p>
+<p class="small">まだ公開ベータのため、変わる部分や修正中の部分があります。</p>
+<figure class="shot hero-shot"><picture><source media="(prefers-color-scheme: dark)" srcset="../img/0.7/streaming-dark-ja.png"><img src="../img/0.7/streaming-light-ja.png" width="3024" height="1898" alt="Fidenneのストリーミング画面 — サイドバーのストリーミングの下にApple MusicとSpotify、マイプレイリスト（ジャケットは隠してあります）" loading="lazy" decoding="async"></picture></figure>
+</div>
+
+<div class="part" id="install"><p class="eyebrow">第1部</p><h2>インストール</h2><p>ダウンロードして最初の音が出るまでを、順に進めます。</p></div>
+
+<section class="step" id="i1" aria-labelledby="i1-title">
+<p class="eyebrow">インストール 1</p>
+<h3 id="i1-title">音はこのように通ります</h3>
+<p class="lead">Fidenneで出力方式を選び、EQ・Ostrum・クロスフィードとフィルターで音を整え、Playback Chainで音の通り道を確認します。音は<b>再生アプリ → Fidenne → DAC</b>の順に通ります。</p>
+<ol class="steps"><li>音楽は、Apple Music・Spotify・YouTube Musicのアプリ（またはブラウザ）でいつもどおり選んで再生します。Fidenneはその間で音を受け取って処理し、DACへ渡します。</li><li>Playback Chainで、音の通り道と適用中の処理を確認します。音を保存したり、ファイルにしたりはしません。</li><li>聴いているサービスのアプリをFidenneから操作し、曲情報や歌詞もあわせて見られます（再生は各サービスのアプリが行います）。再生回数の集計や広告は各サービスのままで、Fidenneは広告をブロックしたりスキップしたりしません。</li></ol>
+</section>
+
+<section class="step" id="i2" aria-labelledby="i2-title">
+<p class="eyebrow">インストール 2</p>
+<h3 id="i2-title">用意するもの</h3>
+<p class="lead"><b>AppleシリコンMac</b>（M1以降のチップ）、<b>macOS 15以降</b>、そして<b>有線USB外付けDAC</b>をおすすめします。</p>
+<ol class="steps"><li>メニューバーのAppleロゴ › <b>このMacについて</b>を開きます。チップ名が「Apple M」で始まっていれば大丈夫です。</li><li>macOSが15より古いとアプリが開かないので、システム設定でソフトウェアアップデートを先に行います。</li><li>外付けDACをUSBで接続します。音を整える機能（EQなど）は、エンジンが使うPCMレート（44.1〜768 kHz）のうち1つ以上に対応した2チャンネルDACで動作します。</li></ol>
+<p class="note">内蔵スピーカー・3.5 mm端子・AirPods・HDMIでも、FidenneがEQ・Ostrum・クロスフィード・フィルターを適用した音をPCMで送ります。最後にmacOSがシステムミキサーで混ぜて出力するため、ビットパーフェクトではなく、DSDは使えません。対応レートを1つも受け付けないデバイス（多くのドングルなど）は、音をそのまま聴くPCM Directのみで出力されます。</p>
+</section>
+
+<section class="step" id="i3" aria-labelledby="i3-title">
+<p class="eyebrow">インストール 3</p>
+<h3 id="i3-title">ダウンロード</h3>
+<p class="lead">インストールファイル（<code>.dmg</code>）は、Fidenneの公開ページのリリース欄から入手します。</p>
+<ol class="steps"><li><a href="https://github.com/fidenne/fidenne/releases/latest">リリースページ</a>（<code>github.com/fidenne/fidenne/releases</code>）で、いちばん上の最新の項目を開きます。</li><li><code>.dmg</code>で終わるファイルをクリックします。<code>.dmg</code>はMacでアプリをまとめて配布するディスクイメージファイルで、ダウンロードしたファイルは通常「ダウンロード」フォルダに入ります。</li><li>ダウンロードに時間がかかるときは、終わるまで待ちます。ファイルが開けない、または名前が違うときは、最新の項目かどうかをもう一度確認します。</li></ol>
+<p class="note">アプリは署名と公証を経て配布されます。ほかの場所で入手したファイルは使わないでください。</p>
+</section>
+
+<section class="step" id="i4" aria-labelledby="i4-title">
+<p class="eyebrow">インストール 4</p>
+<h3 id="i4-title">アプリケーションフォルダに移す</h3>
+<p class="lead">ダウンロードしたディスクイメージを開き、アプリをアプリケーションフォルダに置きます。</p>
+<figure class="shot wide-small"><img src="../img/install-dmg.png" width="1000" height="254" alt="ディスクイメージのウインドウ — 左にApplicationsフォルダ、右にFidenneアプリ" loading="lazy" decoding="async"></figure>
+<ol class="steps"><li>ダウンロードした<code>.dmg</code>をダブルクリックします。小さなウインドウが開きます。</li><li>ウインドウ内の<b>Fidenne</b>アイコンを<b>アプリケーション</b>フォルダへドラッグします。</li><li>コピーが終わったらウインドウを閉じ、Finderのサイドバーにある取り出し（⏏）ボタンでディスクイメージを取り出します。</li></ol>
+<p class="note">アプリをアプリケーションフォルダに置いておくと、あとでアップデートしやすくなります。SafariでYouTube Musicを使う機能拡張も、そのフォルダから開いたアプリでないとSafariに表示されません。ディスクイメージの中やダウンロードフォルダから直接開かないでください。同じ名前のアプリがすでにあるという表示が出たら、新しいほうに置き換えを選びます。</p>
+</section>
+
+<section class="step" id="i5" aria-labelledby="i5-title">
+<p class="eyebrow">インストール 5</p>
+<h3 id="i5-title">初めて開く</h3>
+<p class="lead">アプリケーションフォルダでFidenneを開きます。</p>
+<ol class="steps"><li>インターネットからダウンロードしたアプリなので、macOSが一度「開いてもよろしいですか？」と確認します。<b>開く</b>をクリックします。</li><li>それでも開かないときは、システム設定 › プライバシーとセキュリティでFidenneを許可します。</li><li>MacのバージョンがmacOS 15より古いと、アプリはまったく開きません。その場合はインストール 2に戻ってmacOSをアップデートします。</li></ol>
+<p class="note">この確認ウインドウの正確な文言は、macOSのバージョンによって少し異なる場合があります。</p>
+</section>
+
+<section class="step" id="i6" aria-labelledby="i6-title">
+<p class="eyebrow">インストール 6</p>
+<h3 id="i6-title">初期設定</h3>
+<p class="lead">初めて開くと「Fidenneの初期設定」ウインドウが表示され、5つのステップを進みます（ウインドウの上に<code>1 / 5</code>のように表示されます）。各ステップで<b>戻る</b>・<b>次へ</b>で行き来できます。</p>
+<figure class="shot medium"><img src="../img/0.7/onboarding-step1-light-en.png" width="3024" height="760" alt="初期設定 1/5 — 音の出力先のDACを選ぶ（画像内の文字は英語表示です）" loading="lazy" decoding="async"></figure><figure class="shot medium"><img src="../img/0.7/onboarding-step2-light-en.png" width="3024" height="760" alt="初期設定 2/5 — 音の取り込み方法、Fidenne Inletとシステムタップ（画像内の文字は英語表示です）" loading="lazy" decoding="async"></figure><figure class="shot medium"><img src="../img/0.7/onboarding-step3-light-en.png" width="3024" height="760" alt="初期設定 3/5 — macOSが尋ねること（画像内の文字は英語表示です）" loading="lazy" decoding="async"></figure><figure class="shot medium"><img src="../img/0.7/onboarding-step4-light-en.png" width="3024" height="1300" alt="初期設定 4/5 — Fidenneが行うこと・行わないこと（画像内の文字は英語表示です）" loading="lazy" decoding="async"></figure><figure class="shot medium"><img src="../img/0.7/onboarding-step5-light-en.png" width="3024" height="1898" alt="初期設定 5/5 — ライセンスとインターネット接続（画像内の文字は英語表示です）" loading="lazy" decoding="async"></figure>
+<ol class="steps"><li><b>音の出力先のDAC</b> — お使いのDACを選びます。わからなければ<b>あとで選ぶ</b>のままにします。DACが表示されないときは、接続してから更新します。</li><li><b>音の取り込み方法</b> — 最初から<b>Fidenne Inlet</b>が選ばれています。音楽アプリが出す音をそのままの状態で受け取る仮想デバイスなので、そのままにします。インストールされていなければ<b>インストール…</b>をクリックし、管理者パスワードを一度入力します（その瞬間、すべての音が少しのあいだ途切れます）。Inletのような仮想オーディオデバイスはmacOSがシステムフォルダからしか読み込まないため、別途インストールします。インストールしたくないときは<b>システムタップ</b>を選びます（インストールなしで使えますが、48 kHzで受け取ります）。</li><li><b>macOSが尋ねること</b> — 今は尋ねず、その機能を初めて使うときに尋ねます。</li><li><b>Fidenneが行うこと・行わないこと</b> — 読んで<b>次へ</b>をクリックします。</li><li><b>ライセンスとインターネット接続</b> — 規約の下に確認欄が4つあります（<b>すべてに同意</b>・<b>[必須] 利用規約</b>・<b>[任意] インターネット接続機能を使う</b>・<b>[任意] 問題報告用の診断記録</b>）。必須の欄にチェックを入れると<b>開始</b>をクリックできます。任意の欄はオフのままでも再生できます。同意せずに終了をクリックすると、アプリが終了します。</li></ol>
+<p class="note">完了すると、同じウインドウにサイドバー（ページ一覧）とページが表示されます。次回の起動からはこのウインドウは表示されず、選んだ内容はあとから設定で変更できます。インターネット接続に同意しない場合、オンライン機能はオフになります。</p>
+</section>
+
+<section class="step" id="i7" aria-labelledby="i7-title">
+<p class="eyebrow">インストール 7</p>
+<h3 id="i7-title">権限</h3>
+<p class="lead">権限は、その機能を初めて使う瞬間にmacOSが尋ねます。確認ウインドウが表示されたら<b>許可</b>をクリックします。</p>
+<figure class="shot narrow"><img src="../img/permission-automation.png" width="545" height="645" alt="macOSが尋ねるオートメーションの権限ウインドウ — Fidenneがミュージックアプリを制御しようとしています、許可しない · 許可" loading="lazy" decoding="async"></figure>
+<ol class="steps"><li><b>オーディオ録音・システムオーディオ</b> — ほかのアプリが出す音を受け取るとき。「録音」という言葉がついていますが、Fidenneは音を保存しません。</li><li><b>マイク</b> — Fidenne Inletのような入力デバイスで受け取るとき。保存したり外部へ送ったりしません。</li><li><b>オートメーション</b> — Apple MusicやSpotifyの現在の曲情報を読み取り、再生・一時停止を伝えるとき。</li><li><b>Apple Musicライブラリ</b> — ライブラリを読み取るとき。</li></ol>
+<p class="note">誤って拒否した場合は、システム設定 › プライバシーとセキュリティで、該当する項目のFidenneをもう一度オンにします。許可しないまま使うと、音が入らなかったり、曲情報が表示されなかったりすることがあります。</p>
+</section>
+
+<section class="step" id="i8" aria-labelledby="i8-title">
+<p class="eyebrow">インストール 8</p>
+<h3 id="i8-title">初めての再生の前に音量を下げる</h3>
+<p class="lead">初めて再生をクリックすると、音が出る前にこのウインドウが表示されます。</p>
+<figure class="shot compact"><img src="../img/volume-first.png" width="820" height="356" alt="「音量を下げてから開始してください」ウインドウ — キャンセル · 下げました、開始" loading="lazy" decoding="async"></figure>
+<ol class="steps"><li>DACやアンプの音量を<b>0かごく低く</b>下げます。</li><li><b>下げました、開始</b>をクリックします。<b>キャンセル</b>をクリックすると、何も開始しません。</li><li>音を聴きながら、ゆっくり上げていきます。</li></ol>
+<p class="note">アプリを起動するたびに最初の再生で一度、このアプリで初めて使うDACでもう一度表示されます。最初に送る音が突然大きいことがあるため、耳と機器を守るためのものです。再生をクリックしても何も起きないときは、このウインドウがほかのウインドウの後ろにないか確認します。</p>
+</section>
+
+<section class="step" id="i9" aria-labelledby="i9-title">
+<p class="eyebrow">インストール 9</p>
+<h3 id="i9-title">困ったときは</h3>
+<p class="lead">音が出ない、または様子がおかしいときは、<a href="https://github.com/fidenne/fidenne/blob/main/docs/user/en/TROUBLESHOOTING.md">問題の確認 (English)</a>で症状から探します。いちばん多い「音が出ない」は最初の項目です。</p>
+<ol class="steps"><li>解決しないときは、アプリの診断メニュー › <b>サポート用の診断を書き出す…</b>でサポート用ファイルを作成します。送る前に、ファイルに何が入っているかを画面に表示します。</li><li><b>fidenne.support@gmail.com</b>にメールを送ります。アプリは何も代わりに送信しないので、送るかどうかは自分で決められます。</li></ol>
+<p class="note">GitHubアカウントがあればissueに書き込んでもかまいませんが、診断ファイルは必ずメールだけで送ってください。issueには投稿しないでください。</p>
+</section>
+
+<section class="step" id="i10" aria-labelledby="i10-title">
+<p class="eyebrow">インストール 10 · 任意</p>
+<h3 id="i10-title">Spotifyの接続 ① 自分のアプリを作る</h3>
+<p class="lead">しなくてもかまいません。Spotifyアプリで曲を選べば、キーがなくてもFidenneが音を整え、再生中の曲も表示します。Fidenneの中でSpotifyの検索・プレイリスト・再生操作を使いたいときだけ必要です。FidenneにはSpotifyのキーが入っていないため、自分のSpotify開発者アプリのキーを作ります。普段使っているSpotifyアカウントでログインすれば大丈夫です。</p>
+<ol class="steps">
+<li>ブラウザで<code>developer.spotify.com</code>を開き、<b>Log in</b>をクリックします。Fidenneのストリーミングページ、Spotifyの横のドット › <b>デベロッパダッシュボードを開く</b>からも開けます。<figure class="shot wide-small"><img src="../img/spotify-1-login.jpg" width="1600" height="113" alt="Spotify for Developersの最初の画面 — アドレスdeveloper.spotify.com、メニューバー右端のLog in" loading="lazy" decoding="async"></figure></li>
+<li>ログインしたら、アカウント名のボタンをクリックし、メニューから<b>Dashboard</b>を選びます。<figure class="shot wide-small"><img src="../img/spotify-2-dashboard-menu.jpg" width="1260" height="373" alt="アカウント名のボタンをクリックすると開くメニュー — Dashboard、Log out（アカウント名は隠してあります）" loading="lazy" decoding="async"></figure></li>
+<li><b>Dashboard</b>画面で<b>Create app</b>をクリックします。<figure class="shot wide-small"><img src="../img/spotify-3-create.jpg" width="1600" height="341" alt="Dashboard画面とCreate appボタン" loading="lazy" decoding="async"></figure></li>
+<li><b>App name</b>と<b>App description</b>には好きな内容を入力します。<b>Redirect URIs</b>欄には、Fidenneに表示されるアドレス<code>http://127.0.0.1:53682/callback</code>を貼り付け（Fidenneの<b>コピー</b>ボタン）、<b>Add</b>をクリックします。<b>Which API/SDKs are you planning to use?</b>では<b>Web API</b>にチェックを入れます。Website欄は空欄のままにします。<figure class="shot wide-small"><img src="../img/spotify-4-form.jpg" width="1600" height="864" alt="Create appの入力画面 — App name、App description、Website（空欄）、Redirect URIs欄のhttp://127.0.0.1:53682/callbackとAddボタン、Web APIのチェック" loading="lazy" decoding="async"></figure></li>
+<li>規約の同意欄（<b>I understand and agree with Spotify's Developer Terms of Service and Design Guidelines</b>）にチェックを入れ、<b>Save</b>をクリックします。<figure class="shot wide-small"><img src="../img/spotify-5-save.jpg" width="1600" height="417" alt="Web APIのチェック、規約同意のチェック、Saveボタン" loading="lazy" decoding="async"></figure></li>
+</ol>
+<p class="note">ここで同意するのはSpotifyの開発者規約です。ご自身で同意するもので、この規約はSpotifyが定めています。サイト上のボタンの名前や配置は変わることがあります。</p>
+</section>
+
+<section class="step" id="i11" aria-labelledby="i11-title">
+<p class="eyebrow">インストール 11 · 任意</p>
+<h3 id="i11-title">Spotifyの接続 ② キーを入れる</h3>
+<p class="lead">作成したアプリの<b>Client ID</b>をFidenneの入力欄に貼り付けます。必要なのは<b>Client ID</b>だけです。ダッシュボードには<b>Client Secret</b>（秘密鍵）も表示されますが、Fidenneは使わないので入力欄はありません。パスワードのような値なので、誰にも教えないでください。ダッシュボードのアドレスをそのまま貼り付けても、その中のIDを読み取ります。</p>
+<ol class="steps" start="6">
+<li>Saveすると、作成したアプリの<b>Basic Information</b>画面が開きます。<b>Client ID</b>欄の右端にあるコピーボタンをクリックします。<figure class="shot wide-small"><img src="../img/spotify-6-clientid.jpg" width="1600" height="500" alt="作成したアプリのBasic Information画面 — Client ID欄とコピーボタン（IDの値は隠してあります）" loading="lazy" decoding="async"></figure></li>
+<li>Fidenneのストリーミングページ、Spotifyの接続欄に貼り付けて<b>キーを確認</b>をクリックし、形式が合っているか確認します。文字数や使えない文字を指摘されたら、コピーしたときに前後の空白が混ざっていないか確認します。問題なければ<b>Spotifyを接続</b>をクリックします。<figure class="shot medium"><picture><source media="(prefers-color-scheme: dark)" srcset="../img/0.7/spotify-popover-dark-en.png"><img src="../img/0.7/spotify-popover-light-en.png" width="3024" height="1300" alt="Spotify接続ウインドウ — Redirect URIのコピー、Client ID欄、キーを確認、Spotifyを接続（画像内の文字は英語表示で、入力欄は空です）" loading="lazy" decoding="async"></picture></figure></li>
+<li>ブラウザにSpotifyの同意画面が表示されます。作成したアプリの名前を確認して、<b>同意する</b>をクリックします。<figure class="shot medium"><img src="../img/spotify-7-consent.jpg" width="1058" height="1523" alt="Spotifyの同意画面 — 作成したアプリとの連携の許可、許可する項目の一覧、キャンセルと同意ボタン（アカウント名は隠してあります）" loading="lazy" decoding="async"></figure></li>
+<li>「Spotifyの認証応答を受け取りました。Fidenneに戻って接続結果を確認してください。」と表示されたら、接続は完了です。このタブを閉じてFidenneに戻ります。<figure class="shot wide-small"><img src="../img/spotify-8-done.jpg" width="1512" height="81" alt="接続完了ページ — Spotifyの認証応答を受け取りました。Fidenneに戻って接続結果を確認してください。" loading="lazy" decoding="async"></figure></li>
+</ol>
+<p class="note">Spotifyで曲を再生・一時停止・スキップする操作には、Spotify Premiumが必要です。リクエストが多すぎるとSpotifyがしばらく待つよう求めることがありますが、接続はそのままで、案内された時間が過ぎてからやり直せば大丈夫です。接続すると、設定に再生の権限の更新と接続の解除が表示されます。</p>
+</section>
+
+<section class="step" id="i12" aria-labelledby="i12-title">
+<p class="eyebrow">インストール 12 · 任意</p>
+<h3 id="i12-title">YouTube Music</h3>
+<p class="lead">実験的機能のため、最初はオフになっています。YouTube MusicにはMac用アプリがないので、Safari・Chrome・Edgeで聴き、Fidenneはブラウザの機能拡張（ブラウザに追加する小さなプログラム）で曲情報を受け取り、再生を操作します。音は通常どおりFidenne Inletが受け取り、複数のブラウザに接続した場合は、自分で再生を始めたブラウザに従います。Safariの機能拡張はアプリの中に入っているので、インストールするファイルはありません。</p>
+<figure class="shot"><img src="../img/settings-ytm.png" width="1264" height="230" alt="設定 › 一般の最上部にあるYouTube Music（実験的機能）スイッチ" loading="lazy" decoding="async"></figure>
+<ol class="steps"><li><b>設定 › 一般</b>の最上部にあるスイッチでYouTube Musicをオンにします。</li><li>ChromeまたはEdgeを使うには、<b>設定 › プライバシー › ブラウザの機能拡張と接続（Safari・Chrome・Edge）</b>をオンにします。Safariだけを使う場合、このスイッチは不要で、下の<b>Safariでオンにする</b>へ進みます。</li><li>ChromeまたはEdgeでは、同じ場所の<b>インストール案内…</b>をクリックすると、機能拡張のインストールウインドウが表示されます。このウインドウは開いたまま、次の手順に進みます。</li></ol>
+<figure class="shot narrow"><img src="../img/privacy-ytm.png" width="620" height="240" alt="設定 › プライバシーのYouTube Music欄 — ChromeとEdgeの機能拡張と接続するスイッチ、インストール案内・機能拡張フォルダーを開くボタン" loading="lazy" decoding="async"></figure>
+<figure class="shot medium"><img src="../img/ytm-extension.png" width="460" height="425" alt="機能拡張のインストールウインドウ — ChromeとEdgeの選択、アドレスをコピー、デベロッパーモード、パスをコピー、YouTube Musicのタブを再読み込み" loading="lazy" decoding="async"></figure>
+<h4>Chromeに機能拡張をインストール</h4>
+<ol class="steps">
+<li>Chromeのアドレスバーに<code>chrome://extensions</code>を入力してReturnを押します（インストールウインドウの<b>アドレスをコピー</b>）。<b>デベロッパーモード</b>のスイッチをオンにすると、ボタンが3つ表示されます。<figure class="shot wide-small"><img src="../img/ytm-chrome-1-devmode.jpg" width="1600" height="220" alt="Chromeの拡張機能画面 — アドレスchrome://extensions、デベロッパーモードがオン、パッケージ化されていない拡張機能を読み込む・拡張機能をパッケージ化・更新ボタン" loading="lazy" decoding="async"></figure></li>
+<li><b>パッケージ化されていない拡張機能を読み込む</b>をクリックします。フォルダを選ぶウインドウが開きます。<figure class="shot wide-small"><img src="../img/ytm-chrome-2-load.jpg" width="1600" height="774" alt="パッケージ化されていない拡張機能を読み込むをクリックすると開く、拡張機能のディレクトリ選択ウインドウ" loading="lazy" decoding="async"></figure></li>
+<li>そのウインドウで⌘⇧Gを押し、インストールウインドウの<b>パスをコピー</b>でコピーしたパスを貼り付けてReturnを押します。<figure class="shot wide-small"><img src="../img/ytm-chrome-3-path.jpg" width="1600" height="820" alt="⌘⇧Gで開いたフォルダへ移動の欄 — …Application Support/Fidenne/BrowserExtension/Chromeのパスを貼り付けた状態（ユーザーフォルダ名は隠してあります）" loading="lazy" decoding="async"></figure></li>
+<li>フォルダ名が<b>Chrome</b>に変わったのを確認して、<b>選択</b>をクリックします。<figure class="shot wide-small"><img src="../img/ytm-chrome-4-select.jpg" width="1600" height="818" alt="Chromeフォルダを開いた選択ウインドウ — background.js、manifest.jsonなどのファイルと選択ボタン" loading="lazy" decoding="async"></figure></li>
+<li>拡張機能の一覧に<b>Fidenne for YouTube Music</b>が表示されれば、インストールは完了です。バージョン番号は異なる場合があります。<figure class="shot medium"><img src="../img/ytm-chrome-5-done.jpg" width="810" height="427" alt="インストールされたFidenne for YouTube Music拡張機能のカード — 詳細、削除、再読み込み、オンのスイッチ" loading="lazy" decoding="async"></figure></li>
+<li>開いているYouTube Musicのタブを再読み込みします（⌘R）。</li>
+</ol>
+<h4>Edgeに機能拡張をインストール</h4>
+<p class="note">手順はChromeと同じで、名前だけが違います。</p>
+<ol class="steps">
+<li>Edgeのアドレスバーに<code>edge://extensions</code>を入力してReturnを押します。<figure class="shot wide-small"><img src="../img/ytm-edge-1-buttons.jpg" width="1600" height="280" alt="Edgeの拡張機能画面 — アドレスedge://extensions、開発者向けオプションの展開されたファイルの読み込み・拡張機能のパック・更新ボタン" loading="lazy" decoding="async"></figure></li>
+<li>サイドバーの最下部にある<b>開発者モード</b>のスイッチをオンにします。<figure class="shot narrow"><img src="../img/ytm-edge-2-devmode.jpg" width="610" height="106" alt="Edgeの開発者モードのスイッチをオンにした状態" loading="lazy" decoding="async"></figure></li>
+<li><b>展開されたファイルの読み込み</b>をクリックし、開いたウインドウで⌘⇧Gを押して<b>パスをコピー</b>したパスを貼り付けてReturn、続けて<b>選択</b>をクリックします。<figure class="shot wide-small"><img src="../img/ytm-edge-3-path.jpg" width="1600" height="814" alt="Edgeの拡張機能ディレクトリ選択ウインドウで、⌘⇧Gでパスを貼り付けた状態（ユーザーフォルダ名は隠してあります）" loading="lazy" decoding="async"></figure></li>
+<li>その他のソースの下に<b>Fidenne for YouTube Music</b>が表示されれば完了です。開いているYouTube Musicのタブを再読み込みします（⌘R）。<figure class="shot wide-small"><img src="../img/ytm-edge-4-done.jpg" width="1600" height="342" alt="Edgeにインストールされた Fidenne for YouTube Music拡張機能 — 詳細、削除、再読み込み、オンのスイッチ" loading="lazy" decoding="async"></figure></li>
+</ol>
+<h4>Safariでオンにする</h4>
+<p>上の手順1でYouTube Musicをオンにしたあとに行います。Safari 18.4以降が必要です。</p>
+<ol class="steps">
+<li>Fidenneが<b>アプリケーション</b>フォルダから開かれているか確認します。ダウンロードフォルダやディスクイメージの中から開いたアプリだと、設定 › プライバシー › YouTube Musicに「Safari機能拡張は、Fidenneをアプリケーションフォルダに移動して開き直すと、Safariに表示されます。」と表示されます。Fidenneを終了し、アプリケーションフォルダに移動してから、そのフォルダで開き直します。</li>
+<li>同じ場所の<b>Safariの設定を開く</b>をクリックします。Safariの機能拡張の設定が開いたら、FidenneのYouTube Music機能拡張をオンにします。Safariだけが開いた場合は、Safari › 設定 › <b>機能拡張</b>でオンにします。</li>
+<li>music.youtube.comを開き、アドレスバー横の拡張機能アイコンの列にあるFidenneアイコンをクリックして、このWebサイトで許可します（<b>常に許可</b>）。そのタブを再読み込みします（⌘R）。</li>
+</ol>
+<p class="note">music.youtube.comで曲を再生したとき、下部のバーにその曲が表示されれば接続されています。表示されないときは、Safari › 設定 › <b>機能拡張</b>でFidenneの機能拡張がオンになっているか、Safari › 設定 › <b>Webサイト</b>でmusic.youtube.comが許可になっているか確認します。アプリをアップデートしたあとにバーが止まったら、そのタブを一度再読み込みします。</p>
+<h4>タブがスリープしないようにする</h4>
+<p>ブラウザが使っていないタブをスリープさせると、YouTube Musicが応答できなくなります。<code>music.youtube.com</code>を例外に追加します。Chromeは設定 › パフォーマンス › メモリセーバー › <b>常にアクティブにするサイト</b>、Edgeは設定 › システムとパフォーマンス › リソースの節約 › <b>これらのサイトをスリープ状態にしない</b>にあります。Safariには、サイトごとに指定するスリープの例外はありません。音が出ているタブはスリープしませんが、長く止めておいたタブや機能拡張がスリープしてバーが止まったときは、そのタブを一度再読み込みします（⌘R）。</p>
+<h4>プレイリストを取り込む</h4>
+<p>機能拡張が接続された状態でYouTube Musicのプレイリスト画面を開くと、自動的に取り込まれます。または、Googleテイクアウト（自分のデータをダウンロード）のファイルを取り込みます。取り込まれたリストは<b>ストリーミング › YouTube Music › マイプレイリスト</b>に集まります。</p>
+<p class="note">ChromeとEdgeは、インストールウインドウの最下行が「ブラウザ1つが接続済み」に変わると接続されています。まだウェブストアにはないため、デベロッパーモードでのみインストールでき、機能拡張は1つのブラウザにだけインストールします。Safariは、music.youtube.comで曲を再生したとき、下部のバーにその曲が表示されれば接続されています。アプリをアップデートしたあとは、拡張機能のページでFidenneの機能拡張の再読み込み（↻、Edgeは<b>再読み込み</b>）を一度クリックします。YouTube Musicの画面が変わると、動作が止まることがあります。実験的機能というのは、そういう意味です。</p>
+</section>
+
+<div class="part" id="usage"><p class="eyebrow">第2部</p><h2>使い方</h2><p>デバイスを選ぶ → サービスを接続する → 再生する、の順に案内します。画面は日本語表示のものです。⌘1・⌘4・⌘5のように、⌘はキーボードのCommandキーで、サイドバーのページをすぐに開くキーです。</p></div>
+
+<section class="step" id="u1" aria-labelledby="u1-title">
+<p class="eyebrow">使い方 1</p>
+<h3 id="u1-title">音の出力先のDACを選ぶ</h3>
+<p class="lead">サイドバーの<b>入出力 · 診断</b>（⌘5）で、出力DACと出力方式を選びます。</p>
+<figure class="shot"><picture><source media="(prefers-color-scheme: dark)" srcset="../img/0.7/io-dark-ja.png"><img src="../img/0.7/io-light-ja.png" width="3024" height="1898" alt="入出力 · 診断ページ — エンジンの状態、出力デバイス、出力方式のカード" loading="lazy" decoding="async"></picture></figure>
+<ol class="steps"><li><b>出力DAC</b>でお使いのDACを選びます。表示されないときは、接続してから更新（↻）をクリックします。</li><li><b>出力方式</b>で3つのうち1つを選びます。</li></ol>
+
+<dl class="terms"><dt>PCM Direct</dt><dd>Fidenneは音に手を加えず、macOSがDACへ送ります。音の調整はオフになり、いちばんシンプルで、どのデバイスでも使えます。</dd><dt>DSD (DoP)</dt><dd>初期値です（そのDACでDSDが確認されるまでは、PCM Directで始まります）。エンジンがフィルターとDSD変換を通して送ります。DSDに対応したDACが必要です。</dd><dt>PCMオーバーサンプリング</dt><dd>エンジンが処理した音を整数PCMで送ります。DSDに対応していないDAC向けです。出力レートは詳細のPCMで44.1〜768 kHzの対応レートから選び、新しい設定の既定値は音源のレートを維持です。</dd></dl>
+<p class="note">音の調整は、44.1〜768 kHzの対応レートのうち1つ以上を受け付ける2チャンネルDACで動作します。そうでないデバイスは、一覧で名前の末尾に「· PCM Direct のみ」が付きます。内蔵スピーカー・3.5 mm端子・AirPods・HDMIにはこの表示がつかず、Fidenneが音を処理して送り、最後にmacOSがシステムミキサーで混ぜて出力します（DSDは選べません）。DSDで始めたときにシャーシャー・ザーという大きなノイズが出たら、すぐに止めてPCMオーバーサンプリングに切り替えます。そのDACはDSD（DoP）を解釈できないということです。このアプリで初めて使うDACで最初にDSDを送るときは、一度確認ウインドウが表示されます。</p>
+</section>
+
+<section class="step" id="u2" aria-labelledby="u2-title">
+<p class="eyebrow">使い方 2</p>
+<h3 id="u2-title">まず音量を下げる</h3>
+<p class="lead">アプリを起動して初めて再生すると、音量の案内ウインドウが表示されます。音量を下げて<b>下げました、開始</b>をクリックし、そのあとゆっくり上げます。</p>
+<figure class="shot medium"><img src="../img/settings-sound-safety.png" width="1268" height="390" alt="設定 › サウンドの安全 — オンにするたびに音量の案内を表示、音楽ではない信号が出たらミュート" loading="lazy" decoding="async"></figure>
+<ol class="steps"><li>案内ウインドウを表示しないようにするには、設定 › <b>サウンドの安全</b>で「オンにするたびに音量の案内を表示」をオフにします。</li><li>オフにしていても、このアプリで初めて使うDACでは一度確認します。</li></ol>
+<p class="note">PCM Directに切り替えるときは、エンジンの安全な余裕音量が適用されないため、切り替える前にDACの音量を確認します。</p>
+</section>
+
+<section class="step" id="u3" aria-labelledby="u3-title">
+<p class="eyebrow">使い方 3</p>
+<h3 id="u3-title">サービスを接続する</h3>
+<p class="lead">サービスは、サイドバーの<b>ストリーミング</b>の下で選びます。Apple Music・Spotify、そしてオンにしている場合のYouTube Musicです（YouTube Musicは、設定 › 一般でオンにしたときだけ表示されます）。サービスをクリックすると、ページの上部にサービス名と接続状態（● 接続済み · 未接続 · 要確認）が表示されます。</p>
+<figure class="shot medium"><picture><source media="(prefers-color-scheme: dark)" srcset="../img/0.7/streaming-dark-ja.png"><img src="../img/0.7/streaming-light-ja.png" width="3024" height="1898" alt="ストリーミングページ — サイドバーのストリーミングの下にあるApple MusicとSpotify、上部のサービス名と接続済みの表示、上部右端のエンジンオフのピル（ジャケットは隠してあります）" loading="lazy" decoding="async"></picture></figure>
+<ol class="steps"><li><b>Apple Music</b> — 初めて使うとき、macOSが2つのことを尋ねます。ミュージックアプリを操作してよいか、Apple Musicライブラリを読み取ってよいか、です。どちらも<b>許可</b>すれば大丈夫です。ライブラリの読み取りは、許可しなくてもミュージックアプリ経由で読み取れます。上部の● 接続済みは状態を知らせる表示で、クリックするボタンではありません。操作を見逃したときは、システム設定 › プライバシーとセキュリティ › <b>オートメーション</b>でFidenneのミュージックをオンにします。</li><li><b>Spotify</b> — しなくてもかまいません。Spotifyアプリで曲を選べば、キーがなくてもFidenneが音を整え、今の曲を表示します。Fidenneの中で検索・プレイリスト・再生操作まで使うには、上部のSpotifyの状態ピルをクリックして開くウインドウに自分のClient IDを入力し、<b>Spotifyを接続</b>をクリックします（インストール 10・11）。接続すると、同じウインドウに再生の権限の更新・キューに従う・接続の解除が表示されます。</li><li><b>YouTube Music</b> — 設定 › 一般でオンにして、インストール 12の手順に進みます。Safari・Chrome・Edgeで使えます。上部の状態ピルをクリックすると、接続に使うブラウザを選ぶウインドウが開きます。</li><li><b>エンジンをオンにする</b> — 音をFidenne経由にするには、上部右端の<b>Playback Chain</b>ピル（例: ● エンジンはオフです ⌄）をクリックし、開いたウインドウの最上部にある<b>エンジン</b>スイッチをオンにします。エンジンスイッチは曲を再生しません。曲はサービスのアプリや、下部バーの再生ボタンで再生します。エンジンをオンにしたときに何を再生するかは、入出力 · 診断ページの<b>エンジン開始後</b>で選びます。</li></ol>
+<h4>Apple MusicをFidenneから再生操作するなら — ミュージックアプリでオフにしておくもの</h4>
+<ul class="plain"><li><b>自動再生（∞）</b> — ミュージックの次に再生リスト上部にある∞ボタン。Fidenneのリストが終わったあとにだけ曲を選びます。</li><li><b>シャッフル · リピート</b> — ミュージック側はオフにして、必要ならFidenneのバーにあるシャッフル · リピートを使います。</li><li><b>曲の切り替え（AutoMix · クロスフェード）</b> — ミュージック › 設定 › 再生。曲と曲が重なると曲が切り替わる瞬間があいまいになり、曲送りやレートの合わせ込みがずれることがあります。</li><li>音を先に変える<b>サウンドチェック · イコライザ · サウンド拡張</b>もオフにすることをおすすめします。Fidenneが整える前に音が変わってしまいます。</li></ul>
+<p class="note">Fidenneには、サービスの購読の代わりになる機能はありません。曲は常に、各サービスのアプリで自分のアカウントで再生されます。音がFidenneを通っているのに聞こえないときは、入出力ページの入力と出力が自分で選んだものか確認します。</p>
+</section>
+
+<section class="step" id="u4" aria-labelledby="u4-title">
+<p class="eyebrow">使い方 4</p>
+<h3 id="u4-title">下部の再生カプセル</h3>
+<p class="lead">ウインドウの下に常に浮かんでいるバーです。ウインドウが広くても狭くても1行で、高さも同じです。左から並んでいる順に説明します。</p>
+<figure class="shot"><picture><source media="(prefers-color-scheme: dark)" srcset="../img/0.7/capsule-dark-ja.png"><img src="../img/0.7/capsule-light-ja.png" width="2480" height="172" alt="下部の再生カプセル — サービスのアイコン、アルバムのジャケット、曲、シャッフル · 前へ · 一時停止 · 次へ · リピート、もっと見る、音量、次に再生、いちばん下の再生位置のライン（再生中、ジャケットは隠してあります）" loading="lazy" decoding="async"></picture></figure>
+<ol class="steps"><li><b>サービスのアイコン</b> — 今音を出しているアプリです。名前はなくアイコンだけが表示され、ポインタを重ねると名前が出ます。クリックすると、今の曲をそのサービスで開きます（YouTube Musicはそのブラウザのタブ）。</li><li><b>アルバムのジャケット</b> — クリックすると、大きな再生画面（アルバムモード）が開きます。<b>Esc</b>、閉じる（×）、ジャケットをもう一度クリックすると閉じます。</li><li><b>曲</b> — タイトルと、その下にアーティスト · アルバムが表示されます。タイトルのすぐ後ろの<b>ハート</b>は、Fidenneが管理するFidenne専用の<b>お気に入りの曲</b>（ライブラリ）に追加します。サービスのアプリの高評価とは別です。</li><li><b>シャッフル · 前へ · 再生/一時停止 · 次へ · リピート</b> — シャッフルとリピートは、Fidenneで再生したリストでのみ使えます。</li><li><b>再生位置</b> — 曲と再生ボタンの下に敷かれた細いラインです。クリックまたはドラッグして動かします。ポインタを重ねるとラインが太くなって真上の文字が薄くなり、ラインの両端の上に現在の時間と残り時間が表示されます。</li><li><b>⋯</b> — 今の曲のメニューです。曲によって、<b>次に再生</b> · <b>キューの最後に追加</b>（Fidenneのリストを再生中のとき）· <b>プレイリストに追加</b> · <b>歌詞を表示</b> · <b>曲の情報</b> · <b>ほかのアプリで開く</b>が表示され、いちばん最後に<b>スリープタイマー</b>と<b>出力設定…</b>（入出力ページの出力設定）があります。</li><li><b>音量（スピーカー）</b> — クリックするとミュートし、もう一度クリックすると元に戻します。ポインタを重ねると上に音量バーが表示され、上下にスワイプしても変わります。DAC本体の音量を読み取って変えるボタンです。本体のノブでしか調整できないDACでは薄く表示され、ポインタを重ねると理由が表示されます。</li><li><b>次に再生</b>（リストの形）— 次に再生 · 歌詞のパネルを開いたり閉じたりします。</li></ol>
+<p class="note">ウインドウをかなり狭くするとジャケットが正方形になり、さらに狭くするとシャッフルとリピートがバーから外れて<b>⋯</b>メニューの中に入ります。</p>
+<h4>エンジンスイッチと出力方式は、バーではなく上部にあります</h4>
+<ol class="steps"><li>ページ上部右端の<b>Playback Chain</b>ピルには「アプリ → 出力方式 → DAC」（例: PCM 24-bit）が表示され、点がエンジンの状態です（緑はオン · グレーはオフ · 赤はエラー）。エンジンがオフのときは「エンジンはオフです」と表示されます。</li><li>クリックするとウインドウが開きます。最上部に<b>エンジン</b>スイッチ、その下に<b>出力設定</b>（おすすめのプリセット · 保存したプリセットを選ぶ）、音が通る段階、いちばん下に<b>入出力・診断を開く</b>ボタンがあります。</li><li><b>Option</b>キーを押したままピルをクリックすると、ウインドウを開かずにエンジンをすぐにオン・オフします。</li><li>エンジンがオフのままエラーがあると、バーの右端に赤い！が表示され、クリックすると入出力 · 診断ページが開きます。</li></ol>
+<p class="note">ほかのデバイスでSpotifyを再生すると、バーには「別のデバイスで再生中」とだけ表示され、操作はそのデバイスで行います。</p>
+</section>
+
+<section class="step" id="u5" aria-labelledby="u5-title">
+<p class="eyebrow">使い方 5</p>
+<h3 id="u5-title">ストリーミングページ</h3>
+<p class="lead">サイドバーの<b>ストリーミング</b>（⌘1）を開きます。ホームには<b>続きを聴く</b> · <b>今日聴いた曲</b> · <b>マイプレイリスト</b> · <b>以前よく聴いた曲</b>が表示されます。</p>
+<figure class="shot medium"><picture><source media="(prefers-color-scheme: dark)" srcset="../img/0.7/cap-dark-ja.png"><img src="../img/0.7/cap-light-ja.png" width="3024" height="1898" alt="ストリーミングページ — サービスのボタンと検索欄、開いているプレイリストの曲リスト、下部の再生カプセル（ジャケットは隠してあります）" loading="lazy" decoding="async"></picture></figure>
+<ol class="steps"><li>サイドバーの<b>ストリーミング</b>の下にあるApple Music · Spotify · YouTube Musicのいずれかをクリックします（YouTube Musicはオンにしたときだけ表示されます）。</li><li>曲 · アーティスト · アルバムを検索します。</li><li>曲をクリックして、今すぐ再生か次に再生を選びます。</li><li>プレイリストやアルバムを開いたら、<b>順序を調整</b>で曲の行をドラッグして順序を変え、アルバム上部の<b>ライブラリ</b>ボタンで、そのサービスのライブラリに保存します。順序はFidenneの中でだけ変わり、サービスのプレイリストはそのままです。</li></ol>
+<p class="note">Spotifyの検索結果はほかのサービスと混ざらず、結果の最上部にある<b>Spotify</b>タブをクリックすると別に表示されます。Spotifyの検索ができないときは、キーを入力したか確認します（インストール 10・11）。YouTube Musicが「未接続」のときは、インストール 12の手順に進みます。</p>
+</section>
+
+<section class="step" id="u6" aria-labelledby="u6-title">
+<p class="eyebrow">使い方 6</p>
+<h3 id="u6-title">Fidenneのライブラリとローカル</h3>
+<p class="lead">プレイリストはFidenneの中に保存され、曲は各サービスで再生されます。このMacの音楽ファイルは、サイドバーの<b>ローカル</b>ページに集まります。</p>
+<figure class="shot"><picture><source media="(prefers-color-scheme: dark)" srcset="../img/0.7/library-dark-ja.png"><img src="../img/0.7/library-light-ja.png" width="3024" height="1898" alt="ローカルページ — このMacの音楽ファイルの一覧と、曲 · アルバム · アーティスト · プレイリストのタブ" loading="lazy" decoding="async"></picture></figure>
+<ol class="steps"><li>曲の行の右端の<b>⋯</b>（または右クリック）›<b>プレイリストに追加</b>を選びます。ハートはお気に入りのリストに追加します。</li><li><b>＋ 新規プレイリスト</b>で名前を付けて、新しいリストを作ります。</li><li>ローカルページでフォルダを追加します。WAV · AIFF · FLAC · ALAC · AAC · MP3 · Opusを読み込み、ファイル自体は移動も変更もしません。</li></ol>
+<p class="note">リストを削除しても、曲のファイルはそのまま残ります。サービスから曲がなくなると、リストのその行は再生できないことがあります。</p>
+</section>
+
+<section class="step" id="u7" aria-labelledby="u7-title">
+<p class="eyebrow">使い方 7</p>
+<h3 id="u7-title">次に再生と歌詞</h3>
+<p class="lead">アルバムモードを開くと、中央の欄に<b>次に再生</b>（今の曲に続く曲）と<b>歌詞</b>があります。</p>
+<figure class="shot"><picture><source media="(prefers-color-scheme: dark)" srcset="../img/0.7/album-dark-ja.png"><img src="../img/0.7/album-light-ja.png" width="3024" height="1898" alt="アルバムモード — ジャケットと再生操作、中央の次に再生の欄、右のPlayback Chain（ジャケットは隠してあります）" loading="lazy" decoding="async"></picture></figure>
+<figure class="shot narrow"><img src="../img/album-mode-narrow.jpg" width="600" height="1064" alt="狭いウインドウのアルバムモード — ジャケット、再生操作、下に次の曲のリスト" loading="lazy" decoding="async"></figure>
+<ol class="steps"><li>下のボタンで、次に再生と歌詞を切り替えます。歌詞は今歌っている行がくっきり表示され、離れるほど薄くなります。</li><li>歌詞ファイル（LRCまたはTXT）を曲に直接関連づけたり、歌詞が早い・遅いときはタイミングを少しずつ直したりできます。</li><li>歌詞が表示されないときは、更新（↻）をクリックします。見つからなかった曲は、30分間は再検索しません。</li></ol>
+<p class="note">歌詞を初めてインターネットで探すとき、同意を一度尋ねます。送るのは曲のタイトル · アーティスト · アルバム · 長さだけで、音とアカウント情報は送りません。同意しなければ送りません。</p>
+</section>
+
+<section class="step" id="u8" aria-labelledby="u8-title">
+<p class="eyebrow">使い方 8</p>
+<h3 id="u8-title">音を整える</h3>
+<p class="lead">サイドバーの<b>DSP</b>（⌘4）を開きます。DSPグループの<b>EQ</b> · <b>Ostrum</b> · <b>クロスフィード</b>は、それぞれ別のページです。</p>
+<figure class="shot"><picture><source media="(prefers-color-scheme: dark)" srcset="../img/0.7/eq-dark-ja.png"><img src="../img/0.7/eq-light-ja.png" width="3024" height="1898" alt="EQページ — グラフとバンド、下のEQスイッチと保存したEQを選ぶ欄" loading="lazy" decoding="async"></picture></figure>
+<ol class="steps"><li><b>Equalizer</b> — 高い音と低い音の大きさを帯域ごとに調整します。<b>Auto EQ</b>でヘッドフォンとターゲットを選ぶと、自動で合わせてくれます。</li><li><b>Ostrum</b> — 低音 · 存在感 · 音の広がりを整える、Fidenne独自の機能です。4つの開始値のうち1つから始めます。</li><li><b>クロスフィード</b> — ヘッドフォンの左右の音を少し混ぜます。スイッチでオン・オフします。</li><li>値を変えると、保存しなくてもそのまま適用されます。耳に聞こえるまでには、フィルターと出力バッファーを通る時間の分だけ遅れ、長いフィルターや「安定」バッファーでは数秒かかることがあります。次回の起動にも残すには<b>保存</b>（⌘S）をクリックします。保存しないと、アプリを終了して開き直したときに元に戻ります。</li></ol>
+<div class="pair"><figure class="shot"><picture><source media="(prefers-color-scheme: dark)" srcset="../img/0.7/ostrum-dark-ja.png"><img src="../img/0.7/ostrum-light-ja.png" width="3024" height="1898" alt="Ostrumページ — 4つの開始値とスイッチ" loading="lazy" decoding="async"></picture></figure><figure class="shot"><picture><source media="(prefers-color-scheme: dark)" srcset="../img/0.7/crossfeed-dark-ja.png"><img src="../img/0.7/crossfeed-light-ja.png" width="3024" height="1898" alt="クロスフィードページ — 3つの段階とノブ" loading="lazy" decoding="async"></picture></figure></div>
+<p class="note">DSPはエンジンを通るときだけ動作します。PCM Directにしているときや、44.1〜768 kHzの対応レートを1つも受け付けないデバイスでは音が変わらないので、使い方 1を確認します。音が大きくなりすぎるときは、EQを大きく上げたことが原因かもしれないので、まず下げてみます。</p>
+</section>
+
+<section class="step" id="u9" aria-labelledby="u9-title">
+<p class="eyebrow">使い方 9</p>
+<h3 id="u9-title">困ったときは</h3>
+<p class="lead">音が出ないときは、<a href="https://github.com/fidenne/fidenne/blob/main/docs/user/en/TROUBLESHOOTING.md">問題の確認 (English)</a>で症状から探します。まず見るのは3つです。</p>
+<ol class="steps"><li>上部右端のPlayback Chainピルで、エンジンがオンか（緑の点）を確認します。</li><li>DACとアンプの音量が上がっているか確認します。</li><li>音量の案内ウインドウが表示されたままになっていないか確認します。</li><li>それでも解決しないときは、メニューの<b>ヘルプ › 問題報告用の診断を作成…</b>を開きます。初回の起動時に「問題報告用の診断記録」に同意していれば、すでに記録されているので、問題が起きたあとアプリを終了する前に、すぐにバンドルを作成します。オフにしていた場合は<b>診断記録を開始</b>をクリックしておき、次に問題が起きたときに作成します。バンドルは、送る前に内容を表示します。</li><li><b>メールで送る</b>をクリックすると、メールアプリにアドレス · 件名 · ひな形を入力した状態で開きます。ほかのメール（Gmailなど）を使う場合は、<b>メールのひな形をコピー</b>で同じ内容をコピーして貼り付けます。バンドルは自分で添付します。アプリは何も代わりに送信しません。</li></ol>
+<p class="note">お問い合わせは<b>fidenne.support@gmail.com</b>へ。メールには、DACと出力方式 · いつ何をしていて何が聞こえたかをあわせて書きます。アプリのバージョンとmacOSのバージョンは、ひな形とバンドルに自動で入っています。バンドルには時刻 · サービス · レートと任意の曲のジャケットが含まれ、曲のタイトル · アーティスト · アルバムは隠されます。診断バンドルはメールだけで送り、GitHubのissueには投稿しないでください。</p>
+<p class="note">アプリを削除するときは、まず<b>入出力 · 診断 › 入力デバイスと出力デバイス</b>でFidenne Inletの<b>削除…</b>をクリックしてから、アプリをゴミ箱に移します。アプリだけを捨てると、Inletデバイスが残ります。</p>
+<div class="resource-links"><a href="https://github.com/fidenne/fidenne/blob/main/docs/user/en/MANUAL.md">マニュアル (English)</a><a href="https://github.com/fidenne/fidenne/blob/main/docs/user/en/HOW-TO.md">やりたいこと別ガイド (English)</a><a href="https://github.com/fidenne/fidenne/blob/main/docs/user/en/TROUBLESHOOTING.md">問題の確認 (English)</a><a href="mailto:fidenne.support@gmail.com">サポートへメール</a></div>
+</section>
+</main>
+<footer><p>Fidenneは、Apple Music · Spotify · YouTube Musicのアプリが出す音を整えて、お使いのDACへ送ります。</p><p>画像の一部は以前のバージョンで撮影したもので、一部は画像用の架空の曲名 · デバイス名で作成しています。0.7の画面とは少し異なる場合があります。アルバムのジャケットはぼかしてあります。</p><p>この翻訳はAIで作成したもので、ネイティブによる確認はまだ行っていません。不自然な表現が含まれる場合があります。</p></footer>
+</body>
+</html>
