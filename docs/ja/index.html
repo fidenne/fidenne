@@ -6,8 +6,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<meta name="description" content="Macで聴いている音をEQ・Ostrum・クロスフィード・Audio Unitで調整し、外付けDACへ。Fidenne 0.7のインストールと使い方。">
-<title>Fidenne 0.7 · インストールと使い方</title>
+<meta name="description" content="Macで聴いている音をEQ・Ostrum・クロスフィード・Audio Unitで調整し、外付けDACへ。Fidenne 0.8のインストールと使い方。">
+<title>Fidenne 0.8 · インストールと使い方</title>
 <link rel="icon" href="../img/icon.png">
 <link rel="stylesheet" href="../style.css">
 <link rel="alternate" hreflang="ko" href="../index.html">
@@ -18,12 +18,12 @@
 <a class="skip-link" href="#main">本文へ</a>
 <header class="site-header" id="top">
 <a class="brand" href="#top"><img src="../img/icon.png" alt="" width="28" height="28">Fidenne</a>
-<nav aria-label="このページ"><a href="#new">0.7の変更点</a><a href="#install">はじめに</a><a href="#usage">使い方</a><a href="#privacy">プライバシー</a></nav>
+<nav aria-label="このページ"><a href="#new">0.8の変更点</a><a href="#new07">0.7の変更点</a><a href="#install">はじめに</a><a href="#usage">使い方</a><a href="#privacy">プライバシー</a></nav>
 <nav class="languages" aria-label="言語"><a href="../index.html" lang="ko" hreflang="ko">한국어</a><a href="../en/index.html" lang="en" hreflang="en">English</a><a href="../ja/index.html" lang="ja" hreflang="ja" aria-current="page">日本語</a></nav>
 </header>
 <main id="main">
 <div class="hero" aria-labelledby="hero-title">
-<p class="eyebrow">Fidenne · 公開ベータ1 · 0.7.0</p><h1 id="hero-title">いつもの音楽を、<br>自分の好みの音に。</h1>
+<p class="eyebrow">Fidenne · 公開ベータ1 · 0.8.0</p><h1 id="hero-title">いつもの音楽を、<br>自分の好みの音に。</h1>
 <p class="lead">いつもの再生アプリのまま、EQ・Ostrum・クロスフィードで音を調整し、外付けDACへ送ります。音楽と歌詞、音が通る経路をひとつのウインドウで確認できます。</p>
 <a class="button" href="https://github.com/fidenne/fidenne/releases/latest">リリースを見る<span aria-hidden="true"> ↗</span></a>
 <p class="requirements">AppleシリコンMac · macOS 15以降 · 有線USB DAC推奨</p><p class="small">まだ公開ベータのため、変わる部分や修正中の部分があります。ダウンロードと公開状況はリリースページで確認してください。</p>
@@ -31,7 +31,11 @@
 <picture><source media="(prefers-color-scheme: dark)" srcset="../img/0.7/home-dark-ja.png"><img src="../img/0.7/home-light-ja.png" alt="いつもの音楽の続きを" loading="lazy"></picture>
 </figure>
 </div>
-<section id="new" aria-labelledby="new-title"><p class="eyebrow">0.7</p><h2 id="new-title">0.7で広がる、聴き方の選択</h2><p>読みやすい画面、自分で選ぶ翻訳、自分で決める音の設定。</p><div class="feature-grid"><article><h3>3つの言語、ライトとダーク</h3><p>韓国語・English・日本語と、ライト・ダークの表示に対応します。アプリの言語はmacOSのアプリ別言語設定に従います。曲名とアルバム名は各サービスの表記のまま表示します。</p></article>
+<section id="new" aria-labelledby="new-title"><p class="eyebrow">0.8</p><h2 id="new-title">0.8の新機能</h2><p>0.8では、アルバムモードに動画ページと情報ページを追加し、サービスごとのホームの欄、フローティング歌詞、日本語の読み表示を加え、5.1・7.1のファイルを処理せずに送ります。動作環境は0.7.0と同じです。以下の画像の一部は0.7の画面のため、0.8とは少し異なる場合があります。</p><div class="feature-grid"><article><h3>アルバムモードの3ページ</h3><p>大きな再生画面が、再生中・動画・情報の3ページに分かれます（⌘＋スワイプ・ホイール・⌥⌘↑ ⌥⌘↓）。設定 › 表示 › アルバムモードのページで順序と表示を決めます。情報ページにはアルバム・リリース・ジャンル・長さ・音質と参加者が表示され、動画ページはリンク・動画ファイル・検索語で見つけた動画を音楽の位置に合わせて再生します。</p></article>
+<article><h3>サービスごとのホームの欄と検索</h3><p>ストリーミングのホームに、Apple Musicのおすすめ・チャート・最近再生した項目、Spotifyの最近再生した項目・よく聴く曲・保存したアルバムの欄が加わり、Apple Musicのアーティスト検索、Spotify検索と「もっと見る」が使えます。</p></article>
+<article><h3>フローティング歌詞と読み表示</h3><p>再生メニュー › フローティング歌詞（⇧⌘L）で歌詞を別ウィンドウに表示し、歌詞 › 表示で読み表示・発音表記をオンにします。ノブは矢印キーで調整でき、Fidenneのリストは最後から最初へ続きます。</p></article>
+<article><h3>マルチチャンネルのファイルをそのまま</h3><p>ローカルの5.1・7.1・7.1.4のファイルを、マルチチャンネル出力デバイスへ処理せずに送ります（再生ピルの「マルチチャンネルそのまま」）。DSP › プラグインのマルチチャンネル入力プラグインで、ヘッドホン用の2チャンネルを作ることもできます。DSP › EQのバンドは最大256個まで置け、入出力・診断 › 詳細 › PCMでDACごとに44.1・48 kHz系の最高レートを下げられます。</p></article></div><p class="note"><b>音が変わる点。</b> 別の曲を選んだり、次へ・前へを押したりしたとき、先頭を無音のまま保持して最初の位置へ戻すため、曲は最初から一度だけ始まります（以前は始まりが聞こえてから巻き戻っていました）。ファイルの最後の音もDACまですべて届きます。修正したもの：Spotify無料アカウントの表示、YouTube Musicの正方形のジャケット、保存したDACの質問のあとApple Musicが代わりに再生されていた問題。YouTube Musicでは、曲を選ぶ操作が最後に前面にしたブラウザのタブへ送られます（拡張機能0.4.50、更新後に↻が必要）。Safariでは、アプリの更新後にタブを再読み込みするよう案内します。</p></section>
+<section id="new07" aria-labelledby="new07-title"><p class="eyebrow">0.7</p><h2 id="new07-title">0.7で広がる、聴き方の選択</h2><p>読みやすい画面、自分で選ぶ翻訳、自分で決める音の設定。</p><div class="feature-grid"><article><h3>3つの言語、ライトとダーク</h3><p>韓国語・English・日本語と、ライト・ダークの表示に対応します。アプリの言語はmacOSのアプリ別言語設定に従います。曲名とアルバム名は各サービスの表記のまま表示します。</p></article>
 <article><h3>歌詞も読み方も、自分に合わせて</h3><p>原文・発音・翻訳の順序と表示を選び、発音の行を編集できます。翻訳先の言語ごとに文体を編集し、デフォルトに戻すこともできます。</p></article>
 <article><h3>求める音を言葉で伝える</h3><p>DSPヘルパーに希望を伝え、3つの設定サンプルを受け取ります。各サンプルに感想を添えて再提案を依頼し、自分が選んだ設定だけを適用します。</p></article>
 <article><h3>プラグインを音の経路に</h3><p>Audio Unitエフェクトを音の処理経路に追加し、順序を入れ替えます。プラグイン専用の画面は、各カードの「エディタを開く」で別に開きます。Playback Chainで有効な処理と順序を確認できます。</p></article></div></section>
@@ -59,6 +63,6 @@
 <section id="privacy" aria-labelledby="privacy-title"><h2 id="privacy-title">送信する前に、自分で選ぶ</h2><ul><li>このサイトにはトラッカー・分析スクリプト・外部フォントはありません。アプリは取り込んだ音をファイルに保存したり、AI提供元へ送ったりしません。</li><li>オンライン歌詞検索は同意後に曲情報をLRCLIBへ送ります。AI翻訳は、同意した提供元へ歌詞と翻訳に必要な情報を送ります。</li><li>DSPヘルパーは希望の文と現在の音の設定など、依頼に必要な情報を送ります。音声や曲情報は送りません。送信前に内容を確認できます。</li><li>クラウドAIは自分で保存したAPIキーを使い、提供元の料金が発生する場合があります。歌詞翻訳とDSPヘルパーは利用上限を共有します。リクエストだけで設定を自動適用することはありません。</li></ul><a href="https://github.com/fidenne/fidenne/blob/main/PRIVACY.en.md">プライバシーポリシー (English)</a></section>
 <section id="help" aria-labelledby="help-title"><h2 id="help-title">困ったときは</h2><p>音が出ない場合は、まず入力・出力デバイスと出力方式を確認してください。解決しない場合はアプリからサポート用診断を出力し、内容を確認してサポートへメールで送ってください。アプリが代わりに送信することはありません。おかしいと感じた瞬間に⌥⌃⌘K（ヘルプ › 今おかしかったことを記録）を押すと、その時刻が診断記録に印として残り、見つけやすくなります。</p><div class="resource-links"><a href="install.html">インストールガイド（画像付き）</a><a href="https://github.com/fidenne/fidenne/blob/main/docs/user/en/MANUAL.md">マニュアル (English)</a><a href="https://github.com/fidenne/fidenne/blob/main/docs/user/en/HOW-TO.md">やりたいこと別ガイド (English)</a><a href="https://github.com/fidenne/fidenne/blob/main/docs/user/en/TROUBLESHOOTING.md">問題の確認 (English)</a><a href="mailto:fidenne.support@gmail.com">サポートへメール</a></div></section>
 </main>
-<footer><p>Fidenne · 0.7</p><p>このガイドは0.7の機能を説明しています。公開状況とインストールファイルはリリースページで確認してください。</p><p>この翻訳はAIで作成したもので、ネイティブによる確認はまだ行っていません。不自然な表現が含まれる場合があります。</p></footer>
+<footer><p>Fidenne · 0.8</p><p>このガイドは0.8の機能を説明しています。公開状況とインストールファイルはリリースページで確認してください。</p><p>この翻訳はAIで作成したもので、ネイティブによる確認はまだ行っていません。不自然な表現が含まれる場合があります。</p></footer>
 </body>
 </html>

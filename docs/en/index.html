@@ -6,8 +6,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<meta name="description" content="Shape audio on your Mac with EQ, Ostrum, Crossfeed and Audio Unit effects, then send it to your external DAC. Install and use Fidenne 0.7.">
-<title>Fidenne 0.7 · Install and use</title>
+<meta name="description" content="Shape audio on your Mac with EQ, Ostrum, Crossfeed and Audio Unit effects, then send it to your external DAC. Install and use Fidenne 0.8.">
+<title>Fidenne 0.8 · Install and use</title>
 <link rel="icon" href="../img/icon.png">
 <link rel="stylesheet" href="../style.css">
 <link rel="alternate" hreflang="ko" href="../index.html">
@@ -18,12 +18,12 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header" id="top">
 <a class="brand" href="#top"><img src="../img/icon.png" alt="" width="28" height="28">Fidenne</a>
-<nav aria-label="On this page"><a href="#new">New in 0.7</a><a href="#install">Get started</a><a href="#usage">Use Fidenne</a><a href="#privacy">Privacy</a></nav>
+<nav aria-label="On this page"><a href="#new">New in 0.8</a><a href="#new07">New in 0.7</a><a href="#install">Get started</a><a href="#usage">Use Fidenne</a><a href="#privacy">Privacy</a></nav>
 <nav class="languages" aria-label="Language"><a href="../index.html" lang="ko" hreflang="ko">한국어</a><a href="../en/index.html" lang="en" hreflang="en" aria-current="page">English</a><a href="../ja/index.html" lang="ja" hreflang="ja">日本語</a></nav>
 </header>
 <main id="main">
 <div class="hero" aria-labelledby="hero-title">
-<p class="eyebrow">Fidenne · Public beta 1 · 0.7.0</p><h1 id="hero-title">The music you play.<br>The sound you choose.</h1>
+<p class="eyebrow">Fidenne · Public beta 1 · 0.8.0</p><h1 id="hero-title">The music you play.<br>The sound you choose.</h1>
 <p class="lead">Keep your player. Shape its audio with EQ, Ostrum and Crossfeed, then send it to your external DAC. See your music, lyrics and audio path in one window.</p>
 <a class="button" href="https://github.com/fidenne/fidenne/releases/latest">View releases<span aria-hidden="true"> ↗</span></a>
 <p class="requirements">Apple silicon Mac · macOS 15 or later · Wired USB DAC recommended</p><p class="small">This is still a public beta, so some things will change or be fixed. Check the release page for downloads and release availability.</p>
@@ -31,7 +31,11 @@
 <picture><source media="(prefers-color-scheme: dark)" srcset="../img/0.7/home-dark-en.png"><img src="../img/0.7/home-light-en.png" alt="Pick up where you left off" loading="lazy"></picture>
 </figure>
 </div>
-<section id="new" aria-labelledby="new-title"><p class="eyebrow">0.7</p><h2 id="new-title">More control over how you listen in 0.7</h2><p>Clearer screens, translation you can shape, and sound settings you choose.</p><div class="feature-grid"><article><h3>Three languages. Light and dark.</h3><p>Use Korean, English or Japanese, in light or dark appearance. The app follows the per-app language in macOS. Track and album names keep the wording supplied by each service.</p></article>
+<section id="new" aria-labelledby="new-title"><p class="eyebrow">0.8</p><h2 id="new-title">New in 0.8</h2><p>0.8 adds Video and Info pages to Album Mode, per-service Home rows, a floating lyrics window and reading aids for Japanese, and sends 5.1 and 7.1 files through untouched. Requirements are the same as 0.7.0. Some pictures below were taken on 0.7 and may differ slightly from 0.8.</p><div class="feature-grid"><article><h3>Three Album Mode pages</h3><p>The large playback view is split into Now Playing, Video and Info (Command + swipe, scroll wheel, Option-Command-Up and Down). Choose the order and which pages show in Settings › Display › Album Mode pages. Info shows album, release, genre, length, quality and credits. Video plays a video found by link, video file or search term, aligned to the music position.</p></article>
+<article><h3>Home rows and search per service</h3><p>Streaming Home gains per-service rows (Apple Music recommendations, charts and recently played; Spotify recently played, most played and saved albums), plus Apple Music artist search, Spotify search and Show More.</p></article>
+<article><h3>Floating lyrics and reading aids</h3><p>Open lyrics in their own window from Playback › Floating Lyrics (Shift-Command-L), and turn on reading aids and pronunciation under Lyrics › Display. Knobs can be adjusted with the arrow keys, and the Fidenne queue now continues from the end back to the start.</p></article>
+<article><h3>Multichannel files, untouched</h3><p>Local 5.1, 7.1 and 7.1.4 files are sent to a multichannel output device without processing (the “Multichannel as is” playback pill), and a multichannel-input plug-in in DSP › Plug-ins can make a two-channel mix for headphones. DSP › EQ allows up to 256 bands, and Input/Output &amp; Diagnostics › Advanced › PCM lowers the top 44.1 / 48 kHz-family rate per DAC.</p></article></div><p class="note"><b>What changes in the sound.</b> When you pick another track or press Next or Previous, the start is held silently while the position returns to the beginning, so the track starts once from the top (before, the start was heard and then rewound). The last sound of a file now reaches the DAC in full. Fixed: Spotify free-account display, YouTube Music square covers, and Apple Music playing instead after a saved DAC prompt. For YouTube Music, the click that picks a track goes to the browser tab you last put in front (extension 0.4.50; click ↻ after updating), and Safari tells you to reload the tab after the app updates.</p></section>
+<section id="new07" aria-labelledby="new07-title"><p class="eyebrow">0.7</p><h2 id="new07-title">More control over how you listen in 0.7</h2><p>Clearer screens, translation you can shape, and sound settings you choose.</p><div class="feature-grid"><article><h3>Three languages. Light and dark.</h3><p>Use Korean, English or Japanese, in light or dark appearance. The app follows the per-app language in macOS. Track and album names keep the wording supplied by each service.</p></article>
 <article><h3>Lyrics and readings your way</h3><p>Choose the order and visibility of original lyrics, pronunciation and translation, and edit pronunciation lines. Edit the translation style for each target language or restore its defaults.</p></article>
 <article><h3>Describe the sound you want</h3><p>Ask the DSP helper for three setting samples. Leave a comment on each sample to request another set, and apply only the settings you choose.</p></article>
 <article><h3>Plug-ins in your audio path</h3><p>Add Audio Unit effects to your audio path and reorder them. Open a plug-in's own screen with Open Editor on its card. Check enabled effects and processing order in Playback Chain.</p></article></div></section>
@@ -59,6 +63,6 @@
 <section id="privacy" aria-labelledby="privacy-title"><h2 id="privacy-title">You choose before anything is sent</h2><ul><li>This site has no trackers, analytics scripts or external fonts. The app does not save captured audio to files or send it to AI providers.</li><li>Online lyric lookup sends track information to LRCLIB after consent. AI translation sends lyrics and necessary translation context to the provider you approve.</li><li>The DSP helper sends your wish, current sound settings and other information needed for the request. It does not send audio or track information. You can review the request before sending.</li><li>Cloud AI uses an API key you save yourself and may incur provider charges. Lyrics translation and the DSP helper share usage limits. Requests do not apply settings automatically.</li></ul><a href="https://github.com/fidenne/fidenne/blob/main/PRIVACY.en.md">Privacy policy</a></section>
 <section id="help" aria-labelledby="help-title"><h2 id="help-title">When you need a hand</h2><p>If you hear no audio, check the input and output devices and output mode first. If the problem continues, export a support bundle in the app, review its contents, then send it to support by email. The app does not send it for you. When something sounds odd, press ⌥⌃⌘K (Help › Mark That Something Was Off) to mark that time in the diagnostic record so it is easy to find.</p><div class="resource-links"><a href="install.html">Install guide, with pictures</a><a href="https://github.com/fidenne/fidenne/blob/main/docs/user/en/MANUAL.md">Manual</a><a href="https://github.com/fidenne/fidenne/blob/main/docs/user/en/HOW-TO.md">How-to</a><a href="https://github.com/fidenne/fidenne/blob/main/docs/user/en/TROUBLESHOOTING.md">Troubleshooting</a><a href="mailto:fidenne.support@gmail.com">Email support</a></div></section>
 </main>
-<footer><p>Fidenne · 0.7</p><p>This guide describes 0.7 features. Check the release page for availability and installation files.</p><p>This translation was made with AI and has not yet been reviewed by a native speaker. Some wording may read awkwardly.</p></footer>
+<footer><p>Fidenne · 0.8</p><p>This guide describes 0.8 features. Check the release page for availability and installation files.</p><p>This translation was made with AI and has not yet been reviewed by a native speaker. Some wording may read awkwardly.</p></footer>
 </body>
 </html>
