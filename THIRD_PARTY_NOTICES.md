@@ -184,6 +184,72 @@ IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 ```
 
+### libmysofa — BSD-3-Clause
+
+헤드폰 공간화에서 사용자가 고른 SOFA(AES69) HRTF 파일을 읽을 때 libmysofa 1.3.5 의 읽기 부분을 씁니다. 파일을 읽어
+변환하는 일에만 쓰고, 소리를 처리하는 엔진에는 들어 있지 않습니다. 읽는 쪽 소스는 릴리스 그대로이고, 한 번에 풀어 두는
+메모리의 상한을 정하는 작은 수정 하나가 같은 BSD-3-Clause 조건으로 들어 있습니다. 압축을 푸는 zlib 은 macOS 의 것을 씁니다.
+
+The headphone spatialisation reads a person's own SOFA (AES69) HRTF file with the reader part of libmysofa 1.3.5. It is
+used only to read and convert that file and is not part of the audio engine. The reader sources are as released, with one
+small change that bounds the memory the decoder holds at once, offered under the same BSD-3-Clause terms. Decompression
+uses the zlib that comes with macOS.
+
+- 출처 (Source): https://github.com/hoene/libmysofa
+
+```
+Copyright (c) 2016-2017, Symonics GmbH, Christian Hoene
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+    (1) Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+
+    (2) Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the
+    distribution.
+
+    (3)The name of the author may not be used to
+    endorse or promote products derived from this software without
+    specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT,
+INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+```
+
+### SADIE II Database — Apache License 2.0
+
+헤드폰 공간화의 「가상 스피커」와 「측정 방」은 SADIE II Database 의 피험자 H3 측정값(무향 HRIR, 방 BRIR)에서 만든 두
+뱅크를 씁니다. 측정값은 값을 바꾸지 않고 Fidenne 의 뱅크 형식으로 옮겼습니다(위치는 구면 좌표에서 직교 좌표로). 무엇을
+바꿨는지와 파일 해시는 뱅크 옆의 `NOTICE.md` 에, 라이선스 전문은 뱅크 옆의 `LICENSE-Apache-2.0.txt` 에 있습니다.
+University of York 가 Fidenne 를 보증한다는 뜻이 아닙니다. 두 뱅크와 그 옆의 두 파일은 헤드폰 공간화가 들어 있는 빌드에만
+실립니다. 그 기능이 없는 빌드에는 들어 있지 않습니다.
+
+The headphone spatialisation's virtual speakers and measured room use two banks made from the SADIE II Database's subject
+H3 measurements (anechoic HRIR, room BRIR). The values were copied unchanged into Fidenne's bank format (positions converted
+from spherical to Cartesian coordinates). What was changed and the file hashes are in `NOTICE.md` beside the banks; the full
+licence text is in `LICENSE-Apache-2.0.txt` beside them. The University of York does not endorse this product. The two banks
+and the two files beside them ship only in builds that include the headphone spatialisation; a build without it carries none
+of them.
+
+- 저작권 (Copyright): Copyright 2018, University of York. University of York AudioLab; Gavin Kearney. Measurements: Callum
+  Armstrong, Lewis Thresh.
+- 출처 (Source): SADIE II Database v2-2, https://zenodo.org/records/12092466 (DOI 10.5281/zenodo.12092466)
+- 라이선스 (Licence): Apache License, Version 2.0, http://www.apache.org/licenses/LICENSE-2.0
+
 ### xoshiro256** — 공개 영역 (CC0)
 
 디더에 쓰는 난수 생성기는 David Blackman · Sebastiano Vigna 가 공개 영역에 내놓은 xoshiro256** 참조 구현을 다시 쓴
@@ -205,11 +271,12 @@ Services Branding Guidelines, not the Fidenne terms, and implies no endorsement 
 
 ## 2. macOS 가 제공하는 것 — 앱에 싣지 않음 (Provided by macOS, not shipped)
 
-앱이 링크하는 라이브러리는 macOS 에 들어 있는 Apple 시스템 프레임워크와 시스템 SQLite 뿐입니다. 이들은 운영체제의
-일부이고 Fidenne 과 함께 배포하지 않습니다. SQLite 는 공개 영역입니다.
+앱이 링크하는 시스템 라이브러리는 macOS 에 들어 있는 Apple 시스템 프레임워크와 시스템 SQLite · zlib 뿐입니다. 이들은
+운영체제의 일부이고 Fidenne 과 함께 배포하지 않습니다. SQLite 는 공개 영역, zlib 은 Zlib 라이선스입니다.
 
-The app links only the Apple system frameworks and the system SQLite that come with macOS. They are part of the
-operating system and are not distributed with Fidenne. SQLite is in the public domain (https://www.sqlite.org/).
+The system libraries the app links are only the Apple system frameworks and the system SQLite and zlib that come with
+macOS. They are part of the operating system and are not distributed with Fidenne. SQLite is in the public domain
+(https://www.sqlite.org/); zlib is under the Zlib licence (https://zlib.net/).
 
 ## 3. 만들 때만 쓴 도구 — 앱에 없음 (Build-time tools, not in the app)
 

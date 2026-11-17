@@ -1,8 +1,10 @@
 <!-- SPDX-FileCopyrightText: 2026 The Aural Authors -->
 <!-- SPDX-License-Identifier: LicenseRef-Fidenne-Freeware -->
-<!-- Translated from docs/user/EXPLANATIONS.md (0.7.0 edition) -->
+<!-- Translated from docs/user/EXPLANATIONS.md -->
 
 # When you are curious
+
+[한국어](../EXPLANATIONS.md) | English | [日本語](../ja/EXPLANATIONS.md)
 
 Read this when you wonder "why does it do that?" For what is where, see the [User manual](MANUAL.md); for how to do something, see the
 [Task guide](HOW-TO.md); if you are stuck, see the [Troubleshooting guide](TROUBLESHOOTING.md).
@@ -15,7 +17,7 @@ and warns about them. A warning alone does not change the sound.
 
 AutoEq's own curves can slightly exceed these limits too. So the limits are not copied from AutoEq's numbers: the detector warns only about a narrow
 boost that a single filter cannot produce, or a spot where both the combined curve and the boost-only curve are steep.
-When a warning appears, you can choose how to fix it in **Correction suggestions… (보정 제안…)**.
+When a warning appears, you can choose how to fix it in **Suggest Correction… (보정 제안…)**.
 
 <a id="12-why-the-boost-limit-is-62-db-and-above-10-khz-it-is-an-average"></a>
 ## Where does the boost warning start?
@@ -27,12 +29,12 @@ Clipping (the sound being cut off) is prevented not by this warning but by PCM h
 
 ## How does EQ correction work?
 
-Only one thing is automatic: **Prevent clipping — lower Preamp automatically (클리핑 막기 — Preamp 자동 낮춤)**, which is off by default. When on, if EQ, Ostrum and crossfeed
+Only one thing is automatic: **Prevent clipping — lower the preamp automatically (클리핑 막기 — Preamp 자동 낮춤)**, which is off by default. When on, if EQ, Ostrum and crossfeed
 add up to more than 0 dB, it lowers only the Preamp by the amount needed. It never touches a band, and the curve keeps its shape.
 
-Corrections that change bands happen only when you press **Apply correction (보정 적용)** in **Correction suggestions… (보정 제안…)**. The window opens on **Industry practice (업계 관례)**: it lowers only the Preamp
-and keeps the curve shape. If you choose **Improved (개선)** beside it, only the bands that cause an over-boost or a steep side are changed, by the smallest amount.
-Improved shapes the curve, so the window shows a warning and you decide whether to apply it. After applying, **Undo correction (보정 되돌리기)** takes you back once.
+Corrections that change bands happen only when you press **Apply Correction (보정 적용)** in **Suggest Correction… (보정 제안…)**. The window opens on **Industry convention (업계 관례)**: it lowers only the Preamp
+and keeps the curve shape. If you choose **Improve (개선)** beside it, only the bands that cause an over-boost or a steep side are changed, by the smallest amount.
+Improve changes the shape of the curve, so the window shows a warning and you decide whether to apply it. After applying, **Undo Correction (보정 되돌리기)** takes you back once.
 
 ## Why does Preamp go down?
 
@@ -48,7 +50,7 @@ All three lower the overall level, but they sit in different places and prevent 
 
 - **PCM headroom**: at the very end of all processing, it prevents **clipping**. Automatic by default.
 - **EQ Preamp**: at the very front of the EQ, it sets the EQ's level. It is the Preamp from the question above.
-- **Ostrum Headroom**: inside Ostrum, it keeps Harmonics from being driven too hard. When a recommended value appears, you move it yourself. Only when you turn on **Automatically on every change (바뀔 때마다 자동으로)** beside it (off by default) does the knob follow the recommended value.
+- **Ostrum Headroom**: inside Ostrum, it keeps Harmonics from being driven too hard. When a recommended value appears, you move it yourself. Only when you turn on **Automatically each time it changes (바뀔 때마다 자동으로)** beside it (off by default) does the knob follow the recommended value.
 
 They are kept apart because lowering one to protect against one problem would change the sound of another. Automatic PCM headroom lowers only the boost
 the first two have not already lowered, so the same amount is never lowered twice. Normally you do not need to touch any of the three.
@@ -67,7 +69,7 @@ The engine's PCM output is chosen from supported rates in the 44.1 and 48 kHz fa
 if it is a 2-channel device that takes at least one of them (DSD only if that DAC can unpack DoP). A DAC that does not take 352.8 kHz can still be used by lowering the rate to one it takes.
 A device that takes none of the supported rates from 44.1 to 768 kHz, or is not 2-channel (some dongles, 4- and 8-channel interfaces), is marked at the end of its name in the output device list and plays only in PCM Direct.
 
-Fidenne processes the sound with EQ, Ostrum, crossfeed and filters and sends it to built-in speakers, the 3.5 mm jack, AirPods (Bluetooth) and HDMI too. macOS mixes the result through its system mixer before sending it to the device, so it is **not bit-perfect**.
+Fidenne processes the sound with EQ, Ostrum, crossfeed and filters and sends it to built-in speakers, the 3.5 mm jack, AirPods (Bluetooth) and HDMI too. macOS mixes the result through its system mixer before sending it to the device, so it is not bit-perfect (**via system mixer · not bit-perfect (시스템 믹서 경유 · 비트 퍼펙트 아님)**).
 The engine processes at the highest supported rate from 44.1 to 768 kHz at or below the device's current rate, and macOS converts to the device rate if needed. macOS decides the device's rate and volume; the volume is the Mac's. For a bit-perfect output use an external DAC's integer PCM or DSD.
 
 If you have not chosen a DAC yet, or it has not been confirmed, the app starts in PCM Direct. A DAC that accepts DSD can also be sent DSD.
@@ -109,7 +111,7 @@ if this Mac cannot finish the calculation by then, Fidenne stops playback and te
 ## How are Cardinal Sinc 128K and 64K different from other filters?
 
 They are fixed-length sinc filters in the long-tap extension: 128K has about 131,000 taps (delay about 116 ms) and 64K about 65,500 (delay about 70 ms).
-Both have a fixed cutoff of 22.05 or 24 kHz, and the twin with **Follow (따라감)** in its name lets the cutoff follow the song's rate.
+Both have a fixed cutoff of 22.05 or 24 kHz, and the twin with **follows source (따라감)** at the end of its name lets the cutoff follow the song's rate.
 On 44.1 and 48 kHz songs the twin has the same coefficients and sounds the same; it differs only on songs at other rates.
 The longer the filter, the longer the sound takes to come out, so video may drift.
 
@@ -129,7 +131,7 @@ by the system audio service, not by an app, so it cannot live inside the app; it
 which briefly stops all sound. Other virtual audio devices are installed the same way.
 
 Inlet is the only thing installed, and Fidenne checks its signature again right before installing it. To remove it, press
-**Remove… (제거…)** in **I/O · Diagnostics (입출력 · 진단) › Input and output devices (입력과 출력 장치)**.
+**Remove… (제거…)** in **Input/Output · Diagnostics (입출력 · 진단) › Input and output devices (입력과 출력 장치)**.
 
 If you would rather not install anything, choose **System tap (시스템 탭)** in the first-run setup. It needs no installation, but macOS
 hands the sound over converted to 48 kHz. Inlet is recommended because it receives the playing app's original sample rate.
@@ -147,5 +149,24 @@ when its signature checks out, and only when you choose to install it in the upd
 
 The Safari extension is inside the Fidenne app, and Safari finds it when the app is in a proper place such as the Applications folder.
 An app opened straight from the downloaded .dmg or from the Downloads folder is run by macOS from a separate temporary copy, and Safari
-cannot show its extension. Fidenne notices this and says `Safari 확장은 Fidenne을 응용 프로그램 폴더로 옮긴 뒤 다시 열어야 Safari에 보입니다.`
+cannot show its extension. Fidenne notices this and says `The Safari extension appears in Safari only after you move Fidenne to the Applications folder and open it again.`
 (move Fidenne to the Applications folder and open it again for the extension to appear in Safari).
+
+## Why do multichannel files go out unprocessed?
+
+Fidenne's EQ · Ostrum · crossfeed · filters are made for two channels. A 5.1 · 7.1 · 7.1.4 file is sent sample for sample to the speakers of a multichannel output device, matched by channel name, with no downmix and no processing.
+If the device does not accept that many channels, Fidenne does not quietly reduce to two; it says why and stops. To listen on headphones, pick a spatial Audio Unit yourself in the **Multichannel input plug-in** of **DSP › Plug-in**; the two channels it returns continue to EQ and the output. The processing is the chosen plug-in's own.
+
+## Why does the video play without sound?
+
+The video page in Album Mode is a screen for listening to music, so it mutes the video and moves it to the music's position. It matches only when the page can report the video's position, and says so when there is nothing to match.
+If a web page tries to turn the video's sound back on, it is muted again unless a person pressed it. The videos you used for songs are remembered only on this Mac.
+
+
+## Why does Subtitle over the video show the video larger on a narrow screen?
+
+In video only, the **Lyrics column** takes its own width beside the video, and the video keeps its width-to-height shape in the space that is left. On a narrow window such as a laptop that space is small, so the video is small. **Subtitle over the video** puts the lyrics on top of the picture, so the video can use the whole window. Which is better depends on the screen width and your taste, so you choose it yourself with **Lyrics in the big view**.
+
+## Why does a YouTube Music press go to that browser?
+
+When more than one browser is connected, Fidenne treats the YouTube Music tab you brought to the front last as the place you used most recently. A tab that becomes visible by itself, or only plays sound, does not count; only the tab you clicked forward does. Bringing it forward plays and stops nothing by itself; only the next press that chooses a song uses that tab.

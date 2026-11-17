@@ -1,8 +1,10 @@
 <!-- SPDX-FileCopyrightText: 2026 The Aural Authors -->
 <!-- SPDX-License-Identifier: LicenseRef-Fidenne-Freeware -->
-<!-- Translated from SECURITY.md at commit 60083913fecff876c8e1725df00d19fcb559a621 -->
+<!-- Translated from SECURITY.md -->
 
 # Reporting a Security Issue — Fidenne
+
+[한국어](SECURITY.md) | English | [日本語](SECURITY.ja.md)
 
 ## Supported versions
 

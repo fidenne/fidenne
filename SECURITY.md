@@ -3,6 +3,8 @@
 
 # 보안 문제 알리기 — Fidenne
 
+한국어 | [English](SECURITY.en.md) | [日本語](SECURITY.ja.md)
+
 ## 지원하는 판
 
 | 판 | 보안 수정 |

@@ -1,8 +1,10 @@
 <!-- SPDX-FileCopyrightText: 2026 The Aural Authors -->
 <!-- SPDX-License-Identifier: LicenseRef-Fidenne-Freeware -->
-<!-- Translated from docs/user/KNOWN_LIMITATIONS.md (0.7.0 edition) -->
+<!-- Translated from docs/user/KNOWN_LIMITATIONS.md -->
 
 # Fidenne known limitations
+
+[한국어](../KNOWN_LIMITATIONS.md) | English | [日本語](../ja/KNOWN_LIMITATIONS.md)
 
 Fidenne is still a **beta (0.x)**. This page gathers, in one place, today's known limits, what we left out of
 beta 1, what we are fixing, what we deliberately do not do, and what we are thinking about next.
@@ -14,11 +16,11 @@ For how to use the app see the [user manual](MANUAL.md); when something does not
 Hardware, operating system and service limits of this version.
 
 - It opens **only on Apple silicon (M1 and later) Macs running macOS 15 or later.** It does not open on an Intel Mac even if macOS 15 or later is installed. macOS 15 was checked in a virtual machine (install, first run, each screen); listening for long on a real Mac with a DAC has not been done yet.
-- **An external DAC is recommended.** The beta is built for listening through one. Fidenne processes the sound and sends it to built-in speakers · AirPods · HDMI too; macOS mixes the result through its system mixer before sending it to the device, so it is **not bit-perfect**.
+- **An external DAC is recommended.** The beta is built for listening through one. Fidenne processes the sound and sends it to built-in speakers · AirPods · HDMI too; macOS mixes the result through its system mixer before sending it to the device, so it is not bit-perfect (**via system mixer · not bit-perfect (시스템 믹서 경유 · 비트 퍼펙트 아님)**).
 - On a wired USB DAC the DSP engine runs **on a 2-channel DAC that accepts at least one of the PCM rates the engine uses (44.1 to 768 kHz).**
   A device that takes none of them (most dongles, some monitors) is marked at the end of its name with `· PCM Direct only`, and DSP and
-  library playback cannot be used with it. Only listening to Apple Music or Spotify in PCM Direct works. If playback does not start after you first turn on such a device, choose PCM Direct yourself under I/O & Diagnostics › Output method.
-- Fidenne processes the sound with EQ · Ostrum · crossfeed · filters and sends it to built-in speakers · the 3.5 mm jack · AirPods (Bluetooth) · HDMI · DisplayPort · AirPlay too. macOS mixes the result through its system mixer before sending it to the device, so it is **not bit-perfect**. Bit depth and dither cannot be chosen, and DSD is not sent. A Bluetooth device in call mode pauses Fidenne's processing. This path was checked with a fake device; checking on real speakers · AirPods · monitors by ear was partial.
+  library playback cannot be used with it. Only listening to Apple Music or Spotify in PCM Direct works. When you first start with such a device, the output method may not start in PCM Direct and playback may not start, so choose PCM Direct yourself under Input/Output › Output method.
+- Fidenne processes the sound with EQ · Ostrum · crossfeed · filters and sends it to built-in speakers · the 3.5 mm jack · AirPods (Bluetooth) · HDMI · DisplayPort · AirPlay too. macOS mixes the result through its system mixer before sending it to the device, so it is not bit-perfect (**via system mixer · not bit-perfect (시스템 믹서 경유 · 비트 퍼펙트 아님)**). Bit depth and dither cannot be chosen, and DSD is not sent. A Bluetooth device in call mode pauses Fidenne's processing. This path was tested only with a fake device; checking on real speakers · AirPods · monitors by ear was partial.
 - A 4- or 8-channel audio interface does not use the DSP engine even if it accepts the supported rates from 44.1 to 768 kHz.
 - **PCM output rates (44.1 to 768 kHz) · following the source's rate family · between-songs mode · the wait when the rate changes** were checked with automatic tests and a fake device; the time a real DAC takes to lock to a new rate and what you hear were not checked. The default wait (0.25 s) may not suit every DAC, so make it longer if the first sound is cut off. The between-songs mode applies to PCM playback of local files.
 - **The EQ filter calculation changed**, so an EQ with filters in the treble may sound slightly different from the earlier version (clearer at low output rates). The calculation was checked with test signals, not by ear.
@@ -43,9 +45,9 @@ Hardware, operating system and service limits of this version.
 - **Spotify** depends on the network and your login state. If your login expires or a permission is denied, you may have to handle the macOS authorization window yourself.
 - The **YouTube Music** extension works only in Google Chrome, Microsoft Edge and Safari. Safari needs version 18.4 or later.
   The Safari extension appears in Safari only for a Fidenne opened from the **Applications folder** (or the Applications folder in your home folder); an app opened from inside the downloaded .dmg or from the Downloads folder does not show it.
-  For Chrome · Edge, multiple browsers can be connected; Fidenne follows the browser where you start playback.
+  When several browsers are connected, Fidenne follows the browser where you started playback yourself.
   If the site changes its layout, track information may be empty for a while.
-- **Lyrics**: some tracks that do have lyrics show "marked as an instrumental" and no lyrics.
+- **Lyrics**: some tracks that do have lyrics show "This song is marked as instrumental." (연주곡으로 표시된 곡입니다).
   You can attach them yourself with **Link lyrics file** in the lyrics panel.
 - Long listening on a real DAC, unplugging and replugging the device, and playback after waking from sleep have not been checked enough yet. If something sounds wrong, please tell us.
 
@@ -55,8 +57,8 @@ Limits that come from how macOS and the music apps work, which Fidenne cannot ch
 
 - **DoP instead of native DSD.** macOS's standard USB audio driver has no DSD format, so Fidenne uses DoP, which carries DSD inside PCM without loss. The DSD your DAC receives is the same; the difference is the top rate (up to DSD256). Your DAC must accept DoP. Native output at DSD512 and above is being considered through a network endpoint (a Linux device in front of the DAC).
 - **Fidenne cannot take the music app's original data.** Apple Music and Spotify offer no official way to hand their sound to another app, so Fidenne takes the sound macOS plays and processes it. The start of a track you play for the first time may arrive after macOS changed its rate (from the next play it arrives at the original rate), and bit-perfect delivery is not guaranteed.
-- **Stereo (two channels) only.** Multichannel sound such as Dolby Atmos, and 4- or 8-channel audio interfaces, cannot use the engine.
-- Fidenne processes PCM sound and sends it to Bluetooth · AirPlay · HDMI too; macOS mixes the result through its system mixer before sending it to the device, so it is **not bit-perfect**. **DSD is not sent to these devices.** DSD and bit-perfect integer PCM need a wired USB DAC that takes DoP · integer PCM.
+- **Sound processing is stereo (two channels) only.** 5.1 · 7.1 · 7.1.4 files in Local go out unprocessed to a multichannel output device (no EQ · filters), and multichannel service sound such as Dolby Atmos, and input from 4- or 8-channel audio interfaces, cannot use the engine.
+- Fidenne processes PCM sound and sends it to Bluetooth · AirPlay · HDMI too; macOS mixes the result through its system mixer before sending it to the device, so it is not bit-perfect (**via system mixer · not bit-perfect (시스템 믹서 경유 · 비트 퍼펙트 아님)**). **DSD is not sent to these devices.** DSD and bit-perfect integer PCM need a wired USB DAC that takes DoP · integer PCM.
 - **PCM Direct cannot match the rate track by track,** because the sound does not pass through Fidenne.
 - **A DAC whose volume control is linked to the macOS volume has its DAC-side volume at maximum during DSD · integer PCM playback.** Fidenne keeps the loudness the same inside Fidenne and gives the volume back afterwards, but during playback that volume cannot go higher. Details: [DAC volume and DSD (DoP) · integer PCM](TROUBLESHOOTING.md#dac-volume-and-dsd-dop--integer-pcm)
 - **Apple silicon Macs with macOS 15 or later** only.
@@ -71,7 +73,7 @@ Limits that come from how macOS and the music apps work, which Fidenne cannot ch
 - **When a music service changes its pages or rules,** that connection (especially the YouTube Music extension) can stop suddenly, and a fix can take a few days.
 - **Sound measurements are digital only.** There is no equipment to measure a DAC's analogue output.
 - **No paid service keys inside the app,** so Spotify search and playlists need a Spotify developer key you create yourself (optional).
-- **AI lyrics translation has been confirmed working with Claude (Anthropic) only.** OpenAI and Gemini follow each company's public API documentation and current model names but have not yet been tried with a real account. If 「연결 시험…」 (Test connection) shows an error, please report it with the message.
+- **AI lyrics translation has been confirmed working with Claude (Anthropic) only.** OpenAI and Gemini follow each company's public API documentation and current model names but have not yet been tried with a real account. If **Connection Test… (연결 시험…)** shows an error, please report it with the message.
 
 ## Left out of beta 1
 
@@ -83,7 +85,7 @@ Things that exist in the code or are built, but are off or not shipped in beta 1
 - **Playlists imported through a YouTube account connection** — not in this version. Lists imported that way earlier are not shown.
   Importing a Google Takeout file still works.
 - **Receiving a single app's sound (per-app system tap)** — not in this version (whole system only).
-- **The "연결 후보" (link candidates) screen for joining similar songs** — hidden. Songs that are certainly the same are still merged into one row in the listening history.
+- **The "Link candidates" screen for joining similar songs** — hidden. Songs that are certainly the same are still merged into one row in the listening history.
 - **Finding lyrics on Chinese lyrics servers** — not in this version. Lyrics come from LRCLIB only.
 - **Light theme** — not fully supported yet. The app is tuned for the dark theme, so some screens may look off in light.
 - **English · Japanese UI** — included, but the translations are AI drafts that no native speaker has reviewed. There is no language switch inside the app; it follows macOS's language order. Some screens may cut off longer English · Japanese text.
@@ -143,4 +145,4 @@ No dates are promised. The order may change after beta feedback.
 - **Under consideration** — moving tracks between services (Spotify · YouTube Music tracks into the Apple Music library).
 - **Under consideration** — enriching the library with album notes, credits and artist information (file tags stay untouched; added from a public music database).
 - **Under consideration** — grouping an untidy music folder into albums · artists · covers automatically; syncing untimed lyrics by hand.
-- **Under consideration** — bringing back A/B · ABX, a remote control, home theatre (multichannel HDMI).
+- **Under consideration** — bringing back A/B · ABX, a remote control, processing of multichannel sound for home theatre (for now, multichannel local files are sent unprocessed).
