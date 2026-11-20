@@ -38,12 +38,12 @@
 
 **하는 것**
 
-- macOS가 앱에 열어 둔 오디오 기능(CoreAudio · 오디오 캡처)으로 재생 앱의 소리를 받아, 실시간으로 다듬어 고른 DAC로 보냅니다.
-- Music · Spotify 앱이 스스로 내놓는 AppleScript로 지금 곡을 읽고, 재생 · 일시정지 · 곡 이동을 전합니다.
-- Apple Music 보관함과 카탈로그는 Apple이 주는 MusicKit(Apple Music API)으로, 허용했을 때만 읽습니다.
+- macOS가 앱에 제공하는 오디오 기능(CoreAudio · 오디오 캡처)으로 재생 앱의 소리를 받아, 실시간으로 다듬어 고른 DAC로 보냅니다.
+- Music · Spotify 앱이 제공하는 AppleScript로 지금 곡을 읽고, 재생 · 일시정지 · 곡 이동을 전달합니다.
+- Apple Music 보관함과 카탈로그는 Apple이 제공하는 MusicKit(Apple Music API)으로, 허용했을 때만 읽습니다.
 - YouTube Music은 앱에 들어 있는 Safari 확장과 직접 설치하는 Chrome · Edge 확장이 열린 탭의 곡 정보를 이 Mac 안에서 알려 줍니다.
-- Spotify 검색 · 플레이리스트 · 재생 조종(Spotify Web API)은 본인 Spotify 개발자 앱의 키를 넣었을 때만 켜집니다.
-- 청취 기록은 재생 앱이 AppleScript로 보여 주는 지금 곡(제목 · 아티스트 · 앨범 · 곡 길이)과 들은 시간으로 셉니다 — 로컬 파일은 파일 태그로. 이 Mac에만 두고 밖으로 보내지 않습니다.
+- Spotify 검색 · 플레이리스트 · 재생 제어(Spotify Web API)는 본인 Spotify 개발자 앱의 키를 넣었을 때만 켜집니다.
+- 청취 기록은 재생 앱이 AppleScript로 알려 주는 지금 곡(제목 · 아티스트 · 앨범 · 곡 길이)과 들은 시간으로 셉니다. 로컬 파일은 파일 태그를 씁니다. 이 Mac에만 두고 밖으로 보내지 않습니다.
 
 **하지 않는 것**
 
